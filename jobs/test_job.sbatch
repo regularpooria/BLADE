@@ -13,8 +13,9 @@ echo "Running tests on $DATE"
 # Load modules
 module load StdEnv/2023
 module load scipy-stack/2023b
-module load cuda/12.2
+module load cuda/12.2 
 module load faiss/1.8.0
+moduel load apptainer/1.3.5
 
 # Activate virtual environment
 source .venv/bin/activate

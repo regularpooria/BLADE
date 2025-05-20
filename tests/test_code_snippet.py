@@ -1,11 +1,13 @@
 from scripts.run_snippet import run_code
 
+
 def test_run_code():
     code = "print('Hello, World!')"
     result = run_code(code)
     print("Output:", result)
-    assert result == "Hello, World!\n"
-    
+    assert result == "Hello, World!"
+
+
 def test_rejection():
     code = """import os
 os.system('rm -rf /')"""

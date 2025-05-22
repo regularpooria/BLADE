@@ -1,0 +1,14 @@
+# Setting up a project
+
+
+## Step 1: Clone
+You can clone your project as easy as using `git clone` or simply uploading your project directly with `scp`. However there are some things to lookout for when trying to use the internet to transfer anything to and from the cluster. The jobs don't have access to internet which means that you can use commands such as `git fetch`, `pip install`, `huggingface.model.load()` in jobs without proper caching because they will simply fail. (However your login node has access to internet, so as long as you're logged in you can set these things up before the job runs)
+
+## Step 2:
+When trying to setup your project, make sure you're using python's virtual environment implementation to keep your modules contained so that they wouldn't make complications for your other projects. There are things to look out for when trying to install modules which is usually after cloning your project.
+
+1. Normal `pip install numpy (or any other module)` is **painfully** slow in the clusters, however the admins have solutions to make it faster, many popular modules for python have already been compiled for the clusters and the build wheels for them are available locally, so nothing has to be compiled but you can only use this feature if you add the `--no-index` tag to your `pip install` command. This will use the cache from computecanada to install libraries. Sometimes these versions might not work but it is worth a try. So for example if I wanted to install numpy, I would use `pip install numpy --no-index`\
+   You can see an index of all of the wheels here: [DOCS](https://docs.alliancecan.ca/wiki/Available_Python_wheels#Listing_wheel_from_modules)
+2. **99%** of the time you DO NOT need to install a module from apt, they are almost always included in the `module` command where you can just load them (bonus: there are multiple versions of each module). So, for example if I wanted to install my typical python data science stack (scipy, numpy, pandas, ...) it might takes **ages** to do it with `pip install` on the clusters, So instead I will use `module load scipy-stack/2023b`. You can also use `module spider scipy-stack/2023b` to see what other modules will get loaded if you were to run the `load` command.\
+   You can find a list of them here: [DOCS](https://docs.alliancecan.ca/wiki/Available_software)
+3. You need to user `virtualenv venv` command to make a virtual environment for your python projects, and then activate them by `source venv/bin/activate`. It's a good reminder that you need to load a version of python that you want before hand with `module load python/3.9.6` and once you enable your virtual environment, your shell will move onto using the virtual environment python instead of the loaded one. SO MAKE SURE you're installing your packages in the venv python, not the system-wide one.

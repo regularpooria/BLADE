@@ -9,3 +9,4 @@ requests==2.32.3
 urllib3==2.4.0
 sentence-transformers==4.1.0
 faiss-cpu==1.11.0
+pathspec==0.12.1

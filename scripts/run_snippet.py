@@ -40,12 +40,83 @@ def run_code(code):
         stdout = result.stdout.strip()
         stderr = result.stderr.strip()
 
-        if stderr:
+        if result.returncode != 0:
             raise RuntimeError(f"❌ Error output from code:\n{stderr}")
 
         return stdout
     finally:
         os.remove(host_path)
+
+
+def make_venv(project):
+    project_path = os.path.abspath(f"tmp/{project}")
+    if os.path.isdir(os.path.join(project_path, "venv")):
+        return
+
+    subprocess.run(
+        [
+            "apptainer",
+            "exec",
+            "--home",
+            project_path,
+            "--pwd",
+            project_path,
+            IMAGE_PATH,
+            "python3",
+            "-m",
+            "venv",
+            "--system-site-packages",
+            "venv",
+        ],
+        check=True,
+    )
+
+
+def run_command_in_folder(project: str, commands: list):
+    project_path = os.path.abspath(f"tmp/{project}")
+    result = subprocess.run(
+        [
+            "apptainer",
+            "exec",
+            "--env",
+            f"PYTHONUSERBASE={project_path}",
+            "--home",
+            project_path,
+            "--pwd",
+            project_path,
+            IMAGE_PATH,
+        ]
+        + commands,
+        capture_output=True,
+        text=True,
+    )
+
+    stdout = result.stdout.strip()
+    stderr = result.stderr.strip()
+
+    if result.returncode != 0:
+        raise RuntimeError(f"❌ Error output from code:\n{stderr}")
+
+    return stdout
+
+
+def run_command_in_venv(project: str, commands: list):
+    project_path = os.path.abspath(f"tmp/{project}")
+    result = subprocess.run(
+        f"""apptainer exec --home {project_path} --pwd {project_path} {IMAGE_PATH} \
+    bash -c 'source venv/bin/activate && {" ".join(commands)}'""",
+        capture_output=True,
+        text=True,
+        shell=True,
+    )
+
+    stdout = result.stdout.strip()
+    stderr = result.stderr.strip()
+
+    if result.returncode != 0:
+        raise RuntimeError(f"❌ Error output from code:\n{stderr}")
+
+    return stdout
 
 
 if __name__ == "__main__":

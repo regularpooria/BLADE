@@ -1,4 +1,5 @@
 from scripts.embedding import model, index_embeddings
+from scripts.bugsinpy_utils import get_projects, clone_project
 import ast
 import pathspec
 import os
@@ -9,7 +10,7 @@ import faiss
 
 
 def load_gitignore():
-    gitignore_path = os.path.abspath(".gitignore")
+    gitignore_path = os.path.abspath(".gitignore_embedding")
     if os.path.exists(gitignore_path):
         with open(gitignore_path, "r") as f:
             return pathspec.PathSpec.from_lines("gitwildmatch", f)
@@ -46,6 +47,11 @@ def extract_chunks(repo_path):
                     continue
 
     return all_chunks
+
+
+projects = get_projects()
+for project in projects:
+    clone_project(project)
 
 
 dirs = os.listdir("tmp")

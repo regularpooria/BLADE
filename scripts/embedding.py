@@ -34,7 +34,7 @@ def index_embeddings(embeddings):
     return index
 
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("mchochlov/codebert-base-cd-ft")
 embeddings = embed()
 index = index_embeddings(embeddings)
 

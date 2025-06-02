@@ -1,4 +1,4 @@
-from scripts.embedding import model, index_embeddings
+from scripts.embedding import model, index_embeddings, code_prompt
 from scripts.bugsinpy_utils import get_projects, clone_project
 import ast
 import pathspec
@@ -68,7 +68,7 @@ for directory in dirs:
 
     # Embedding each text
     texts = [chunk["code"] for chunk in chunks]
-    embeddings = model.encode(texts)
+    embeddings = model.encode(texts, prompt=code_prompt)
     os.makedirs("tmp/ast/embeddings/", exist_ok=True)
     numpy.save(f"tmp/ast/embeddings/embedding_{directory}.npy", embeddings)
     index = index_embeddings(embeddings)

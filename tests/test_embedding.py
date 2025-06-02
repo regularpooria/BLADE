@@ -1,4 +1,4 @@
-from scripts.embedding import search_bug, model
+from scripts.embedding import search_bug, model, bug_prompt
 from scripts.bugsinpy_utils import *
 
 import faiss
@@ -97,7 +97,7 @@ def test_all_errors():
                 ]
                 if len(errors) == 0:
                     continue
-                embedding = model.encode(errors)
+                embedding = model.encode(errors, prompt=bug_prompt)
 
                 D, I = index.search(np.array(embedding).astype("float32"), k=3)
                 for idx, error in enumerate(errors):

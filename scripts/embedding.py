@@ -2,6 +2,7 @@ import json
 from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
+import torch
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -40,7 +41,9 @@ bug_prompt = (
 code_prompt = "Represent the code snippet to match it with a possible error traceback."
 
 
-model = SentenceTransformer("flax-sentence-embeddings/st-codesearch-distilroberta-base")
+# model = SentenceTransformer("flax-sentence-embeddings/st-codesearch-distilroberta-base")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model = SentenceTransformer("instructor_base_local", device=device)
 embeddings = embed()
 index = index_embeddings(embeddings)
 

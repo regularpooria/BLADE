@@ -40,7 +40,7 @@ bug_prompt = (
 code_prompt = "Represent the code snippet to match it with a possible error traceback."
 
 
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L12-v2")
+model = SentenceTransformer("flax-sentence-embeddings/st-codesearch-distilroberta-base")
 embeddings = embed()
 index = index_embeddings(embeddings)
 

@@ -1,5 +1,10 @@
 from scripts.embedding import model, index_embeddings, code_prompt
-from scripts.bugsinpy_utils import get_projects, clone_project
+from scripts.bugsinpy_utils import (
+    get_projects,
+    clone_project,
+    checkout_to_commit,
+    get_bug_info,
+)
 import ast
 import pathspec
 import os
@@ -52,6 +57,8 @@ def extract_chunks(repo_path):
 projects = get_projects()
 for project in projects:
     clone_project(project)
+    info = get_bug_info(project, 1)
+    checkout_to_commit(project, info["buggy_commit_id"])
 
 
 dirs = os.listdir("tmp")

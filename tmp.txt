@@ -1,0 +1,23 @@
+_____________________ test_polar_invertedylim_rorigin[png] _____________________
+
+expected = '/home/user/BugsInPy/temp/projects/matplotlib/result_images/test_polar/polar_invertedylim_rorigin-expected.png'
+actual = PosixPath('/home/user/BugsInPy/temp/projects/matplotlib/result_images/test_polar/polar_invertedylim_rorigin.png')
+tol = 0
+
+    def _raise_on_image_difference(expected, actual, tol):
+        __tracebackhide__ = True
+    
+        err = compare_images(expected, actual, tol, in_decorator=True)
+        if err:
+            for key in ["actual", "expected"]:
+                err[key] = os.path.relpath(err[key])
+>           raise ImageComparisonFailure(
+                'images not close (RMS %(rms).3f):\n\t%(actual)s\n\t%(expected)s '
+                 % err)
+E           matplotlib.testing.exceptions.ImageComparisonFailure: images not close (RMS 6.526):
+E           	result_images/test_polar/polar_invertedylim_rorigin.png
+E           	result_images/test_polar/polar_invertedylim_rorigin-expected.png
+
+lib/matplotlib/testing/decorators.py:139: ImageComparisonFailure
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.

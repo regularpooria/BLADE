@@ -34,7 +34,13 @@ def index_embeddings(embeddings):
     return index
 
 
-model = SentenceTransformer("mchochlov/codebert-base-cd-ft")
+bug_prompt = (
+    "Represent the Python traceback to find the source code responsible for the error."
+)
+code_prompt = "Represent the code snippet to match it with a possible error traceback."
+
+
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L12-v2")
 embeddings = embed()
 index = index_embeddings(embeddings)
 
@@ -42,7 +48,7 @@ index = index_embeddings(embeddings)
 def search_bug(bug: dict):
     bugs = load_dataset("toy_bugs.json")
     query_text = prepare_input(bug)
-    query_vec = model.encode([query_text])
+    query_vec = model.encode([query_text], prompt=bug_prompt)
 
     D, I = index.search(np.array(query_vec).astype("float32"), k=2)
 

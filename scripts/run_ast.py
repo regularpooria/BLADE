@@ -1,4 +1,4 @@
-from scripts.embedding import model, index_embeddings
+from scripts.embedding import model, index_embeddings, code_prompt
 from scripts.bugsinpy_utils import get_projects, clone_project
 import ast
 import pathspec

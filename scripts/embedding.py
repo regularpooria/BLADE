@@ -23,7 +23,7 @@ def prepare_input(bug, strategy="full"):
 def embed():
     dataset = load_dataset("toy_bugs.json")
     inputs = [prepare_input(bug) for bug in dataset]
-    embeddings = model.encode(inputs, prompt=code_prompt)
+    embeddings = model.encode(inputs)
     return embeddings
 
 
@@ -32,11 +32,15 @@ def index_embeddings(embeddings):
     index = faiss.IndexFlatL2(embeddings_dim)
     index.add(np.array(embeddings).astype("float32"))
     return index
-bug_prompt = "Represent the Python traceback to find the source code responsible for the error."
+
+
+bug_prompt = (
+    "Represent the Python traceback to find the source code responsible for the error."
+)
 code_prompt = "Represent the code snippet to match it with a possible error traceback."
 
 
-model = SentenceTransformer("hkunlp/instructor-large")
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L12-v2")
 embeddings = embed()
 index = index_embeddings(embeddings)
 

@@ -17,6 +17,23 @@ def parse_string(string: str):
     return output
 
 
+def parse_changed_files(project, bug_id):
+    with open(
+        f"{FOLDER_NAME}/projects/{project}/bugs/{bug_id}/bug_patch.txt"
+    ) as diff_file:
+        diff_text = diff_file.read()
+        changed_files = []
+
+        for line in diff_text.splitlines():
+            if line.startswith("diff --git"):
+                # Extract file name from b/ path
+                match = re.match(r"diff --git a/.* b/(.*)", line)
+                if match:
+                    changed_files.append(match.group(1))
+
+        return changed_files
+
+
 def get_projects():
     return [
         x
@@ -94,45 +111,42 @@ def extract_python_tracebacks(project, bug_id):
     )
     error_patterns = [
         re.compile(r"Traceback \(most recent call last\):"),
-        re.compile(r"^E\s+[\w.]+Error:"),  # pytest single-line error
-        re.compile(r"^E\s+[\w.]+Exception:"),  # pytest single-line exception
-        re.compile(r"^[\w.]+Error:.*"),  # standard single-line error
-        re.compile(r"^[\w.]+Exception:.*"),  # standard single-line exception
+        re.compile(r"^E\s+[\w.]+(?:Error|Exception|Warning):"),  # pytest summary
+        re.compile(r"^[\w.]+(?:Error|Exception|Warning):.*"),  # standard one-liner
     ]
+    pytest_arrow = re.compile(r"^\s*>")  # line where test fails (starts with >)
+    file_lineno = re.compile(r"^[^\s].+:\d+:")  # lines like file.py:123:
+
     with open(file, "r") as bug_trace_file:
         unfiltered_trace = bug_trace_file.readlines()
         errors = []
         used = set()
         context = 2
         idx = 0
+
         while idx < len(unfiltered_trace):
-            line = unfiltered_trace[idx]
+            line = unfiltered_trace[idx].strip()
+
             for pat in error_patterns:
                 if pat.match(line):
-                    # If this is a full traceback, grab lines until the exception line
                     if "Traceback" in line:
                         start = max(0, idx - context)
                         block = [unfiltered_trace[start] if start != idx else line]
                         idx += 1
                         while idx < len(unfiltered_trace):
                             block.append(unfiltered_trace[idx])
-                            # Stop after the first exception line
-                            if (
-                                error_patterns[1].match(unfiltered_trace[idx])
-                                or error_patterns[2].match(unfiltered_trace[idx])
-                                or error_patterns[3].match(unfiltered_trace[idx])
-                                or error_patterns[4].match(unfiltered_trace[idx])
+                            if any(
+                                p.match(unfiltered_trace[idx].strip())
+                                for p in error_patterns[1:]
                             ):
                                 idx += 1
                                 break
-                            # Optionally, stop at an empty line (for even cleaner output)
                             if unfiltered_trace[idx].strip() == "":
                                 idx += 1
                                 break
                             idx += 1
                         block_text = "".join(block).strip()
                     else:
-                        # For single-line errors, grab a bit of context
                         start = max(0, idx - context)
                         end = min(len(unfiltered_trace), idx + context + 1)
                         block_text = "".join(unfiltered_trace[start:end]).strip()
@@ -141,8 +155,28 @@ def extract_python_tracebacks(project, bug_id):
                         errors.append(block_text)
                         used.add(block_text)
                     break
+
             else:
-                idx += 1
+                # NEW: support pytest-style errors starting with >
+                if pytest_arrow.match(line):
+                    start = max(0, idx - context)
+                    block = unfiltered_trace[start:idx]
+                    while idx < len(unfiltered_trace):
+                        block.append(unfiltered_trace[idx])
+                        if any(
+                            p.match(unfiltered_trace[idx].strip())
+                            for p in error_patterns[1:]
+                        ):
+                            idx += 1
+                            break
+                        idx += 1
+                    block_text = "".join(block).strip()
+                    if block_text not in used:
+                        errors.append(block_text)
+                        used.add(block_text)
+                else:
+                    idx += 1
+
         return errors
 
 

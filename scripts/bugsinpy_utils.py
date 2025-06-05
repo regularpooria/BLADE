@@ -110,15 +110,24 @@ def run_test(project, bug_id):
     )
 
 
+def remove_decorations(trace):
+    return "\n".join(
+        line
+        for line in trace.splitlines()
+        if not re.fullmatch(r"[-_=~\s]{5,}", line.strip())
+        and not re.fullmatch(r"[-_=~\s]{5,}.*?[-_=~\s]{5,}", line.strip())
+    )
+
+
 def extract_python_tracebacks(project, bug_id):
     file = os.path.abspath(
         f"{FOLDER_NAME}/projects/{project}/bugs/{bug_id}/bug_buggy.txt"
     )
 
     pattern_pytest = (
-        r"=+ (FAILURES|ERRORS) =+\n"
-        r"(.*?)"
-        r"(?=\n=+ (Captured log setup|warnings summary|short test summary info|ERRORS|FAILURES) =+|\Z)"
+        r"=+ (?:FAILURES|ERRORS) =+\n"
+        r"(?P<trace>.*?)"
+        r"(?=\n[-=]{10,} (Captured|warnings summary|short test summary info|ERRORS|FAILURES|slowest)[^\n]* [-=]{10,}|\Z)"
     )
     pattern_unittest = (
         r"^(FAIL|ERROR): .+?\n"  # Match FAIL or ERROR line
@@ -130,9 +139,11 @@ def extract_python_tracebacks(project, bug_id):
     with open(file, "r") as bug_trace_file:
         unfiltered_trace = bug_trace_file.read()
 
-        match = re.search(pattern_pytest, unfiltered_trace, re.DOTALL)
-        if match:
-            return match.group(2).strip()  # <-- return the actual traceback block
+        matches = list(re.finditer(pattern_pytest, unfiltered_trace, re.DOTALL))
+        if matches:
+            return remove_decorations(
+                "\n".join(m.group("trace").strip() for m in matches)
+            )
 
         match = re.search(pattern_unittest, unfiltered_trace, re.MULTILINE | re.DOTALL)
         if match:

@@ -17,8 +17,8 @@ projects = get_projects()
 #         print(project, bug)
 #         input("Continue?")
 
-project = "matplotlib"
-bug = 9
+project = "luigi"
+bug = 21
 tracebacks = extract_python_tracebacks(project, bug)
 with open("tmp.txt", "w") as file:
     file.write(tracebacks)

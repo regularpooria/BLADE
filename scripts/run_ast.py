@@ -75,7 +75,7 @@ for directory in dirs:
 
     # Embedding each text
     texts = [chunk["code"] for chunk in chunks]
-    embeddings = model.encode(texts)
+    embeddings = model.encode(texts, show_progress_bar=True)
     os.makedirs("tmp/ast/embeddings/", exist_ok=True)
     numpy.save(f"tmp/ast/embeddings/embedding_{directory}.npy", embeddings)
     index = index_embeddings(embeddings)

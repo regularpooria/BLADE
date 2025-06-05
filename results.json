@@ -2,69 +2,86 @@
   "searches_failed": [
     {
       "project_name": "matplotlib",
+      "bug_id": "12",
+      "detected_files": [
+        "conftest.py",
+        "decorators.py",
+        "backend_webagg.py",
+        "backend_agg.py",
+        "decorators.py",
+        "image.py",
+        "backend_pgf.py",
+        "backend_pgf.py",
+        "image.py",
+        "decorators.py"
+      ],
+      "actual_file": "_axes.py"
+    },
+    {
+      "project_name": "matplotlib",
       "bug_id": "9",
       "detected_files": [
-        "backend_webagg.py",
+        "decorators.py",
+        "decorators.py",
         "compare.py",
+        "multi_image.py",
+        "triage_tests.py",
+        "compare.py",
+        "decorators.py",
         "backend_pgf.py",
         "decorators.py",
-        "texmanager.py",
-        "compare.py",
-        "backend_agg.py",
-        "backend_agg.py",
-        "image.py",
-        "mathtext.py"
+        "plot_directive.py"
       ],
       "actual_file": "polar.py"
+    },
+    {
+      "project_name": "matplotlib",
+      "bug_id": "22",
+      "detected_files": [
+        "conftest.py",
+        "dates.py",
+        "rcsetup.py",
+        "__init__.py",
+        "dates.py",
+        "conftest.py",
+        "dates.py",
+        "dates.py",
+        "date_index_formatter.py",
+        "dates.py"
+      ],
+      "actual_file": "_axes.py"
     },
     {
       "project_name": "matplotlib",
       "bug_id": "16",
       "detected_files": [
         "advanced_hillshading.py",
+        "figure.py",
+        "colorbar.py",
+        "colorbar.py",
+        "colorbar.py",
+        "pyplot.py",
+        "colorbar.py",
         "colorbar.py",
         "cm.py",
-        "pyplot.py",
-        "axes_grid.py",
-        "colorbar.py",
-        "figure.py",
-        "colors.py",
-        "colorbar.py",
-        "colorbar.py"
+        "axes_grid.py"
       ],
       "actual_file": "transforms.py"
-    },
-    {
-      "project_name": "matplotlib",
-      "bug_id": "25",
-      "detected_files": [
-        "data_browser.py",
-        "menu.py",
-        "axislines.py",
-        "image.py",
-        "looking_glass.py",
-        "ticker.py",
-        "blocking_input.py",
-        "transforms.py",
-        "__init__.py",
-        "grid_finder.py"
-      ],
-      "actual_file": "collections.py"
     },
     {
       "project_name": "matplotlib",
       "bug_id": "17",
       "detected_files": [
         "advanced_hillshading.py",
+        "figure.py",
+        "colorbar.py",
+        "colorbar.py",
+        "colorbar.py",
+        "pyplot.py",
+        "colorbar.py",
         "colorbar.py",
         "cm.py",
-        "pyplot.py",
-        "axes_grid.py",
-        "colorbar.py",
-        "figure.py",
-        "colors.py",
-        "colorbar.py",
-        "colorbar.py"
+        "axes_grid.py"
       ],
       "actual_file": "transforms.py"
     },
@@ -72,84 +89,50 @@
       "project_name": "matplotlib",
       "bug_id": "11",
       "detected_files": [
-        "animation.py",
-        "quiver.py",
-        "figure.py",
-        "figure.py",
         "dviread.py",
         "figure.py",
-        "backend_agg.py",
+        "figure.py",
+        "figure.py",
         "quiver.py",
-        "backend_webagg_core.py",
-        "rcsetup.py"
+        "figure.py",
+        "backend_qt5.py",
+        "backend_qt5.py",
+        "backend_agg.py",
+        "backend_qt5.py"
       ],
       "actual_file": "text.py"
     },
     {
       "project_name": "scrapy",
+      "bug_id": "29",
+      "detected_files": [
+        "httperror.py",
+        "httperror.py",
+        "__init__.py",
+        "__init__.py",
+        "__init__.py",
+        "__init__.py",
+        "parse.py",
+        "qpsclient.py",
+        "__init__.py",
+        "httpcache.py"
+      ],
+      "actual_file": "request.py"
+    },
+    {
+      "project_name": "scrapy",
       "bug_id": "27",
       "detected_files": [
-        "http11.py",
         "logformatter.py",
-        "engine.py",
-        "datauri.py",
+        "http11.py",
         "files.py",
+        "datauri.py",
+        "engine.py",
         "__init__.py",
+        "media.py",
         "engine.py",
         "file.py",
-        "ftp.py",
-        "webclient.py"
-      ],
-      "actual_file": "redirect.py"
-    },
-    {
-      "project_name": "scrapy",
-      "bug_id": "12",
-      "detected_files": [
-        "telnet.py",
-        "test.py",
-        "check.py",
-        "parse.py",
-        "__init__.py",
-        "text.py",
-        "runspider.py",
-        "test.py",
-        "depth.py",
-        "__init__.py"
-      ],
-      "actual_file": "unified.py"
-    },
-    {
-      "project_name": "scrapy",
-      "bug_id": "40",
-      "detected_files": [
-        "project.py",
-        "feedexport.py",
-        "versions.py",
-        "bench.py",
-        "crawler.py",
-        "item.py",
-        "conf.py",
-        "crawler.py",
-        "feedexport.py",
-        "version.py"
-      ],
-      "actual_file": "exporters.py"
-    },
-    {
-      "project_name": "scrapy",
-      "bug_id": "10",
-      "detected_files": [
-        "test.py",
-        "logformatter.py",
-        "engine.py",
-        "files.py",
-        "downloadtimeout.py",
-        "files.py",
-        "responsetypes.py",
-        "files.py",
-        "webclient.py",
-        "engine.py"
+        "ftp.py"
       ],
       "actual_file": "redirect.py"
     },
@@ -157,16 +140,16 @@
       "project_name": "scrapy",
       "bug_id": "37",
       "detected_files": [
+        "webclient.py",
         "bench.py",
         "bench.py",
+        "ajaxcrawl.py",
+        "webclient.py",
+        "testproc.py",
         "http11.py",
-        "feedexport.py",
-        "bench.py",
-        "contextfactory.py",
-        "response.py",
-        "scraper.py",
+        "parse.py",
         "shell.py",
-        "crawler.py"
+        "http11.py"
       ],
       "actual_file": "__init__.py"
     },
@@ -174,16 +157,16 @@
       "project_name": "scrapy",
       "bug_id": "7",
       "detected_files": [
-        "bench.py",
-        "bench.py",
-        "shell.py",
-        "http11.py",
-        "contextfactory.py",
-        "scraper.py",
-        "spidermw.py",
         "testproc.py",
-        "scraper.py",
-        "feedexport.py"
+        "bench.py",
+        "webclient.py",
+        "bench.py",
+        "ajaxcrawl.py",
+        "shell.py",
+        "webclient.py",
+        "startproject.py",
+        "bench.py",
+        "test.py"
       ],
       "actual_file": "form.py"
     },
@@ -196,11 +179,11 @@
         "crawler.py",
         "crawler.py",
         "engine.py",
-        "crawler.py",
-        "feedexport.py",
         "spiderloader.py",
+        "spiderloader.py",
+        "feedexport.py",
         "parse.py",
-        "check.py"
+        "crawler.py"
       ],
       "actual_file": "offsite.py"
     },
@@ -208,67 +191,101 @@
       "project_name": "scrapy",
       "bug_id": "2",
       "detected_files": [
-        "crawler.py",
-        "memusage.py",
-        "crawler.py",
-        "resolver.py",
-        "shell.py",
-        "http11.py",
         "bench.py",
+        "testproc.py",
+        "crawler.py",
+        "startproject.py",
+        "test.py",
+        "httpcache.py",
+        "robotstxt.py",
         "resolver.py",
-        "crawl.py",
-        "version.py"
+        "bench.py",
+        "http11.py"
       ],
       "actual_file": "datatypes.py"
     },
     {
       "project_name": "scrapy",
-      "bug_id": "18",
-      "detected_files": [
-        "http11.py",
-        "scraper.py",
-        "engine.py",
-        "bench.py",
-        "shell.py",
-        "datauri.py",
-        "bench.py",
-        "scraper.py",
-        "bench.py",
-        "file.py"
-      ],
-      "actual_file": "responsetypes.py"
-    },
-    {
-      "project_name": "scrapy",
       "bug_id": "19",
       "detected_files": [
+        "webclient.py",
         "bench.py",
+        "bench.py",
+        "shell.py",
+        "webclient.py",
         "http11.py",
-        "response.py",
-        "bench.py",
-        "contextfactory.py",
-        "bench.py",
-        "fetch.py",
-        "feedexport.py",
-        "view.py",
-        "log.py"
+        "ajaxcrawl.py",
+        "testproc.py",
+        "test.py",
+        "bench.py"
       ],
       "actual_file": "cookies.py"
     },
     {
       "project_name": "scrapy",
+      "bug_id": "25",
+      "detected_files": [
+        "ajaxcrawl.py",
+        "testproc.py",
+        "webclient.py",
+        "bench.py",
+        "webclient.py",
+        "shell.py",
+        "bench.py",
+        "http11.py",
+        "shell.py",
+        "bench.py"
+      ],
+      "actual_file": "form.py"
+    },
+    {
+      "project_name": "scrapy",
+      "bug_id": "15",
+      "detected_files": [
+        "offsite.py",
+        "text.py",
+        "__init__.py",
+        "__init__.py",
+        "crawl.py",
+        "feedexport.py",
+        "telnet.py",
+        "regex.py",
+        "datauri.py",
+        "exceptions.py"
+      ],
+      "actual_file": "url.py"
+    },
+    {
+      "project_name": "scrapy",
+      "bug_id": "36",
+      "detected_files": [
+        "__init__.py",
+        "__init__.py",
+        "__init__.py",
+        "testproc.py",
+        "testsite.py",
+        "http11.py",
+        "bench.py",
+        "__init__.py",
+        "__init__.py",
+        "testproc.py"
+      ],
+      "actual_file": "misc.py"
+    },
+    {
+      "project_name": "scrapy",
       "bug_id": "17",
       "detected_files": [
-        "bench.py",
-        "scraper.py",
-        "logformatter.py",
-        "shell.py",
-        "spidermw.py",
-        "scraper.py",
-        "bench.py",
-        "shell.py",
         "testproc.py",
-        "crawler.py"
+        "test.py",
+        "bench.py",
+        "ajaxcrawl.py",
+        "bench.py",
+        "startproject.py",
+        "webclient.py",
+        "bench.py",
+        "scraper.py",
+        "responsetypes.py"
       ],
       "actual_file": "response.py"
     },
@@ -276,32 +293,49 @@
       "project_name": "scrapy",
       "bug_id": "5",
       "detected_files": [
+        "webclient.py",
         "bench.py",
-        "scraper.py",
-        "scraper.py",
-        "response.py",
+        "ajaxcrawl.py",
         "bench.py",
+        "webclient.py",
+        "shell.py",
+        "testproc.py",
+        "parse.py",
         "bench.py",
-        "logformatter.py",
-        "contextfactory.py",
-        "http11.py",
-        "spidermw.py"
+        "startproject.py"
       ],
       "actual_file": "__init__.py"
+    },
+    {
+      "project_name": "scrapy",
+      "bug_id": "38",
+      "detected_files": [
+        "images.py",
+        "files.py",
+        "media.py",
+        "images.py",
+        "images.py",
+        "images.py",
+        "files.py",
+        "images.py",
+        "images.py",
+        "datauri.py"
+      ],
+      "actual_file": "form.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "139",
       "detected_files": [
-        "stata.py",
-        "stata.py",
         "dtypes.py",
-        "categorical.py",
-        "concat.py",
+        "groupby.py",
+        "_testing.py",
+        "category.py",
         "categoricals.py",
         "categorical.py",
-        "multiindex_object.py",
-        "groupby.py",
+        "base.py",
+        "category.py",
+        "categoricals.py",
         "categorical.py"
       ],
       "actual_file": "grouper.py"
@@ -312,14 +346,14 @@
       "detected_files": [
         "join_merge.py",
         "join_merge.py",
+        "array_ops.py",
+        "datetimes.py",
         "join_merge.py",
         "join_merge.py",
         "join_merge.py",
         "cast.py",
         "join_merge.py",
-        "array_ops.py",
-        "join_merge.py",
-        "join_merge.py"
+        "blocks.py"
       ],
       "actual_file": "concat.py"
     },
@@ -327,16 +361,16 @@
       "project_name": "pandas",
       "bug_id": "61",
       "detected_files": [
-        "array.py",
+        "categorical.py",
+        "pytables.py",
+        "base.py",
         "indexing.py",
-        "frame.py",
         "indexing.py",
-        "multi.py",
-        "frame.py",
+        "managers.py",
         "indexing.py",
-        "groupby.py",
-        "interval.py",
-        "generic.py"
+        "category.py",
+        "blocks.py",
+        "base.py"
       ],
       "actual_file": "series.py"
     },
@@ -345,14 +379,14 @@
       "bug_id": "51",
       "detected_files": [
         "categoricals.py",
+        "categoricals.py",
+        "groupby.py",
+        "groupby.py",
+        "categorical.py",
         "indexing.py",
-        "multi.py",
         "base.py",
         "categoricals.py",
-        "indexing_engines.py",
-        "categorical.py",
         "categoricals.py",
-        "categorical.py",
         "base.py"
       ],
       "actual_file": "category.py"
@@ -361,84 +395,67 @@
       "project_name": "pandas",
       "bug_id": "115",
       "detected_files": [
-        "_testing.py",
         "indexing.py",
+        "stat_ops.py",
+        "series.py",
+        "_testing.py",
         "conftest.py",
         "series.py",
-        "generic.py",
-        "_tester.py",
-        "conftest.py",
-        "base.py",
         "series.py",
-        "_testing.py"
+        "frame_methods.py",
+        "resample.py",
+        "timeseries.py"
       ],
       "actual_file": "missing.py"
+    },
+    {
+      "project_name": "pandas",
+      "bug_id": "129",
+      "detected_files": [
+        "timedeltas.py",
+        "datetimes.py",
+        "datetimes.py",
+        "timedeltas.py",
+        "datetimes.py",
+        "array_ops.py",
+        "common.py",
+        "cast.py",
+        "dtypes.py",
+        "timedeltas.py"
+      ],
+      "actual_file": "datetimelike.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "6",
       "detected_files": [
         "datetimes.py",
-        "period.py",
-        "series.py",
         "base.py",
-        "period.py",
-        "period.py",
-        "conftest.py",
+        "frame.py",
+        "series.py",
+        "series_methods.py",
+        "accessors.py",
         "datetimes.py",
         "period.py",
-        "plotting.py"
+        "period.py",
+        "period.py"
       ],
       "actual_file": "grouper.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "161",
-      "detected_files": [
-        "category.py",
-        "numpy_.py",
-        "blocks.py",
-        "dtype.py",
-        "stata.py",
-        "attrs_caching.py",
-        "interval.py",
-        "strings.py",
-        "array.py",
-        "array.py"
-      ],
-      "actual_file": "categorical.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "85",
-      "detected_files": [
-        "dtypes.py",
-        "frame.py",
-        "stat_ops.py",
-        "stata.py",
-        "stata.py",
-        "eval.py",
-        "multiindex_object.py",
-        "categoricals.py",
-        "base.py",
-        "categorical.py"
-      ],
-      "actual_file": "multi.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "124",
       "detected_files": [
         "apply.py",
-        "_odfreader.py",
+        "construction.py",
         "conftest.py",
+        "generic.py",
+        "_odfreader.py",
+        "reshape.py",
+        "base.py",
+        "__init__.py",
         "construction.py",
-        "_testing.py",
-        "format.py",
-        "pytables.py",
-        "format.py",
-        "construction.py",
-        "base.py"
+        "format.py"
       ],
       "actual_file": "strings.py"
     },
@@ -447,117 +464,83 @@
       "bug_id": "67",
       "detected_files": [
         "timeseries.py",
-        "indexing.py",
+        "datetimes.py",
         "concat.py",
-        "attrs_caching.py",
-        "frame_methods.py",
-        "frame_ctor.py",
-        "attrs_caching.py",
-        "eval.py",
+        "timeseries.py",
+        "period.py",
+        "array_ops.py",
+        "extension.py",
         "indexing.py",
-        "cast.py"
+        "cast.py",
+        "indexing.py"
       ],
       "actual_file": "blocks.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "98",
-      "detected_files": [
-        "series.py",
-        "period.py",
-        "stata.py",
-        "period.py",
-        "period.py",
-        "resample.py",
-        "groupby.py",
-        "datetimelike.py",
-        "period.py",
-        "_arrow_utils.py"
-      ],
-      "actual_file": "base.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "106",
       "detected_files": [
-        "plotting.py",
+        "frame.py",
         "reindex.py",
-        "groupby.py",
-        "frame_methods.py",
         "reindex.py",
-        "frame_methods.py",
-        "groupby.py",
+        "reindex.py",
         "timeseries.py",
+        "cast.py",
+        "plotting.py",
         "groupby.py",
-        "reindex.py"
+        "frame_methods.py",
+        "timeseries.py"
       ],
       "actual_file": "base.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "31",
+      "detected_files": [
+        "integer.py",
+        "array.py",
+        "missing.py",
+        "array.py",
+        "parsers.py",
+        "array.py",
+        "missing.py",
+        "base.py",
+        "generic.py",
+        "multi.py"
+      ],
+      "actual_file": "groupby.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "156",
       "detected_files": [
+        "dtype.py",
         "pickle_compat.py",
         "conftest.py",
-        "algorithms.py",
-        "construction.py",
-        "conftest.py",
         "generic.py",
-        "hdf.py",
         "dtype.py",
+        "numpy_.py",
+        "series.py",
         "generic.py",
-        "timedeltas.py"
+        "accessor.py",
+        "construction.py"
       ],
       "actual_file": "frame.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "32",
-      "detected_files": [
-        "sas.py",
-        "stata.py",
-        "pickle.py",
-        "hdf.py",
-        "stata.py",
-        "stata.py",
-        "stata.py",
-        "stata.py",
-        "dtype.py",
-        "concat.py"
-      ],
-      "actual_file": "sas_xport.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "10",
-      "detected_files": [
-        "construction.py",
-        "dtype.py",
-        "conftest.py",
-        "__init__.py",
-        "pickle_compat.py",
-        "apply.py",
-        "_testing.py",
-        "attrs_caching.py",
-        "cast.py",
-        "series.py"
-      ],
-      "actual_file": "blocks.py"
-    },
-    {
-      "project_name": "pandas",
       "bug_id": "143",
       "detected_files": [
-        "frame.py",
-        "frame.py",
-        "frame.py",
-        "frame.py",
-        "categoricals.py",
-        "reindex.py",
-        "base.py",
-        "__init__.py",
         "managers.py",
-        "interval.py"
+        "reindex.py",
+        "series.py",
+        "frame.py",
+        "reindex.py",
+        "multi.py",
+        "base.py",
+        "category.py",
+        "categoricals.py",
+        "frame_methods.py"
       ],
       "actual_file": "range.py"
     },
@@ -565,16 +548,16 @@
       "project_name": "pandas",
       "bug_id": "108",
       "detected_files": [
-        "interval.py",
-        "interval.py",
-        "interval.py",
         "timedeltas.py",
         "timedeltas.py",
-        "base.py",
+        "period.py",
         "datetimes.py",
-        "category.py",
-        "common.py",
-        "numeric.py"
+        "timedeltas.py",
+        "timedeltas.py",
+        "timedeltas.py",
+        "datetimes.py",
+        "blocks.py",
+        "common.py"
       ],
       "actual_file": "cast.py"
     },
@@ -583,15 +566,15 @@
       "bug_id": "94",
       "detected_files": [
         "timeseries.py",
-        "datetimes.py",
-        "dtypes.py",
-        "indexing.py",
-        "ctors.py",
         "eval.py",
+        "ctors.py",
+        "indexing.py",
+        "indexing.py",
         "datetimes.py",
-        "reindex.py",
+        "conftest.py",
         "attrs_caching.py",
-        "timedeltas.py"
+        "timeseries.py",
+        "series_methods.py"
       ],
       "actual_file": "datetimelike.py"
     },
@@ -599,16 +582,16 @@
       "project_name": "pandas",
       "bug_id": "137",
       "detected_files": [
-        "blocks.py",
-        "cast.py",
+        "attrs_caching.py",
+        "categoricals.py",
+        "attrs_caching.py",
+        "accessors.py",
+        "categoricals.py",
+        "stata.py",
         "datetimes.py",
-        "dtypes.py",
-        "dtypes.py",
-        "timedeltas.py",
-        "base.py",
-        "common.py",
-        "timedeltas.py",
-        "tile.py"
+        "categoricals.py",
+        "algorithms.py",
+        "timedeltas.py"
       ],
       "actual_file": "categorical.py"
     },
@@ -618,31 +601,48 @@
       "detected_files": [
         "timeseries.py",
         "timeseries.py",
-        "datetimes.py",
+        "reindex.py",
+        "reindex.py",
+        "timeseries.py",
         "frame_methods.py",
-        "conftest.py",
-        "categoricals.py",
-        "frequencies.py",
-        "categoricals.py",
-        "datetimes.py",
-        "attrs_caching.py"
+        "frame_methods.py",
+        "attrs_caching.py",
+        "arithmetic.py",
+        "managers.py"
       ],
       "actual_file": "base.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "86",
+      "detected_files": [
+        "range.py",
+        "category.py",
+        "algorithms.py",
+        "parsers.py",
+        "apply.py",
+        "base.py",
+        "indexing.py",
+        "apply.py",
+        "numeric.py",
+        "parsers.py"
+      ],
+      "actual_file": "pivot.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "72",
       "detected_files": [
-        "stata.py",
-        "multiindex_object.py",
-        "multiindex_object.py",
-        "categorical.py",
-        "categoricals.py",
-        "generic.py",
         "groupby.py",
+        "categorical.py",
+        "multiindex_object.py",
+        "category.py",
+        "categorical.py",
+        "multiindex_object.py",
         "categoricals.py",
+        "multiindex_object.py",
         "stata.py",
-        "arithmetic.py"
+        "dtypes.py"
       ],
       "actual_file": "blocks.py"
     },
@@ -650,16 +650,16 @@
       "project_name": "pandas",
       "bug_id": "13",
       "detected_files": [
-        "stata.py",
-        "construction.py",
         "categorical.py",
         "categorical.py",
+        "groupby.py",
         "dtypes.py",
-        "categoricals.py",
-        "categoricals.py",
-        "categoricals.py",
-        "blocks.py",
-        "categorical.py"
+        "pytables.py",
+        "base.py",
+        "categorical.py",
+        "base.py",
+        "base.py",
+        "pytables.py"
       ],
       "actual_file": "missing.py"
     },
@@ -667,16 +667,16 @@
       "project_name": "pandas",
       "bug_id": "136",
       "detected_files": [
-        "datetimelike.py",
+        "frame.py",
+        "join_merge.py",
+        "join_merge.py",
+        "dtypes.py",
+        "join_merge.py",
+        "join_merge.py",
+        "join_merge.py",
+        "dtypes.py",
         "numeric.py",
-        "join_merge.py",
-        "join_merge.py",
-        "timedeltas.py",
-        "string_.py",
-        "category.py",
-        "interval.py",
-        "join_merge.py",
-        "numeric.py"
+        "arithmetic.py"
       ],
       "actual_file": "merge.py"
     },
@@ -684,50 +684,33 @@
       "project_name": "pandas",
       "bug_id": "78",
       "detected_files": [
-        "generic.py",
-        "dtype.py",
-        "apply.py",
-        "dtypes.py",
-        "dtypes.py",
         "_testing.py",
+        "array.py",
+        "boolean.py",
+        "frame_methods.py",
+        "dtype.py",
+        "dtypes.py",
+        "groupby.py",
         "string_.py",
-        "offsets.py",
         "nanops.py",
-        "expressions.py"
+        "generic.py"
       ],
       "actual_file": "frame.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "93",
-      "detected_files": [
-        "dtypes.py",
-        "period.py",
-        "period.py",
-        "dtypes.py",
-        "timedeltas.py",
-        "common.py",
-        "stata.py",
-        "datetimes.py",
-        "dtypes.py",
-        "category.py"
-      ],
-      "actual_file": "datetimelike.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "8",
       "detected_files": [
         "stata.py",
-        "dtype.py",
-        "numeric.py",
-        "boolean.py",
-        "timedeltas.py",
+        "replace.py",
+        "frame.py",
         "missing.py",
-        "generic.py",
+        "conftest.py",
+        "numpy_.py",
+        "categorical.py",
         "nanops.py",
-        "datetimes.py",
-        "ops.py"
+        "generic.py",
+        "replace.py"
       ],
       "actual_file": "blocks.py"
     },
@@ -736,48 +719,31 @@
       "bug_id": "45",
       "detected_files": [
         "blocks.py",
+        "attrs_caching.py",
         "series.py",
+        "period.py",
+        "frame_methods.py",
         "frame_methods.py",
         "dtypes.py",
+        "generic.py",
         "cast.py",
-        "stata.py",
-        "groupby.py",
-        "dtypes.py",
-        "datetimes.py",
-        "frame.py"
+        "datetimes.py"
       ],
       "actual_file": "construction.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "69",
-      "detected_files": [
-        "timedeltas.py",
-        "timedeltas.py",
-        "stata.py",
-        "frame_methods.py",
-        "plotting.py",
-        "timedeltas.py",
-        "groupby.py",
-        "timeseries.py",
-        "index_cached_properties.py",
-        "json.py"
-      ],
-      "actual_file": "indexing.py"
-    },
-    {
-      "project_name": "pandas",
       "bug_id": "154",
       "detected_files": [
-        "timeseries.py",
-        "period.py",
-        "timestamp.py",
-        "datetimelike.py",
+        "conftest.py",
+        "conftest.py",
         "conftest.py",
         "timestamp.py",
-        "datetimelike.py",
-        "datetimes.py",
-        "timedeltas.py",
+        "timestamp.py",
+        "_test_decorators.py",
+        "timestamp.py",
+        "timestamp.py",
+        "timestamp.py",
         "timestamp.py"
       ],
       "actual_file": "groupby.py"
@@ -786,16 +752,16 @@
       "project_name": "pandas",
       "bug_id": "39",
       "detected_files": [
+        "managers.py",
         "replace.py",
         "__init__.py",
-        "frame.py",
-        "frame.py",
+        "frame_methods.py",
         "generic.py",
         "sql.py",
+        "generic.py",
         "frame_methods.py",
-        "_testing.py",
-        "frame.py",
-        "eval.py"
+        "resample.py",
+        "reindex.py"
       ],
       "actual_file": "methods.py"
     },
@@ -806,7 +772,7 @@
         "groupby.py",
         "groupby.py",
         "groupby.py",
-        "groupby.py",
+        "generic.py",
         "groupby.py",
         "groupby.py",
         "series.py",
@@ -820,16 +786,16 @@
       "project_name": "pandas",
       "bug_id": "163",
       "detected_files": [
+        "rolling.py",
+        "groupby.py",
         "numba_.py",
         "sas_xport.py",
-        "groupby.py",
-        "function.py",
-        "parsers.py",
-        "numpy_.py",
-        "pytables.py",
         "generic.py",
-        "stata.py",
-        "numpy_.py"
+        "generic.py",
+        "rolling.py",
+        "numpy_.py",
+        "nanops.py",
+        "datetimelike.py"
       ],
       "actual_file": "window.py"
     },
@@ -845,25 +811,42 @@
         "join_merge.py",
         "join_merge.py",
         "join_merge.py",
-        "frame.py",
-        "json.py"
+        "join_merge.py",
+        "timedeltas.py"
       ],
       "actual_file": "merge.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "81",
+      "detected_files": [
+        "string_.py",
+        "common.py",
+        "common.py",
+        "common.py",
+        "base.py",
+        "common.py",
+        "numeric.py",
+        "cast.py",
+        "numpy_.py",
+        "boolean.py"
+      ],
+      "actual_file": "integer.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "117",
       "detected_files": [
-        "groupby.py",
-        "groupby.py",
-        "groupby.py",
-        "datetimelike.py",
-        "masked.py",
-        "frame_ctor.py",
-        "frame_methods.py",
-        "groupby.py",
         "stata.py",
-        "groupby.py"
+        "sparse.py",
+        "frame_ctor.py",
+        "indexing.py",
+        "_testing.py",
+        "arithmetic.py",
+        "series_methods.py",
+        "plotting.py",
+        "groupby.py",
+        "algorithms.py"
       ],
       "actual_file": "missing.py"
     },
@@ -872,15 +855,15 @@
       "bug_id": "160",
       "detected_files": [
         "arithmetic.py",
+        "series.py",
         "arithmetic.py",
         "__init__.py",
-        "frame.py",
-        "generic.py",
-        "__init__.py",
-        "stat_ops.py",
-        "__init__.py",
+        "sparse.py",
         "arithmetic.py",
-        "generic.py"
+        "join_merge.py",
+        "__init__.py",
+        "__init__.py",
+        "frame_methods.py"
       ],
       "actual_file": "expressions.py"
     },
@@ -888,16 +871,16 @@
       "project_name": "pandas",
       "bug_id": "48",
       "detected_files": [
-        "common.py",
-        "base.py",
-        "common.py",
         "integer.py",
+        "common.py",
+        "common.py",
         "cast.py",
         "numeric.py",
+        "cast.py",
+        "base.py",
         "numeric.py",
-        "parsers.py",
-        "common.py",
-        "base.py"
+        "construction.py",
+        "cast.py"
       ],
       "actual_file": "generic.py"
     },
@@ -905,16 +888,16 @@
       "project_name": "pandas",
       "bug_id": "153",
       "detected_files": [
-        "numeric.py",
-        "dtype.py",
-        "common.py",
-        "datetimes.py",
-        "timedeltas.py",
-        "timedeltas.py",
+        "pytables.py",
+        "string_.py",
+        "pytables.py",
         "numpy_.py",
-        "datetimes.py",
-        "datetimelike.py",
-        "hdf.py"
+        "frame.py",
+        "numpy_.py",
+        "base.py",
+        "generic.py",
+        "common.py",
+        "numeric.py"
       ],
       "actual_file": "blocks.py"
     },
@@ -922,16 +905,16 @@
       "project_name": "pandas",
       "bug_id": "36",
       "detected_files": [
+        "datetimes.py",
+        "cast.py",
+        "datetimes.py",
         "dtypes.py",
         "datetimes.py",
-        "datetimes.py",
-        "period.py",
-        "common.py",
-        "blocks.py",
-        "timedeltas.py",
+        "array_ops.py",
+        "cast.py",
         "dtypes.py",
         "timedeltas.py",
-        "cast.py"
+        "blocks.py"
       ],
       "actual_file": "missing.py"
     },
@@ -939,14 +922,14 @@
       "project_name": "pandas",
       "bug_id": "131",
       "detected_files": [
-        "datetimes.py",
         "generic.py",
-        "blocks.py",
-        "datetimes.py",
-        "pytables.py",
-        "conftest.py",
-        "timestamp.py",
         "categoricals.py",
+        "categoricals.py",
+        "dtypes.py",
+        "algorithms.py",
+        "generic.py",
+        "timeseries.py",
+        "datetimes.py",
         "datetimes.py",
         "categoricals.py"
       ],
@@ -956,16 +939,16 @@
       "project_name": "pandas",
       "bug_id": "149",
       "detected_files": [
-        "validate_docstrings.py",
-        "_testing.py",
-        "pickle.py",
-        "dtypes.py",
-        "_testing.py",
+        "generate_pip_deps_from_conda.py",
+        "_test_decorators.py",
+        "stata.py",
         "sql.py",
-        "eval.py",
-        "indexing.py",
-        "__init__.py",
-        "concat.py"
+        "stata.py",
+        "sas.py",
+        "expr.py",
+        "stata.py",
+        "converter.py",
+        "stata.py"
       ],
       "actual_file": "parquet.py"
     },
@@ -975,14 +958,14 @@
       "detected_files": [
         "masked.py",
         "datetimelike.py",
-        "conftest.py",
         "string_.py",
-        "algorithms.py",
         "parsers.py",
         "array.py",
-        "categorical.py",
+        "conftest.py",
         "frame.py",
-        "generic.py"
+        "categorical.py",
+        "series.py",
+        "algorithms.py"
       ],
       "actual_file": "integer.py"
     },
@@ -991,15 +974,15 @@
       "bug_id": "41",
       "detected_files": [
         "indexing.py",
+        "category.py",
         "categorical.py",
-        "indexing.py",
         "categoricals.py",
         "multiindex_object.py",
         "categorical.py",
         "categoricals.py",
-        "categoricals.py",
         "category.py",
-        "indexing.py"
+        "frame.py",
+        "replace.py"
       ],
       "actual_file": "blocks.py"
     },
@@ -1007,52 +990,18 @@
       "project_name": "pandas",
       "bug_id": "97",
       "detected_files": [
-        "timedelta.py",
-        "cast.py",
-        "json.py",
         "datetimelike.py",
-        "categoricals.py",
+        "numeric.py",
+        "timedelta.py",
+        "datetimelike.py",
+        "sparse.py",
+        "api.py",
         "timeseries.py",
+        "datetimes.py",
         "timeseries.py",
-        "frame_methods.py",
-        "_testing.py",
-        "groupby.py"
+        "categoricals.py"
       ],
       "actual_file": "timedeltas.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "101",
-      "detected_files": [
-        "nanops.py",
-        "nanops.py",
-        "datetimelike.py",
-        "nanops.py",
-        "blocks.py",
-        "multi.py",
-        "nanops.py",
-        "nanops.py",
-        "nanops.py",
-        "pytables.py"
-      ],
-      "actual_file": "cast.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "159",
-      "detected_files": [
-        "stata.py",
-        "missing.py",
-        "groupby.py",
-        "boolean.py",
-        "replace.py",
-        "datetimelike.py",
-        "blocks.py",
-        "nanops.py",
-        "numpy_.py",
-        "interval.py"
-      ],
-      "actual_file": "frame.py"
     },
     {
       "project_name": "pandas",
@@ -1062,12 +1011,12 @@
         "array_ops.py",
         "array_ops.py",
         "array_ops.py",
+        "array_ops.py",
         "expressions.py",
-        "base.py",
-        "expressions.py",
+        "array_ops.py",
         "frame.py",
-        "base.py",
-        "string_.py"
+        "array_ops.py",
+        "timedeltas.py"
       ],
       "actual_file": "__init__.py"
     },
@@ -1075,33 +1024,50 @@
       "project_name": "pandas",
       "bug_id": "96",
       "detected_files": [
+        "dtypes.py",
+        "timedeltas.py",
+        "concat.py",
         "datetimes.py",
-        "datetimes.py",
-        "plotting.py",
-        "frame_methods.py",
-        "holiday.py",
         "_testing.py",
-        "datetimes.py",
+        "frame_ctor.py",
         "csv.py",
-        "datetimes.py",
-        "json.py"
+        "categoricals.py",
+        "resample.py",
+        "cast.py"
       ],
       "actual_file": "offsets.py"
+    },
+    {
+      "project_name": "pandas",
+      "bug_id": "133",
+      "detected_files": [
+        "join_merge.py",
+        "indexing.py",
+        "frame_methods.py",
+        "apply.py",
+        "conftest.py",
+        "join_merge.py",
+        "html.py",
+        "apply.py",
+        "managers.py",
+        "frame.py"
+      ],
+      "actual_file": "generic.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "102",
       "detected_files": [
         "frame_ctor.py",
+        "dtypes.py",
         "frame_ctor.py",
         "frame_methods.py",
-        "dtypes.py",
+        "timedeltas.py",
         "stata.py",
-        "frame_ctor.py",
-        "arithmetic.py",
         "dtypes.py",
-        "attrs_caching.py",
-        "series.py"
+        "timedeltas.py",
+        "frame_ctor.py",
+        "dtypes.py"
       ],
       "actual_file": "construction.py"
     },
@@ -1109,16 +1075,16 @@
       "project_name": "pandas",
       "bug_id": "11",
       "detected_files": [
-        "_testing.py",
-        "_misc.py",
-        "config.py",
-        "_misc.py",
-        "category.py",
-        "series.py",
-        "indexing.py",
         "reindex.py",
-        "multi.py",
-        "stata.py"
+        "reshape.py",
+        "reindex.py",
+        "series.py",
+        "base.py",
+        "sorting.py",
+        "join_merge.py",
+        "algorithms.py",
+        "algorithms.py",
+        "reindex.py"
       ],
       "actual_file": "concat.py"
     },
@@ -1126,101 +1092,118 @@
       "project_name": "pandas",
       "bug_id": "56",
       "detected_files": [
-        "common.py",
         "concat.py",
-        "generic.py",
-        "nanops.py",
-        "cast.py",
-        "rolling.py",
         "common.py",
-        "stata.py",
-        "datetimelike.py",
-        "timedeltas.py"
+        "nanops.py",
+        "blocks.py",
+        "datetimes.py",
+        "rolling.py",
+        "datetimes.py",
+        "cast.py",
+        "cast.py",
+        "accessors.py"
       ],
       "actual_file": "frame.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "43",
+      "bug_id": "122",
       "detected_files": [
-        "array_ops.py",
-        "replace.py",
-        "frame.py",
-        "groupby.py",
-        "boolean.py",
-        "join_merge.py",
-        "frame_methods.py",
-        "frame_methods.py",
-        "arithmetic.py",
-        "join_merge.py"
+        "generic.py",
+        "_testing.py",
+        "_testing.py",
+        "blocks.py",
+        "_testing.py",
+        "base.py",
+        "blocks.py",
+        "numeric.py",
+        "datetimelike.py",
+        "frame.py"
       ],
-      "actual_file": "__init__.py"
+      "actual_file": "managers.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "122",
+      "bug_id": "38",
       "detected_files": [
-        "datetimelike.py",
-        "category.py",
-        "_testing.py",
-        "frame_methods.py",
-        "blocks.py",
+        "multi.py",
         "base.py",
-        "numeric.py",
-        "_testing.py",
-        "frame.py",
+        "multi.py",
+        "multi.py",
+        "pytables.py",
+        "pytables.py",
+        "base.py",
+        "pytables.py",
+        "base.py",
         "base.py"
       ],
-      "actual_file": "managers.py"
+      "actual_file": "reshape.py"
     },
     {
       "project_name": "thefuck",
       "bug_id": "12",
       "detected_files": [
-        "test.py.py",
+        "types.py",
         "pyenv_no_such_command.py",
-        "hostscli.py",
-        "gulp_not_task.py",
-        "git_pull_clone.py",
-        "touch.py",
-        "django_south_ghost.py",
-        "git_add.py",
-        "npm_missing_script.py",
-        "django_south_merge.py"
+        "read_log.py",
+        "test.py.py",
+        "npm.py",
+        "types.py",
+        "shell_logger.py",
+        "test.py.py",
+        "fix_command.py",
+        "logs.py"
       ],
       "actual_file": "no_command.py"
     },
     {
       "project_name": "thefuck",
-      "bug_id": "9",
+      "bug_id": "28",
       "detected_files": [
-        "git_branch_exists.py",
-        "git_push_different_branch_names.py",
-        "git_checkout.py",
-        "git_stash_pop.py",
-        "git_commit_reset.py",
-        "git_checkout.py",
-        "git.py",
-        "git_pull_uncommitted_changes.py",
-        "git_pull.py",
-        "git_branch_list.py"
+        "pyenv_no_such_command.py",
+        "logs.py",
+        "types.py",
+        "npm_missing_script.py",
+        "tsuru_not_command.py",
+        "test.py.py",
+        "fastentrypoints.py",
+        "prove_recursively.py",
+        "pyenv_no_such_command.py",
+        "python_execute.py"
       ],
-      "actual_file": "git_push.py"
+      "actual_file": "fix_file.py"
+    },
+    {
+      "project_name": "thefuck",
+      "bug_id": "22",
+      "detected_files": [
+        "ui.py",
+        "ui.py",
+        "exceptions.py",
+        "test.py.py",
+        "ui.py",
+        "ui.py",
+        "fix_command.py",
+        "corrector.py",
+        "argument_parser.py",
+        "powershell.py"
+      ],
+      "actual_file": "types.py"
     },
     {
       "project_name": "thefuck",
       "bug_id": "7",
       "detected_files": [
-        "pyenv_no_such_command.py",
         "test.py.py",
         "python_command.py",
+        "pyenv_no_such_command.py",
         "npm_wrong_command.py",
-        "django_south_ghost.py",
-        "dry.py",
-        "git_remote_seturl_add.py",
-        "scm_correction.py",
-        "django_south_merge.py",
-        "yum_invalid_operation.py"
+        "man.py",
+        "git_push_without_commits.py",
+        "yum_invalid_operation.py",
+        "has_exists_script.py",
+        "npm_run_script.py",
+        "chmod_x.py"
       ],
       "actual_file": "php_s.py"
     },
@@ -1233,9 +1216,9 @@
         "apt_invalid_operation.py",
         "test.py.py",
         "brew_reinstall.py",
+        "choco_install.py",
         "pyenv_no_such_command.py",
         "mvn_no_command.py",
-        "choco_install.py",
         "git_add_force.py",
         "python_execute.py"
       ],
@@ -1251,10 +1234,10 @@
         "brew_reinstall.py",
         "long_form_help.py",
         "fix_file.py",
-        "man.py",
         "npm_wrong_command.py",
         "git_push_without_commits.py",
-        "mvn_no_command.py"
+        "mvn_no_command.py",
+        "choco_install.py"
       ],
       "actual_file": "dnf_no_such_command.py"
     },
@@ -1262,101 +1245,101 @@
       "project_name": "thefuck",
       "bug_id": "30",
       "detected_files": [
-        "test.py.py",
-        "read_log.py",
-        "dirty_unzip.py",
-        "grep_arguments_order.py",
         "pyenv_no_such_command.py",
+        "logs.py",
         "types.py",
-        "git_stash_pop.py",
-        "git_rm_staged.py",
-        "git_rm_local_modifications.py",
-        "logs.py"
+        "tsuru_not_command.py",
+        "read_log.py",
+        "shell_logger.py",
+        "prove_recursively.py",
+        "python_execute.py",
+        "npm_missing_script.py",
+        "ag_literal.py"
       ],
       "actual_file": "fix_file.py"
     },
     {
-      "project_name": "thefuck",
-      "bug_id": "11",
-      "detected_files": [
-        "git_branch_exists.py",
-        "git_push_different_branch_names.py",
-        "git_checkout.py",
-        "git_stash_pop.py",
-        "git_commit_reset.py",
-        "git_checkout.py",
-        "git.py",
-        "git_pull_uncommitted_changes.py",
-        "git_pull.py",
-        "git_branch_list.py"
-      ],
-      "actual_file": "git_push.py"
-    },
-    {
       "project_name": "youtube-dl",
-      "bug_id": "14",
+      "bug_id": "12",
       "detected_files": [
-        "buildserver.py",
-        "YoutubeDL.py",
+        "utils.py",
         "__init__.py",
         "utils.py",
-        "buildserver.py",
-        "update.py",
-        "update-sites.py",
-        "commonmistakes.py",
-        "wat.py",
-        "ffmpeg.py"
+        "utils.py",
+        "utils.py",
+        "make_issue_template.py",
+        "youtube.py",
+        "youtube.py",
+        "options.py",
+        "options.py"
       ],
-      "actual_file": "youtube.py"
+      "actual_file": "YoutubeDL.py"
     },
     {
       "project_name": "youtube-dl",
       "bug_id": "4",
       "detected_files": [
+        "utils.py",
         "__init__.py",
-        "YoutubeDL.py",
-        "buildserver.py",
         "utils.py",
-        "common.py",
-        "update.py",
-        "buildserver.py",
-        "noco.py",
         "utils.py",
-        "generic.py"
+        "youtube.py",
+        "make_issue_template.py",
+        "youtube.py",
+        "utils.py",
+        "buildserver.py",
+        "youtube.py"
       ],
       "actual_file": "jsinterp.py"
     },
     {
-      "project_name": "keras",
-      "bug_id": "28",
+      "project_name": "youtube-dl",
+      "bug_id": "18",
       "detected_files": [
-        "lstm_text_generation.py",
-        "test_utils.py",
-        "training_utils.py",
-        "training.py",
-        "training_arrays.py",
-        "interfaces.py",
-        "training_generator.py",
-        "data_utils.py",
-        "variational_autoencoder.py",
-        "variational_autoencoder_deconv.py"
+        "youtube.py",
+        "youtube.py",
+        "utils.py",
+        "vice.py",
+        "utils.py",
+        "commonmistakes.py",
+        "youtube.py",
+        "youtube.py",
+        "youtube.py",
+        "limelight.py"
       ],
-      "actual_file": "sequence.py"
+      "actual_file": "YoutubeDL.py"
+    },
+    {
+      "project_name": "youtube-dl",
+      "bug_id": "30",
+      "detected_files": [
+        "utils.py",
+        "__init__.py",
+        "utils.py",
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "make_issue_template.py",
+        "youtube.py",
+        "youtube.py",
+        "youtube.py"
+      ],
+      "actual_file": "YoutubeDL.py"
     },
     {
       "project_name": "keras",
       "bug_id": "6",
       "detected_files": [
-        "merge.py",
-        "pooling.py",
         "embeddings.py",
         "merge.py",
-        "merge.py",
+        "pooling.py",
+        "core.py",
         "base_layer.py",
+        "merge.py",
+        "merge.py",
+        "network.py",
         "core.py",
-        "tensorflow_backend.py",
-        "core.py",
-        "network.py"
+        "layers.py"
       ],
       "actual_file": "training_utils.py"
     },
@@ -1364,16 +1347,16 @@
       "project_name": "keras",
       "bug_id": "9",
       "detected_files": [
-        "optimizers.py",
-        "advanced_activations.py",
-        "advanced_activations.py",
-        "wrappers.py",
-        "core.py",
-        "advanced_activations.py",
-        "optimizers.py",
-        "convolutional.py",
-        "advanced_activations.py",
-        "optimizers.py"
+        "cudnn_recurrent.py",
+        "layers.py",
+        "layers.py",
+        "layers.py",
+        "lstm_seq2seq_restore.py",
+        "lstm_seq2seq.py",
+        "cudnn_recurrent.py",
+        "numpy_backend.py",
+        "layers.py",
+        "tensorflow_backend.py"
       ],
       "actual_file": "autogen.py"
     },
@@ -1381,16 +1364,16 @@
       "project_name": "keras",
       "bug_id": "22",
       "detected_files": [
-        "test_utils.py",
-        "image_ocr.py",
-        "tensorflow_backend.py",
+        "__init__.py",
+        "__init__.py",
+        "network.py",
+        "base_layer.py",
+        "cntk_backend.py",
+        "merge.py",
+        "load_backend.py",
         "tensorflow_backend.py",
         "network.py",
-        "tensorflow_backend.py",
-        "theano_backend.py",
-        "cntk_backend.py",
-        "__init__.py",
-        "theano_backend.py"
+        "network.py"
       ],
       "actual_file": "input_layer.py"
     },
@@ -1398,50 +1381,33 @@
       "project_name": "keras",
       "bug_id": "31",
       "detected_files": [
-        "load_backend.py",
-        "wrappers.py",
-        "image_ocr.py",
-        "layers.py",
-        "optimizers.py",
-        "theano_backend.py",
+        "cntk_backend.py",
+        "cntk_backend.py",
+        "cntk_backend.py",
         "base_layer.py",
-        "layers.py",
-        "optimizers.py",
-        "cudnn_recurrent.py"
+        "theano_backend.py",
+        "test_utils.py",
+        "wrappers.py",
+        "core.py",
+        "core.py",
+        "vis_utils.py"
       ],
       "actual_file": "tensorflow_backend.py"
     },
     {
       "project_name": "keras",
-      "bug_id": "7",
-      "detected_files": [
-        "layers.py",
-        "core.py",
-        "mnist_transfer_cnn.py",
-        "core.py",
-        "pooling.py",
-        "antirectifier.py",
-        "convolutional.py",
-        "core.py",
-        "base_layer.py",
-        "core.py"
-      ],
-      "actual_file": "scikit_learn.py"
-    },
-    {
-      "project_name": "keras",
       "bug_id": "21",
       "detected_files": [
-        "optimizers.py",
-        "training_arrays.py",
-        "base_layer.py",
-        "wrappers.py",
-        "optimizers.py",
+        "__init__.py",
+        "__init__.py",
         "image_ocr.py",
+        "mnist_tfrecord.py",
         "optimizers.py",
+        "base_layer.py",
+        "training_arrays.py",
+        "layers.py",
         "optimizers.py",
-        "optimizers.py",
-        "optimizers.py"
+        "convolutional_recurrent.py"
       ],
       "actual_file": "callbacks.py"
     },
@@ -1449,16 +1415,16 @@
       "project_name": "keras",
       "bug_id": "13",
       "detected_files": [
-        "mnist_transfer_cnn.py",
-        "mnist_tfrecord.py",
         "convolutional_recurrent.py",
-        "convolutional_recurrent.py",
-        "training.py",
-        "training_arrays.py",
         "layers.py",
-        "optimizers.py",
-        "base_layer.py",
-        "mnist_net2net.py"
+        "cntk_backend.py",
+        "mnist_transfer_cnn.py",
+        "cntk_backend.py",
+        "mnist_tfrecord.py",
+        "convolutional.py",
+        "theano_backend.py",
+        "cntk_backend.py",
+        "convolutional.py"
       ],
       "actual_file": "training_generator.py"
     },
@@ -1466,16 +1432,16 @@
       "project_name": "keras",
       "bug_id": "16",
       "detected_files": [
-        "layers.py",
-        "tensorflow_backend.py",
-        "cntk_backend.py",
+        "training.py",
+        "training_arrays.py",
+        "image_ocr.py",
+        "training.py",
+        "boston_housing.py",
+        "training.py",
+        "pooling.py",
+        "training_utils.py",
         "data_utils.py",
-        "tensorflow_backend.py",
-        "tensorflow_backend.py",
-        "theano_backend.py",
-        "cntk_backend.py",
-        "optimizers.py",
-        "tensorflow_backend.py"
+        "convolutional_recurrent.py"
       ],
       "actual_file": "sequential.py"
     },
@@ -1483,16 +1449,16 @@
       "project_name": "keras",
       "bug_id": "2",
       "detected_files": [
-        "load_backend.py",
+        "training_arrays.py",
+        "callbacks.py",
+        "tensorflow_backend.py",
+        "theano_backend.py",
         "wrappers.py",
-        "generic_utils.py",
-        "advanced_activations.py",
+        "pooling.py",
+        "cntk_backend.py",
         "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "base_layer.py"
+        "layers.py",
+        "tensorboard_v2.py"
       ],
       "actual_file": "numpy_backend.py"
     },
@@ -1500,84 +1466,33 @@
       "project_name": "keras",
       "bug_id": "8",
       "detected_files": [
-        "cifar10_resnet.py",
-        "cifar10_resnet.py",
+        "theano_backend.py",
+        "common.py",
         "tensorflow_backend.py",
-        "mnist_net2net.py",
-        "convolutional.py",
+        "theano_backend.py",
         "cntk_backend.py",
-        "cifar10_resnet.py",
-        "base_layer.py",
-        "test_utils.py",
-        "mnist_net2net.py"
+        "mnist_tfrecord.py",
+        "mnist_net2net.py",
+        "sequential.py",
+        "pooling.py",
+        "mnist_dataset_api.py"
       ],
       "actual_file": "network.py"
-    },
-    {
-      "project_name": "keras",
-      "bug_id": "18",
-      "detected_files": [
-        "local.py",
-        "image_ocr.py",
-        "convolutional_recurrent.py",
-        "convolutional_recurrent.py",
-        "layers.py",
-        "optimizers.py",
-        "convolutional.py",
-        "core.py",
-        "generic_utils.py",
-        "recurrent.py"
-      ],
-      "actual_file": "tensorflow_backend.py"
-    },
-    {
-      "project_name": "keras",
-      "bug_id": "39",
-      "detected_files": [
-        "convolutional.py",
-        "convolutional.py",
-        "tensorflow_backend.py",
-        "scikit_learn.py",
-        "layers.py",
-        "theano_backend.py",
-        "interfaces.py",
-        "cntk_backend.py",
-        "theano_backend.py",
-        "tensorflow_backend.py"
-      ],
-      "actual_file": "generic_utils.py"
-    },
-    {
-      "project_name": "keras",
-      "bug_id": "25",
-      "detected_files": [
-        "resnet50.py",
-        "interfaces.py",
-        "resnext.py",
-        "resnet.py",
-        "vgg19.py",
-        "vgg16.py",
-        "resnet_v2.py",
-        "layers.py",
-        "tensorflow_backend.py",
-        "xception.py"
-      ],
-      "actual_file": "imagenet_utils.py"
     },
     {
       "project_name": "keras",
       "bug_id": "24",
       "detected_files": [
         "network.py",
-        "base_layer.py",
-        "network.py",
-        "network.py",
-        "core.py",
-        "network.py",
+        "tensorflow_backend.py",
         "network.py",
         "base_layer.py",
-        "tensorboard_v1.py",
-        "cudnn_recurrent.py"
+        "base_layer.py",
+        "network.py",
+        "theano_backend.py",
+        "network.py",
+        "network.py",
+        "network.py"
       ],
       "actual_file": "callbacks.py"
     },
@@ -1587,14 +1502,14 @@
       "detected_files": [
         "image_ocr.py",
         "image_ocr.py",
-        "io_utils.py",
-        "lstm_seq2seq_restore.py",
-        "lstm_seq2seq.py",
         "babi_rnn.py",
         "babi_memnn.py",
+        "lstm_text_generation.py",
+        "lstm_seq2seq_restore.py",
+        "lstm_seq2seq.py",
+        "cntk_backend.py",
         "image_ocr.py",
-        "image_ocr.py",
-        "test_utils.py"
+        "reuters.py"
       ],
       "actual_file": "text.py"
     },
@@ -1602,16 +1517,16 @@
       "project_name": "keras",
       "bug_id": "30",
       "detected_files": [
-        "wrappers.py",
-        "neural_style_transfer.py",
-        "neural_doodle.py",
-        "wrappers.py",
-        "callbacks.py",
-        "neural_style_transfer.py",
-        "neural_doodle.py",
-        "optimizers.py",
+        "cntk_backend.py",
         "base_layer.py",
-        "network.py"
+        "network.py",
+        "mnist_tfrecord.py",
+        "wrappers.py",
+        "wrappers.py",
+        "convolutional.py",
+        "convolutional.py",
+        "optimizers.py",
+        "losses.py"
       ],
       "actual_file": "training.py"
     },
@@ -1619,16 +1534,16 @@
       "project_name": "keras",
       "bug_id": "5",
       "detected_files": [
-        "cifar10.py",
-        "cifar100.py",
-        "io_utils.py",
         "image_ocr.py",
-        "reuters.py",
-        "boston_housing.py",
+        "image.py",
         "test_utils.py",
-        "variational_autoencoder.py",
-        "variational_autoencoder_deconv.py",
-        "tensorflow_backend.py"
+        "vis_utils.py",
+        "test_utils.py",
+        "image.py",
+        "tensorboard_v2.py",
+        "initializers.py",
+        "initializers.py",
+        "test_utils.py"
       ],
       "actual_file": "data_utils.py"
     },
@@ -1636,16 +1551,16 @@
       "project_name": "luigi",
       "bug_id": "21",
       "detected_files": [
-        "range.py",
-        "metrics.py",
-        "metrics.py",
-        "task.py",
-        "task.py",
-        "task_history.py",
-        "task_history.py",
-        "range.py",
-        "ecs.py",
-        "task_history.py"
+        "execution_summary_example.py",
+        "execution_summary_example.py",
+        "foo.py",
+        "parameter.py",
+        "foo.py",
+        "execution_summary_example.py",
+        "dynamic_requirements.py",
+        "util.py",
+        "per_task_retry_policy.py",
+        "worker.py"
       ],
       "actual_file": "interface.py"
     },
@@ -1653,18 +1568,35 @@
       "project_name": "luigi",
       "bug_id": "13",
       "detected_files": [
+        "mock.py",
         "local_target.py",
-        "local_target.py",
-        "hadoopcli_clients.py",
-        "target.py",
-        "snakebite_client.py",
-        "azureblob.py",
-        "webhdfs_client.py",
         "local_target.py",
         "mock.py",
+        "local_target.py",
+        "mock.py",
+        "hadoopcli_clients.py",
+        "target.py",
+        "azureblob.py",
         "local_target.py"
       ],
       "actual_file": "file.py"
+    },
+    {
+      "project_name": "luigi",
+      "bug_id": "33",
+      "detected_files": [
+        "parameter.py",
+        "parameter.py",
+        "task_history.py",
+        "range.py",
+        "parameter.py",
+        "execution_summary_example.py",
+        "parameter.py",
+        "dynamic_requirements.py",
+        "db_task_history.py",
+        "parameter.py"
+      ],
+      "actual_file": "task.py"
     },
     {
       "project_name": "luigi",
@@ -1673,13 +1605,13 @@
         "per_task_retry_policy.py",
         "per_task_retry_policy.py",
         "per_task_retry_policy.py",
-        "metrics.py",
-        "metrics.py",
         "db_task_history.py",
-        "per_task_retry_policy.py",
-        "scheduler.py",
+        "metrics.py",
+        "metrics.py",
+        "batch_notifier.py",
         "prometheus_metric.py",
-        "ftp_experiment_outputs.py"
+        "datadog_metric.py",
+        "per_task_retry_policy.py"
       ],
       "actual_file": "worker.py"
     },
@@ -1689,14 +1621,14 @@
       "detected_files": [
         "black.py",
         "black.py",
+        "black.py",
         "gallery.py",
         "black.py",
         "black.py",
+        "parse.py",
         "black.py",
-        "pytree.py",
-        "pygram.py",
         "black.py",
-        "black.py"
+        "tokenize.py"
       ],
       "actual_file": "driver.py"
     },
@@ -1705,15 +1637,15 @@
       "bug_id": "13",
       "detected_files": [
         "gallery.py",
+        "black.py",
+        "black.py",
+        "gallery.py",
+        "black.py",
         "pygram.py",
         "black.py",
         "black.py",
         "black.py",
-        "pgen.py",
-        "black.py",
-        "grammar.py",
-        "gallery.py",
-        "grammar.py"
+        "driver.py"
       ],
       "actual_file": "tokenize.py"
     }
@@ -1723,16 +1655,16 @@
       "project_name": "matplotlib",
       "bug_id": "29",
       "detected_files": [
-        "floating_axes.py",
-        "axes_grid.py",
-        "mpl_axes.py",
-        "parasite_axes.py",
+        "custom_scale.py",
         "_base.py",
-        "geo.py",
         "axis.py",
-        "transforms.py",
+        "_base.py",
+        "_base.py",
+        "axis.py",
         "axes3d.py",
-        "geo.py"
+        "axis.py",
+        "polar.py",
+        "axis.py"
       ],
       "actual_file": "axis.py"
     },
@@ -1740,67 +1672,33 @@
       "project_name": "matplotlib",
       "bug_id": "14",
       "detected_files": [
-        "font_manager.py",
         "text.py",
-        "mathtext.py",
+        "rcsetup.py",
         "pyplot.py",
-        "pyplot.py",
-        "figure.py",
         "backend_cairo.py",
-        "pyplot.py",
-        "_axes.py",
-        "font_manager.py"
+        "font_manager.py",
+        "font_manager.py",
+        "mathtext.py",
+        "__init__.py",
+        "font_manager.py",
+        "mathtext.py"
       ],
       "actual_file": "text.py"
     },
     {
       "project_name": "matplotlib",
-      "bug_id": "12",
-      "detected_files": [
-        "decorators.py",
-        "backend_gtk3agg.py",
-        "decorators.py",
-        "advanced_hillshading.py",
-        "_axes.py",
-        "backend_pgf.py",
-        "collections.py",
-        "decorators.py",
-        "colors.py",
-        "backend_pdf.py"
-      ],
-      "actual_file": "_axes.py"
-    },
-    {
-      "project_name": "matplotlib",
       "bug_id": "6",
       "detected_files": [
-        "_axes.py",
-        "style_sheets_reference.py",
-        "_axes.py",
-        "decorators.py",
+        "backend_webagg.py",
         "image.py",
-        "advanced_hillshading.py",
-        "pyplot.py",
-        "artist.py",
-        "figure.py",
-        "pyplot.py"
-      ],
-      "actual_file": "_axes.py"
-    },
-    {
-      "project_name": "matplotlib",
-      "bug_id": "22",
-      "detected_files": [
-        "_axes.py",
-        "conftest.py",
-        "__init__.py",
-        "rcsetup.py",
-        "pyplot.py",
-        "dates.py",
-        "_axes.py",
-        "__init__.py",
-        "dates.py",
-        "dates.py"
+        "backend_gtk3agg.py",
+        "backend_pgf.py",
+        "decorators.py",
+        "_base.py",
+        "style_sheets_reference.py",
+        "backend_agg.py",
+        "image.py",
+        "_axes.py"
       ],
       "actual_file": "_axes.py"
     },
@@ -1808,16 +1706,16 @@
       "project_name": "matplotlib",
       "bug_id": "3",
       "detected_files": [
-        "markers.py",
-        "lines.py",
         "lines.py",
         "markers.py",
         "lines.py",
-        "lines.py",
+        "markers.py",
         "lines.py",
         "backend_pdf.py",
+        "markers.py",
         "lines.py",
-        "markers.py"
+        "lines.py",
+        "backend_pdf.py"
       ],
       "actual_file": "markers.py"
     },
@@ -1825,16 +1723,16 @@
       "project_name": "matplotlib",
       "bug_id": "10",
       "detected_files": [
-        "simple_anchored_artists.py",
-        "axis.py",
-        "axis_artist.py",
-        "axis.py",
         "axis.py",
         "axis_artist.py",
         "axis_artist.py",
+        "axis.py",
+        "axis_artist.py",
+        "axis.py",
         "backend_wx.py",
-        "ticker.py",
-        "offsetbox.py"
+        "axis.py",
+        "axis_artist.py",
+        "ticker.py"
       ],
       "actual_file": "axis.py"
     },
@@ -1842,16 +1740,16 @@
       "project_name": "matplotlib",
       "bug_id": "7",
       "detected_files": [
-        "advanced_hillshading.py",
         "axes3d.py",
         "colors.py",
         "demo_agg_filter.py",
         "colors.py",
-        "demo_agg_filter.py",
+        "colors.py",
         "patheffects.py",
         "demo_agg_filter.py",
-        "tricontour_smooth_user.py",
-        "demo_agg_filter.py"
+        "colors.py",
+        "backend_cairo.py",
+        "advanced_hillshading.py"
       ],
       "actual_file": "colors.py"
     },
@@ -1861,14 +1759,14 @@
       "detected_files": [
         "_axes.py",
         "pyplot.py",
-        "_axes.py",
         "__init__.py",
-        "demo_curvelinear_grid2.py",
-        "demo_floating_axis.py",
-        "demo_curvelinear_grid.py",
-        "widgets.py",
-        "demo_ribbon_box.py",
-        "custom_figure_class.py"
+        "_axes.py",
+        "lines.py",
+        "patches.py",
+        "patches.py",
+        "_axes.py",
+        "lines.py",
+        "style_sheets_reference.py"
       ],
       "actual_file": "_axes.py"
     },
@@ -1878,14 +1776,14 @@
       "detected_files": [
         "path.py",
         "path.py",
+        "path.py",
         "bezier.py",
-        "patches.py",
-        "backend_cairo.py",
-        "table.py",
-        "collections.py",
-        "collections.py",
         "colorbar.py",
-        "backend_pdf.py"
+        "backend_pdf.py",
+        "backend_cairo.py",
+        "bezier.py",
+        "table.py",
+        "collections.py"
       ],
       "actual_file": "path.py"
     },
@@ -1893,16 +1791,16 @@
       "project_name": "matplotlib",
       "bug_id": "2",
       "detected_files": [
-        "_axes.py",
-        "axes3d.py",
         "style_sheets_reference.py",
         "pyplot.py",
-        "scatter_hist.py",
-        "demo_curvelinear_grid.py",
-        "setup.py",
-        "pick_event_demo.py",
+        "_axes.py",
         "axes3d.py",
-        "memleak.py"
+        "scatter_hist.py",
+        "memleak.py",
+        "pick_event_demo.py",
+        "demo_curvelinear_grid2.py",
+        "demo_curvelinear_grid.py",
+        "custom_scale.py"
       ],
       "actual_file": "_axes.py"
     },
@@ -1911,15 +1809,15 @@
       "bug_id": "8",
       "detected_files": [
         "_base.py",
-        "lines.py",
-        "axes3d.py",
+        "_base.py",
+        "_base.py",
         "colors.py",
-        "memleak.py",
-        "gridspec.py",
-        "pyplot.py",
-        "gridspec.py",
-        "transforms.py",
-        "colors.py"
+        "colors.py",
+        "_base.py",
+        "axes3d.py",
+        "_base.py",
+        "axes3d.py",
+        "_base.py"
       ],
       "actual_file": "_base.py"
     },
@@ -1929,14 +1827,14 @@
       "detected_files": [
         "pyplot.py",
         "polar.py",
-        "pyplot.py",
-        "UnitDblConverter.py",
-        "_base.py",
-        "demo_floating_axes.py",
-        "demo_curvelinear_grid.py",
+        "radar_chart.py",
         "demo_floating_axis.py",
+        "simple_axis_pad.py",
+        "demo_axis_direction.py",
+        "polar.py",
+        "polar.py",
         "_base.py",
-        "pyplot.py"
+        "polar.py"
       ],
       "actual_file": "polar.py"
     },
@@ -1945,14 +1843,14 @@
       "bug_id": "19",
       "detected_files": [
         "pyplot.py",
-        "pyplot.py",
         "polar.py",
-        "UnitDblConverter.py",
-        "pyplot.py",
-        "figure.py",
-        "demo_curvelinear_grid.py",
         "_base.py",
+        "polar.py",
+        "polar.py",
+        "polar.py",
         "demo_floating_axis.py",
+        "radar_chart.py",
+        "polar.py",
         "polar.py"
       ],
       "actual_file": "polar.py"
@@ -1961,18 +1859,35 @@
       "project_name": "matplotlib",
       "bug_id": "23",
       "detected_files": [
-        "widgets.py",
         "_base.py",
         "_base.py",
-        "_secondary_axes.py",
-        "ticker.py",
-        "ticker.py",
         "_base.py",
         "ticker.py",
         "ticker.py",
-        "_base.py"
+        "axes3d.py",
+        "ticker.py",
+        "parasite_axes.py",
+        "_base.py",
+        "ticker.py"
       ],
       "actual_file": "_base.py"
+    },
+    {
+      "project_name": "matplotlib",
+      "bug_id": "25",
+      "detected_files": [
+        "collections.py",
+        "blocking_input.py",
+        "_axes.py",
+        "buttons.py",
+        "pyplot.py",
+        "collections.py",
+        "poly_editor.py",
+        "buttons.py",
+        "collections.py",
+        "blocking_input.py"
+      ],
+      "actual_file": "collections.py"
     },
     {
       "project_name": "matplotlib",
@@ -1981,13 +1896,13 @@
         "_base.py",
         "axis.py",
         "axis.py",
-        "colorbar.py",
+        "axis_artist.py",
+        "axis_artist.py",
         "axis.py",
-        "axis.py",
-        "_secondary_axes.py",
+        "custom_scale.py",
         "ticker.py",
-        "pyplot.py",
-        "axis_artist.py"
+        "axis.py",
+        "colorbar.py"
       ],
       "actual_file": "axis.py"
     },
@@ -1995,16 +1910,16 @@
       "project_name": "matplotlib",
       "bug_id": "30",
       "detected_files": [
+        "conftest.py",
         "colors.py",
+        "__init__.py",
+        "axes3d.py",
         "conftest.py",
         "transforms.py",
+        "image_annotated_heatmap.py",
         "transforms.py",
-        "transforms.py",
-        "decorators.py",
-        "axes3d.py",
-        "transforms.py",
-        "transforms.py",
-        "decorators.py"
+        "basic_units.py",
+        "setup.py"
       ],
       "actual_file": "colors.py"
     },
@@ -2012,35 +1927,18 @@
       "project_name": "matplotlib",
       "bug_id": "5",
       "detected_files": [
-        "demo_curvelinear_grid.py",
-        "scatter_hist.py",
-        "style_sheets_reference.py",
         "_axes.py",
+        "scatter_hist.py",
+        "demo_curvelinear_grid.py",
         "axislines.py",
-        "widgets.py",
+        "pyplot.py",
+        "style_sheets_reference.py",
         "demo_curvelinear_grid2.py",
         "grid_helper_curvelinear.py",
-        "pyplot.py",
-        "axislines.py"
+        "axislines.py",
+        "mpl_axes.py"
       ],
       "actual_file": "_axes.py"
-    },
-    {
-      "project_name": "scrapy",
-      "bug_id": "29",
-      "detected_files": [
-        "request.py",
-        "__init__.py",
-        "__init__.py",
-        "response.py",
-        "parse.py",
-        "__init__.py",
-        "qpsclient.py",
-        "__init__.py",
-        "http10.py",
-        "fetch.py"
-      ],
-      "actual_file": "request.py"
     },
     {
       "project_name": "scrapy",
@@ -2048,31 +1946,48 @@
       "detected_files": [
         "gz.py",
         "decompression.py",
+        "httpcompression.py",
         "decompression.py",
         "decompression.py",
         "gz.py",
-        "httpcompression.py",
-        "decompression.py",
         "gz.py",
-        "httpcompression.py",
-        "httpcache.py"
+        "decompression.py",
+        "decompression.py",
+        "conftest.py"
       ],
       "actual_file": "gz.py"
     },
     {
       "project_name": "scrapy",
+      "bug_id": "12",
+      "detected_files": [
+        "text.py",
+        "telnet.py",
+        "testproc.py",
+        "telnet.py",
+        "unified.py",
+        "exceptions.py",
+        "unified.py",
+        "check.py",
+        "test.py",
+        "__init__.py"
+      ],
+      "actual_file": "unified.py"
+    },
+    {
+      "project_name": "scrapy",
       "bug_id": "28",
       "detected_files": [
+        "dupefilters.py",
+        "scheduler.py",
+        "testsite.py",
         "scheduler.py",
         "spiderloader.py",
+        "conftest.py",
         "__init__.py",
-        "scheduler.py",
-        "__init__.py",
+        "telnet.py",
         "dupefilters.py",
-        "__init__.py",
-        "__init__.py",
-        "testsite.py",
-        "dupefilters.py"
+        "telnet.py"
       ],
       "actual_file": "dupefilters.py"
     },
@@ -2080,16 +1995,16 @@
       "project_name": "scrapy",
       "bug_id": "34",
       "detected_files": [
-        "crawler.py",
-        "crawler.py",
-        "deprecate.py",
-        "shell.py",
-        "bench.py",
-        "responsetypes.py",
+        "testproc.py",
         "item.py",
-        "spider.py",
-        "contextfactory.py",
-        "version.py"
+        "item.py",
+        "startproject.py",
+        "test.py",
+        "edit.py",
+        "crawler.py",
+        "runspider.py",
+        "crawl.py",
+        "bench.py"
       ],
       "actual_file": "item.py"
     },
@@ -2102,11 +2017,11 @@
         "images.py",
         "images.py",
         "images.py",
-        "images.py",
-        "files.py",
-        "files.py",
         "media.py",
-        "test.py"
+        "media.py",
+        "media.py",
+        "images.py",
+        "images.py"
       ],
       "actual_file": "images.py"
     },
@@ -2114,18 +2029,35 @@
       "project_name": "scrapy",
       "bug_id": "26",
       "detected_files": [
-        "check.py",
-        "crawler.py",
-        "testsite.py",
-        "project.py",
-        "testsite.py",
-        "__init__.py",
-        "test.py",
-        "crawler.py",
         "testproc.py",
-        "settings.py"
+        "testsite.py",
+        "crawler.py",
+        "testsite.py",
+        "check.py",
+        "telnet.py",
+        "project.py",
+        "__init__.py",
+        "testsite.py",
+        "__init__.py"
       ],
       "actual_file": "__init__.py"
+    },
+    {
+      "project_name": "scrapy",
+      "bug_id": "40",
+      "detected_files": [
+        "test.py",
+        "startproject.py",
+        "testproc.py",
+        "project.py",
+        "item.py",
+        "feedexport.py",
+        "item.py",
+        "item.py",
+        "exporters.py",
+        "versions.py"
+      ],
+      "actual_file": "exporters.py"
     },
     {
       "project_name": "scrapy",
@@ -2133,14 +2065,14 @@
       "detected_files": [
         "mail.py",
         "mail.py",
+        "mail.py",
+        "testproc.py",
+        "webclient.py",
+        "statsmailer.py",
+        "test.py",
         "statsmailer.py",
         "bench.py",
-        "contextfactory.py",
-        "mail.py",
-        "shell.py",
-        "testproc.py",
-        "mail.py",
-        "log.py"
+        "bench.py"
       ],
       "actual_file": "mail.py"
     },
@@ -2148,16 +2080,16 @@
       "project_name": "scrapy",
       "bug_id": "22",
       "detected_files": [
-        "versions.py",
-        "feedexport.py",
         "exporters.py",
-        "contextfactory.py",
-        "http11.py",
+        "versions.py",
+        "startproject.py",
+        "exporters.py",
         "feedexport.py",
-        "version.py",
-        "crawler.py",
-        "crawl.py",
-        "runspider.py"
+        "test.py",
+        "item.py",
+        "testproc.py",
+        "startproject.py",
+        "item.py"
       ],
       "actual_file": "exporters.py"
     },
@@ -2167,14 +2099,14 @@
       "detected_files": [
         "redirect.py",
         "logformatter.py",
+        "redirect.py",
         "engine.py",
-        "engine.py",
+        "redirect.py",
         "files.py",
-        "datauri.py",
-        "files.py",
-        "__init__.py",
-        "middleware.py",
-        "webclient.py"
+        "httperror.py",
+        "media.py",
+        "scraper.py",
+        "redirect.py"
       ],
       "actual_file": "redirect.py"
     },
@@ -2184,14 +2116,14 @@
       "detected_files": [
         "cookies.py",
         "cookies.py",
+        "cookies.py",
+        "logformatter.py",
         "files.py",
         "cookies.py",
+        "media.py",
+        "httpcache.py",
         "cookies.py",
-        "cookies.py",
-        "engine.py",
-        "files.py",
-        "files.py",
-        "logformatter.py"
+        "cookies.py"
       ],
       "actual_file": "cookies.py"
     },
@@ -2199,33 +2131,50 @@
       "project_name": "scrapy",
       "bug_id": "32",
       "detected_files": [
-        "test.py",
+        "crawler.py",
         "crawl.py",
-        "crawler.py",
-        "media.py",
-        "corestats.py",
-        "crawler.py",
-        "spiderstate.py",
-        "robotstxt.py",
+        "testproc.py",
+        "test.py",
         "scraper.py",
-        "feedexport.py"
+        "list.py",
+        "bench.py",
+        "startproject.py",
+        "crawler.py",
+        "robotstxt.py"
       ],
       "actual_file": "crawler.py"
+    },
+    {
+      "project_name": "scrapy",
+      "bug_id": "10",
+      "detected_files": [
+        "logformatter.py",
+        "redirect.py",
+        "files.py",
+        "files.py",
+        "downloadtimeout.py",
+        "responsetypes.py",
+        "engine.py",
+        "testsite.py",
+        "redirect.py",
+        "downloadtimeout.py"
+      ],
+      "actual_file": "redirect.py"
     },
     {
       "project_name": "scrapy",
       "bug_id": "4",
       "detected_files": [
         "check.py",
+        "exceptions.py",
+        "exceptions.py",
+        "__init__.py",
+        "telnet.py",
         "__init__.py",
         "__init__.py",
-        "test.py",
         "__init__.py",
-        "test.py",
-        "http11.py",
-        "__init__.py",
-        "__init__.py",
-        "check.py"
+        "telnet.py",
+        "__init__.py"
       ],
       "actual_file": "__init__.py"
     },
@@ -2236,13 +2185,13 @@
         "sitemap.py",
         "sitemap.py",
         "sitemap.py",
+        "sitemap.py",
+        "sitemap.py",
         "robotstxt.py",
         "robotstxt.py",
         "robotstxt.py",
         "robotstxt.py",
-        "parse.py",
-        "crawler.py",
-        "crawl.py"
+        "parse.py"
       ],
       "actual_file": "sitemap.py"
     },
@@ -2253,10 +2202,10 @@
         "robotstxt.py",
         "robotstxt.py",
         "robotstxt.py",
-        "engine.py",
-        "files.py",
         "robotstxt.py",
-        "http11.py",
+        "files.py",
+        "logformatter.py",
+        "robotstxt.py",
         "downloadtimeout.py",
         "engine.py",
         "robotstxt.py"
@@ -2268,15 +2217,15 @@
       "bug_id": "13",
       "detected_files": [
         "images.py",
+        "images.py",
         "media.py",
-        "files.py",
-        "test.py",
         "media.py",
         "__init__.py",
         "media.py",
-        "misc.py",
-        "dupefilters.py",
-        "interfaces.py"
+        "files.py",
+        "__init__.py",
+        "media.py",
+        "test.py"
       ],
       "actual_file": "images.py"
     },
@@ -2285,15 +2234,15 @@
       "bug_id": "16",
       "detected_files": [
         "cookies.py",
-        "python.py",
         "url.py",
         "robotstxt.py",
+        "text.py",
+        "headers.py",
         "regex.py",
-        "python.py",
         "reqser.py",
-        "request.py",
-        "ssl.py",
-        "httpcompression.py"
+        "python.py",
+        "__init__.py",
+        "cookies.py"
       ],
       "actual_file": "url.py"
     },
@@ -2302,15 +2251,15 @@
       "bug_id": "35",
       "detected_files": [
         "crawler.py",
+        "list.py",
+        "crawler.py",
+        "runspider.py",
         "test.py",
         "crawler.py",
         "crawler.py",
         "crawl.py",
-        "crawler.py",
-        "crawler.py",
-        "shell.py",
         "scraper.py",
-        "crawler.py"
+        "bench.py"
       ],
       "actual_file": "crawler.py"
     },
@@ -2318,18 +2267,35 @@
       "project_name": "scrapy",
       "bug_id": "8",
       "detected_files": [
-        "item.py",
-        "shell.py",
-        "contextfactory.py",
-        "crawler.py",
-        "feedexport.py",
-        "squeues.py",
-        "responsetypes.py",
-        "crawler.py",
         "testproc.py",
+        "item.py",
+        "item.py",
+        "item.py",
+        "startproject.py",
+        "spiderloader.py",
+        "scraper.py",
+        "http11.py",
+        "shell.py",
         "bench.py"
       ],
       "actual_file": "item.py"
+    },
+    {
+      "project_name": "scrapy",
+      "bug_id": "18",
+      "detected_files": [
+        "http11.py",
+        "webclient.py",
+        "scraper.py",
+        "responsetypes.py",
+        "test.py",
+        "testproc.py",
+        "ajaxcrawl.py",
+        "webclient.py",
+        "view.py",
+        "bench.py"
+      ],
+      "actual_file": "responsetypes.py"
     },
     {
       "project_name": "scrapy",
@@ -2337,33 +2303,16 @@
       "detected_files": [
         "__init__.py",
         "__init__.py",
-        "spider.py",
         "__init__.py",
-        "urllength.py",
+        "bench.py",
         "logformatter.py",
         "__init__.py",
-        "scraper.py",
-        "scraper.py",
-        "crawler.py"
+        "logformatter.py",
+        "shell.py",
+        "urllength.py",
+        "scraper.py"
       ],
       "actual_file": "__init__.py"
-    },
-    {
-      "project_name": "scrapy",
-      "bug_id": "25",
-      "detected_files": [
-        "bench.py",
-        "response.py",
-        "shell.py",
-        "bench.py",
-        "http11.py",
-        "htmlparser.py",
-        "form.py",
-        "crawler.py",
-        "spidermw.py",
-        "log.py"
-      ],
-      "actual_file": "form.py"
     },
     {
       "project_name": "scrapy",
@@ -2372,11 +2321,11 @@
         "shell.py",
         "http11.py",
         "http11.py",
-        "crawler.py",
-        "engine.py",
         "webclient.py",
+        "http11.py",
+        "tls.py",
         "throttle.py",
-        "downloadtimeout.py",
+        "http11.py",
         "http11.py",
         "engine.py"
       ],
@@ -2384,86 +2333,35 @@
     },
     {
       "project_name": "scrapy",
-      "bug_id": "15",
-      "detected_files": [
-        "webclient.py",
-        "crawl.py",
-        "regex.py",
-        "__init__.py",
-        "regex.py",
-        "files.py",
-        "form.py",
-        "feedexport.py",
-        "url.py",
-        "http11.py"
-      ],
-      "actual_file": "url.py"
-    },
-    {
-      "project_name": "scrapy",
-      "bug_id": "36",
-      "detected_files": [
-        "__init__.py",
-        "__init__.py",
-        "http11.py",
-        "test.py",
-        "__init__.py",
-        "__init__.py",
-        "misc.py",
-        "check.py",
-        "scheduler.py",
-        "runspider.py"
-      ],
-      "actual_file": "misc.py"
-    },
-    {
-      "project_name": "scrapy",
       "bug_id": "11",
       "detected_files": [
         "gz.py",
+        "testproc.py",
+        "startproject.py",
         "decompression.py",
+        "decompression.py",
+        "list.py",
+        "httpcache.py",
+        "runspider.py",
         "crawler.py",
-        "decompression.py",
-        "decompression.py",
-        "crawler.py",
-        "crawl.py",
-        "httpcompression.py",
-        "project.py",
-        "http11.py"
+        "decompression.py"
       ],
       "actual_file": "gz.py"
-    },
-    {
-      "project_name": "scrapy",
-      "bug_id": "38",
-      "detected_files": [
-        "images.py",
-        "files.py",
-        "images.py",
-        "images.py",
-        "images.py",
-        "images.py",
-        "files.py",
-        "form.py",
-        "files.py",
-        "datauri.py"
-      ],
-      "actual_file": "form.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "29",
       "detected_files": [
         "interval.py",
-        "category.py",
-        "numeric.py",
-        "missing.py",
-        "interval.py",
-        "interval.py",
-        "timedeltas.py",
         "dtypes.py",
-        "dtype.py",
-        "interval.py"
+        "interval.py",
+        "dtypes.py",
+        "interval.py",
+        "category.py",
+        "interval.py",
+        "interval.py",
+        "interval.py",
+        "_testing.py"
       ],
       "actual_file": "interval.py"
     },
@@ -2473,14 +2371,14 @@
       "detected_files": [
         "array_ops.py",
         "nanops.py",
+        "missing.py",
+        "nanops.py",
+        "nanops.py",
+        "missing.py",
+        "array_ops.py",
         "base.py",
         "nanops.py",
-        "nanops.py",
-        "nanops.py",
-        "nanops.py",
-        "nanops.py",
-        "array_ops.py",
-        "nanops.py"
+        "base.py"
       ],
       "actual_file": "array_ops.py"
     },
@@ -2491,13 +2389,13 @@
         "pivot.py",
         "frame.py",
         "reshape.py",
+        "reshape.py",
         "frame.py",
         "frame.py",
         "frame.py",
         "reshape.py",
-        "series.py",
-        "strings.py",
-        "base.py"
+        "reshape.py",
+        "pivot.py"
       ],
       "actual_file": "pivot.py"
     },
@@ -2506,14 +2404,14 @@
       "bug_id": "27",
       "detected_files": [
         "datetimes.py",
-        "datetimes.py",
         "frame.py",
         "series.py",
-        "stata.py",
-        "base.py",
+        "accessors.py",
+        "datetimes.py",
         "period.py",
         "period.py",
-        "_arrow_utils.py",
+        "period.py",
+        "frame.py",
         "period.py"
       ],
       "actual_file": "datetimes.py"
@@ -2523,15 +2421,15 @@
       "bug_id": "12",
       "detected_files": [
         "frame.py",
+        "conftest.py",
+        "series.py",
+        "stat_ops.py",
+        "frame.py",
         "frame.py",
         "conftest.py",
-        "sas7bdat.py",
-        "string_.py",
-        "sas7bdat.py",
-        "construction.py",
-        "_doctools.py",
-        "frame.py",
-        "_testing.py"
+        "generic.py",
+        "stat_ops.py",
+        "frame.py"
       ],
       "actual_file": "frame.py"
     },
@@ -2539,16 +2437,16 @@
       "project_name": "pandas",
       "bug_id": "28",
       "detected_files": [
-        "strings.py",
-        "strings.py",
-        "base.py",
-        "base.py",
-        "construction.py",
         "categoricals.py",
-        "format.py",
-        "construction.py",
-        "indexing.py",
-        "categorical.py"
+        "category.py",
+        "attrs_caching.py",
+        "base.py",
+        "categorical.py",
+        "strings.py",
+        "categoricals.py",
+        "dtypes.py",
+        "pytables.py",
+        "category.py"
       ],
       "actual_file": "strings.py"
     },
@@ -2556,16 +2454,16 @@
       "project_name": "pandas",
       "bug_id": "141",
       "detected_files": [
-        "base.py",
-        "multi.py",
-        "period.py",
-        "multi.py",
         "range.py",
         "base.py",
-        "index_cached_properties.py",
+        "period.py",
         "interval.py",
+        "range.py",
+        "base.py",
         "interval.py",
-        "indexing.py"
+        "base.py",
+        "multi.py",
+        "managers.py"
       ],
       "actual_file": "range.py"
     },
@@ -2575,14 +2473,14 @@
       "detected_files": [
         "frame.py",
         "melt.py",
-        "reshape.py",
         "melt.py",
-        "hdf.py",
-        "frame_methods.py",
         "reshape.py",
-        "frame.py",
-        "frame.py",
-        "series.py"
+        "reshape.py",
+        "frame_methods.py",
+        "hdf.py",
+        "reshape.py",
+        "frame_methods.py",
+        "stat_ops.py"
       ],
       "actual_file": "melt.py"
     },
@@ -2590,50 +2488,33 @@
       "project_name": "pandas",
       "bug_id": "34",
       "detected_files": [
-        "resample.py",
-        "timeseries.py",
-        "resample.py",
+        "datetimes.py",
         "inference.py",
-        "timeseries.py",
-        "timeseries.py",
         "generic.py",
-        "timeseries.py",
         "frame_methods.py",
-        "csv.py"
+        "timeseries.py",
+        "timeseries.py",
+        "resample.py",
+        "timeseries.py",
+        "timeseries.py",
+        "resample.py"
       ],
       "actual_file": "resample.py"
-    },
-    {
-      "project_name": "pandas",
-      "bug_id": "129",
-      "detected_files": [
-        "datetimes.py",
-        "timedeltas.py",
-        "common.py",
-        "dtypes.py",
-        "datetimes.py",
-        "timedeltas.py",
-        "array_ops.py",
-        "datetimes.py",
-        "datetimelike.py",
-        "arithmetic.py"
-      ],
-      "actual_file": "datetimelike.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "127",
       "detected_files": [
         "generic.py",
+        "groupby.py",
         "frame_methods.py",
+        "core.py",
         "frame_methods.py",
-        "frame_methods.py",
-        "frame_methods.py",
+        "sparse.py",
+        "reindex.py",
+        "plotting.py",
         "arithmetic.py",
-        "frame_methods.py",
-        "frame_methods.py",
-        "frame_methods.py",
-        "core.py"
+        "frame_methods.py"
       ],
       "actual_file": "generic.py"
     },
@@ -2641,16 +2522,33 @@
       "project_name": "pandas",
       "bug_id": "26",
       "detected_files": [
-        "categorical.py",
         "nanops.py",
-        "base.py",
-        "categoricals.py",
-        "base.py",
-        "categorical.py",
-        "categoricals.py",
         "datetimelike.py",
         "masked_reductions.py",
-        "nanops.py"
+        "range.py",
+        "base.py",
+        "datetimelike.py",
+        "masked_reductions.py",
+        "categorical.py",
+        "masked_reductions.py",
+        "categoricals.py"
+      ],
+      "actual_file": "categorical.py"
+    },
+    {
+      "project_name": "pandas",
+      "bug_id": "161",
+      "detected_files": [
+        "attrs_caching.py",
+        "categorical.py",
+        "strings.py",
+        "category.py",
+        "attrs_caching.py",
+        "numpy_.py",
+        "resample.py",
+        "categorical.py",
+        "nanops.py",
+        "array.py"
       ],
       "actual_file": "categorical.py"
     },
@@ -2661,30 +2559,47 @@
         "frame.py",
         "merge.py",
         "merge.py",
+        "join_merge.py",
+        "join_merge.py",
         "merge.py",
-        "frame.py",
         "merge.py",
-        "merge.py",
-        "frame.py",
-        "__init__.py",
-        "base.py"
+        "join_merge.py",
+        "join_merge.py",
+        "merge.py"
       ],
       "actual_file": "merge.py"
+    },
+    {
+      "project_name": "pandas",
+      "bug_id": "85",
+      "detected_files": [
+        "categoricals.py",
+        "multiindex_object.py",
+        "dtypes.py",
+        "groupby.py",
+        "categorical.py",
+        "multiindex_object.py",
+        "categorical.py",
+        "categoricals.py",
+        "multi.py",
+        "category.py"
+      ],
+      "actual_file": "multi.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "147",
       "detected_files": [
         "blocks.py",
-        "dtypes.py",
         "datetimes.py",
+        "datetimes.py",
+        "timedeltas.py",
+        "numpy_.py",
         "cast.py",
-        "period.py",
-        "dtypes.py",
         "timedeltas.py",
         "dtypes.py",
-        "cast.py",
-        "stata.py"
+        "timedeltas.py",
+        "period.py"
       ],
       "actual_file": "dtypes.py"
     },
@@ -2693,15 +2608,15 @@
       "bug_id": "91",
       "detected_files": [
         "cast.py",
-        "dtypes.py",
         "datetimelike.py",
         "timedeltas.py",
-        "period.py",
-        "array.py",
-        "_testing.py",
         "timedeltas.py",
         "timedeltas.py",
-        "dtypes.py"
+        "datetimelike.py",
+        "timedeltas.py",
+        "accessors.py",
+        "accessors.py",
+        "array.py"
       ],
       "actual_file": "timedeltas.py"
     },
@@ -2709,16 +2624,16 @@
       "project_name": "pandas",
       "bug_id": "104",
       "detected_files": [
-        "blocks.py",
-        "groupby.py",
-        "blocks.py",
-        "series.py",
-        "managers.py",
-        "frame.py",
         "resample.py",
-        "frame_methods.py",
+        "blocks.py",
+        "blocks.py",
+        "frame.py",
         "rolling.py",
-        "tile.py"
+        "frame_methods.py",
+        "managers.py",
+        "frame_methods.py",
+        "algorithms.py",
+        "groupby.py"
       ],
       "actual_file": "groupby.py"
     },
@@ -2726,16 +2641,16 @@
       "project_name": "pandas",
       "bug_id": "59",
       "detected_files": [
-        "hdf.py",
         "rolling.py",
-        "plotting.py",
-        "json.py",
-        "stata.py",
-        "frame_ctor.py",
-        "pickle.py",
+        "rolling.py",
+        "rolling.py",
+        "rolling.py",
+        "rolling.py",
+        "rolling.py",
+        "generic.py",
         "frame.py",
-        "frequencies.py",
-        "gil.py"
+        "frame_methods.py",
+        "stat_ops.py"
       ],
       "actual_file": "rolling.py"
     },
@@ -2743,16 +2658,16 @@
       "project_name": "pandas",
       "bug_id": "162",
       "detected_files": [
-        "reshape.py",
-        "frame.py",
-        "pivot.py",
-        "reshape.py",
         "frame.py",
         "reshape.py",
         "pivot.py",
         "reshape.py",
+        "reshape.py",
+        "frame.py",
         "pivot.py",
-        "groupby.py"
+        "melt.py",
+        "pivot.py",
+        "pivot.py"
       ],
       "actual_file": "pivot.py"
     },
@@ -2760,16 +2675,16 @@
       "project_name": "pandas",
       "bug_id": "166",
       "detected_files": [
+        "frame_methods.py",
         "base.py",
-        "algorithms.py",
-        "__init__.py",
-        "base.py",
-        "base.py",
-        "datetimelike.py",
-        "generic.py",
         "frame.py",
-        "categorical.py",
-        "frame.py"
+        "__init__.py",
+        "algorithms.py",
+        "frame.py",
+        "range.py",
+        "base.py",
+        "frame_methods.py",
+        "__init__.py"
       ],
       "actual_file": "frame.py"
     },
@@ -2780,30 +2695,47 @@
         "groupby.py",
         "generic.py",
         "generic.py",
+        "base.py",
         "array.py",
-        "base.py",
-        "dtype.py",
-        "algorithms.py",
-        "base.py",
-        "missing.py",
-        "numpy_.py"
+        "resample.py",
+        "groupby.py",
+        "frame_methods.py",
+        "frame.py",
+        "frame.py"
       ],
       "actual_file": "generic.py"
+    },
+    {
+      "project_name": "pandas",
+      "bug_id": "98",
+      "detected_files": [
+        "dtypes.py",
+        "accessors.py",
+        "period.py",
+        "datetimelike.py",
+        "datetimes.py",
+        "period.py",
+        "base.py",
+        "period.py",
+        "period.py",
+        "period.py"
+      ],
+      "actual_file": "base.py"
     },
     {
       "project_name": "pandas",
       "bug_id": "3",
       "detected_files": [
         "base.py",
-        "datetimes.py",
-        "period.py",
+        "categorical.py",
+        "base.py",
+        "conftest.py",
+        "indexing.py",
+        "_testing.py",
+        "conftest.py",
         "series.py",
-        "datetimes.py",
-        "period.py",
-        "base.py",
-        "base.py",
-        "offsets.py",
-        "indexing.py"
+        "generic.py",
+        "pytables.py"
       ],
       "actual_file": "series.py"
     },
@@ -2813,12 +2745,12 @@
       "detected_files": [
         "frame.py",
         "timeseries.py",
-        "stata.py",
-        "series.py",
-        "frame.py",
+        "merge.py",
+        "merge.py",
+        "timeseries.py",
         "join_merge.py",
-        "join_merge.py",
-        "join_merge.py",
+        "merge.py",
+        "merge.py",
         "merge.py",
         "join_merge.py"
       ],
@@ -2826,69 +2758,86 @@
     },
     {
       "project_name": "pandas",
-      "bug_id": "31",
-      "detected_files": [
-        "blocks.py",
-        "groupby.py",
-        "resample.py",
-        "algorithms.py",
-        "managers.py",
-        "frame.py",
-        "series.py",
-        "blocks.py",
-        "nanops.py",
-        "nanops.py"
-      ],
-      "actual_file": "groupby.py"
-    },
-    {
-      "project_name": "pandas",
       "bug_id": "95",
       "detected_files": [
-        "pickle.py",
-        "stata.py",
-        "hdf.py",
+        "algorithms.py",
         "groupby.py",
+        "period.py",
+        "dtypes.py",
         "plotting.py",
         "interval.py",
-        "datetimelike.py",
         "period.py",
         "datetimelike.py",
+        "period.py",
         "stata.py"
       ],
       "actual_file": "period.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "32",
+      "detected_files": [
+        "sas.py",
+        "sas.py",
+        "csv.py",
+        "stata.py",
+        "csv.py",
+        "csv.py",
+        "sas_xport.py",
+        "csv.py",
+        "sasreader.py",
+        "hdf.py"
+      ],
+      "actual_file": "sas_xport.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "148",
       "detected_files": [
-        "frame.py",
         "apply.py",
+        "frame.py",
+        "generic.py",
+        "conftest.py",
+        "reshape.py",
+        "conftest.py",
+        "series.py",
         "series.py",
         "rolling.py",
-        "rolling.py",
-        "generic.py",
-        "rolling.py",
-        "frame.py",
-        "groupby.py",
-        "conftest.py"
+        "frame_methods.py"
       ],
       "actual_file": "apply.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "10",
+      "detected_files": [
+        "series.py",
+        "frame.py",
+        "attrs_caching.py",
+        "base.py",
+        "reshape.py",
+        "conftest.py",
+        "series.py",
+        "pytables.py",
+        "conftest.py",
+        "blocks.py"
+      ],
+      "actual_file": "blocks.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "4",
       "detected_files": [
-        "base.py",
         "merge.py",
+        "merge.py",
+        "base.py",
         "merge.py",
         "multi.py",
-        "base.py",
         "merge.py",
+        "indexing.py",
         "merge.py",
-        "merge.py",
-        "base.py",
-        "index_cached_properties.py"
+        "api.py",
+        "indexing.py"
       ],
       "actual_file": "base.py"
     },
@@ -2897,15 +2846,15 @@
       "bug_id": "42",
       "detected_files": [
         "_testing.py",
-        "interval.py",
-        "datetimes.py",
-        "timedeltas.py",
-        "common.py",
-        "timedeltas.py",
-        "_testing.py",
+        "series.py",
+        "numpy_.py",
+        "generic.py",
+        "generic.py",
+        "cast.py",
+        "generic.py",
+        "expressions.py",
         "dtypes.py",
-        "numeric.py",
-        "generic.py"
+        "cast.py"
       ],
       "actual_file": "_testing.py"
     },
@@ -2913,6 +2862,7 @@
       "project_name": "pandas",
       "bug_id": "20",
       "detected_files": [
+        "arithmetic.py",
         "offsets.py",
         "offsets.py",
         "offsets.py",
@@ -2921,8 +2871,7 @@
         "offsets.py",
         "arithmetic.py",
         "offsets.py",
-        "offsets.py",
-        "frame_ctor.py"
+        "period.py"
       ],
       "actual_file": "offsets.py"
     },
@@ -2930,15 +2879,15 @@
       "project_name": "pandas",
       "bug_id": "37",
       "detected_files": [
-        "numeric.py",
-        "missing.py",
-        "common.py",
         "string_.py",
-        "timedeltas.py",
-        "boolean.py",
+        "numeric.py",
+        "base.py",
         "cast.py",
-        "conftest.py",
-        "datetimelike.py",
+        "missing.py",
+        "string_.py",
+        "base.py",
+        "interval.py",
+        "boolean.py",
         "integer.py"
       ],
       "actual_file": "string_.py"
@@ -2948,15 +2897,15 @@
       "bug_id": "109",
       "detected_files": [
         "groupby.py",
+        "categoricals.py",
+        "categorical.py",
+        "groupby.py",
         "categorical.py",
         "categorical.py",
-        "categoricals.py",
-        "categoricals.py",
         "multiindex_object.py",
         "categorical.py",
         "categorical.py",
-        "categorical.py",
-        "multiindex_object.py"
+        "categoricals.py"
       ],
       "actual_file": "categorical.py"
     },
@@ -2964,16 +2913,16 @@
       "project_name": "pandas",
       "bug_id": "99",
       "detected_files": [
-        "array.py",
-        "_json.py",
-        "frame_methods.py",
-        "converter.py",
-        "array.py",
-        "blocks.py",
-        "datetimes.py",
         "cast.py",
+        "cast.py",
+        "frame_methods.py",
+        "datetimes.py",
+        "datetimes.py",
+        "accessors.py",
+        "dtypes.py",
+        "timedeltas.py",
         "common.py",
-        "series.py"
+        "dtypes.py"
       ],
       "actual_file": "datetimes.py"
     },
@@ -2981,50 +2930,33 @@
       "project_name": "pandas",
       "bug_id": "169",
       "detected_files": [
-        "series.py",
+        "frame_methods.py",
+        "resample.py",
         "frame.py",
         "frame_methods.py",
-        "generic.py",
-        "managers.py",
         "blocks.py",
-        "groupby.py",
-        "conftest.py",
+        "generic.py",
         "reshape.py",
-        "stata.py"
+        "rolling.py",
+        "conftest.py",
+        "blocks.py"
       ],
       "actual_file": "frame.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "86",
-      "detected_files": [
-        "pivot.py",
-        "pivot.py",
-        "apply.py",
-        "apply.py",
-        "apply.py",
-        "frame.py",
-        "apply.py",
-        "parsers.py",
-        "reshape.py",
-        "apply.py"
-      ],
-      "actual_file": "pivot.py"
-    },
-    {
-      "project_name": "pandas",
       "bug_id": "21",
       "detected_files": [
-        "_testing.py",
-        "datetimelike.py",
+        "conftest.py",
+        "base.py",
+        "conftest.py",
+        "base.py",
         "frame.py",
+        "base.py",
         "conftest.py",
         "series.py",
-        "conftest.py",
-        "generic.py",
-        "__init__.py",
-        "numpy_.py",
-        "masked.py"
+        "indexing.py",
+        "construction.py"
       ],
       "actual_file": "series.py"
     },
@@ -3032,16 +2964,16 @@
       "project_name": "pandas",
       "bug_id": "1",
       "detected_files": [
+        "categorical.py",
+        "dtypes.py",
         "multi.py",
+        "cast.py",
+        "common.py",
+        "category.py",
+        "categorical.py",
         "dtypes.py",
         "common.py",
-        "base.py",
-        "base.py",
-        "base.py",
-        "category.py",
-        "common.py",
-        "base.py",
-        "categorical.py"
+        "missing.py"
       ],
       "actual_file": "common.py"
     },
@@ -3049,16 +2981,16 @@
       "project_name": "pandas",
       "bug_id": "158",
       "detected_files": [
-        "ctors.py",
-        "indexing.py",
+        "series.py",
+        "managers.py",
+        "base.py",
         "generic.py",
-        "__init__.py",
         "indexing.py",
         "conftest.py",
-        "accessor.py",
-        "frame_methods.py",
+        "multi.py",
         "series.py",
-        "conf.py"
+        "frame_methods.py",
+        "frame_methods.py"
       ],
       "actual_file": "series.py"
     },
@@ -3067,15 +2999,15 @@
       "bug_id": "16",
       "detected_files": [
         "period.py",
-        "datetimelike.py",
-        "series.py",
         "datetimes.py",
-        "period.py",
-        "period.py",
+        "series.py",
         "base.py",
-        "period.py",
-        "period.py",
-        "frame.py"
+        "datetimelike.py",
+        "frame.py",
+        "accessors.py",
+        "dtypes.py",
+        "datetimes.py",
+        "period.py"
       ],
       "actual_file": "datetimelike.py"
     },
@@ -3088,11 +3020,11 @@
         "reshape.py",
         "pivot.py",
         "frame.py",
+        "reshape.py",
+        "reshape.py",
         "pivot.py",
         "pivot.py",
-        "pivot.py",
-        "pivot.py",
-        "reshape.py"
+        "pivot.py"
       ],
       "actual_file": "pivot.py"
     },
@@ -3100,15 +3032,15 @@
       "project_name": "pandas",
       "bug_id": "126",
       "detected_files": [
-        "series.py",
         "frame.py",
         "pytables.py",
         "frame.py",
+        "series.py",
         "base.py",
-        "base.py",
+        "frame.py",
+        "join_merge.py",
         "conftest.py",
-        "_doctools.py",
-        "format.py",
+        "frame.py",
         "concat.py"
       ],
       "actual_file": "frame.py"
@@ -3117,16 +3049,16 @@
       "project_name": "pandas",
       "bug_id": "114",
       "detected_files": [
-        "indexing.py",
-        "indexing.py",
-        "multi.py",
-        "base.py",
-        "period.py",
         "pytables.py",
-        "algorithms.py",
         "base.py",
-        "frame.py",
-        "pickle.py"
+        "base.py",
+        "base.py",
+        "managers.py",
+        "indexing.py",
+        "numeric.py",
+        "indexers.py",
+        "datetimelike.py",
+        "blocks.py"
       ],
       "actual_file": "base.py"
     },
@@ -3135,15 +3067,15 @@
       "bug_id": "2",
       "detected_files": [
         "series.py",
-        "series.py",
         "indexing.py",
-        "array.py",
         "indexing.py",
-        "attrs_caching.py",
+        "apply.py",
         "multi.py",
-        "pytables.py",
+        "indexing.py",
+        "period.py",
         "interval.py",
-        "indexing.py"
+        "interval.py",
+        "base.py"
       ],
       "actual_file": "indexing.py"
     },
@@ -3152,15 +3084,15 @@
       "bug_id": "63",
       "detected_files": [
         "base.py",
-        "apply.py",
-        "timedeltas.py",
-        "indexing.py",
-        "construction.py",
-        "pickle_compat.py",
-        "blocks.py",
-        "hdf.py",
+        "conftest.py",
+        "multi.py",
+        "pytables.py",
+        "series_methods.py",
+        "conftest.py",
+        "accessor.py",
         "base.py",
-        "datetimes.py"
+        "indexing.py",
+        "conftest.py"
       ],
       "actual_file": "indexing.py"
     },
@@ -3168,33 +3100,50 @@
       "project_name": "pandas",
       "bug_id": "35",
       "detected_files": [
+        "series.py",
+        "frame.py",
+        "converter.py",
         "period.py",
         "datetimes.py",
-        "multi.py",
-        "base.py",
-        "period.py",
+        "datetimes.py",
         "pytables.py",
-        "resample.py",
-        "multiindex_object.py",
         "period.py",
-        "period.py"
+        "accessors.py",
+        "base.py"
       ],
       "actual_file": "period.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "93",
+      "detected_files": [
+        "dtypes.py",
+        "dtypes.py",
+        "datetimes.py",
+        "period.py",
+        "datetimelike.py",
+        "accessors.py",
+        "datetimes.py",
+        "period.py",
+        "stata.py",
+        "base.py"
+      ],
+      "actual_file": "datetimelike.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "168",
       "detected_files": [
-        "grouper.py",
-        "gil.py",
-        "series.py",
-        "hist.py",
-        "frame.py",
         "groupby.py",
-        "hist.py",
-        "boxplot.py",
+        "grouper.py",
+        "series.py",
+        "groupby.py",
+        "gil.py",
+        "frame.py",
         "ops.py",
-        "grouper.py"
+        "hist.py",
+        "generic.py",
+        "groupby.py"
       ],
       "actual_file": "grouper.py"
     },
@@ -3202,16 +3151,16 @@
       "project_name": "pandas",
       "bug_id": "74",
       "detected_files": [
-        "frequencies.py",
         "cast.py",
         "rolling.py",
-        "dtypes.py",
+        "timedeltas.py",
         "timedeltas.py",
         "frequencies.py",
-        "period.py",
-        "index_cached_properties.py",
+        "dtypes.py",
         "timeseries.py",
-        "period.py"
+        "timedelta.py",
+        "dtypes.py",
+        "timedeltas.py"
       ],
       "actual_file": "timedeltas.py"
     },
@@ -3223,29 +3172,46 @@
         "frame.py",
         "base.py",
         "series.py",
-        "apply.py",
-        "pytables.py",
+        "series.py",
         "multi.py",
-        "construction.py",
-        "base.py",
+        "pytables.py",
+        "frame.py",
+        "apply.py",
         "frame.py"
       ],
       "actual_file": "series.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "69",
+      "detected_files": [
+        "timeseries.py",
+        "datetimes.py",
+        "conftest.py",
+        "stata.py",
+        "conftest.py",
+        "period.py",
+        "_testing.py",
+        "indexing.py",
+        "period.py",
+        "eval.py"
+      ],
+      "actual_file": "indexing.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "19",
       "detected_files": [
-        "sorting.py",
         "multi.py",
-        "merge.py",
-        "pytables.py",
-        "generic.py",
-        "sorting.py",
+        "conftest.py",
+        "multi.py",
+        "indexing.py",
+        "interval.py",
         "indexing.py",
         "multi.py",
-        "frame.py",
-        "pytables.py"
+        "indexing.py",
+        "merge.py",
+        "array.py"
       ],
       "actual_file": "indexing.py"
     },
@@ -3255,14 +3221,14 @@
       "detected_files": [
         "generic.py",
         "generic.py",
-        "generic.py",
         "frame.py",
         "series.py",
+        "series.py",
         "generic.py",
-        "series_methods.py",
+        "base.py",
+        "ops.py",
         "generic.py",
-        "series_methods.py",
-        "ops.py"
+        "groupby.py"
       ],
       "actual_file": "generic.py"
     },
@@ -3271,15 +3237,15 @@
       "bug_id": "89",
       "detected_files": [
         "reshape.py",
-        "reshape.py",
         "frame.py",
-        "sorting.py",
+        "reshape.py",
+        "series.py",
         "indexing.py",
         "frame.py",
-        "series.py",
         "reshape.py",
-        "base.py",
-        "conftest.py"
+        "frame.py",
+        "reshape.py",
+        "indexing.py"
       ],
       "actual_file": "reshape.py"
     },
@@ -3288,15 +3254,15 @@
       "bug_id": "25",
       "detected_files": [
         "datetimes.py",
-        "offsets.py",
-        "timestamp.py",
         "accessors.py",
         "offsets.py",
+        "offsets.py",
         "timestamp.py",
-        "timestamp.py",
+        "offsets.py",
         "timeseries.py",
         "timeseries.py",
-        "holiday.py"
+        "cast.py",
+        "timeseries.py"
       ],
       "actual_file": "datetimes.py"
     },
@@ -3307,12 +3273,12 @@
         "frame.py",
         "frame.py",
         "pivot.py",
+        "reshape.py",
+        "reshape.py",
         "pivot.py",
         "reshape.py",
         "reshape.py",
         "reshape.py",
-        "parsers.py",
-        "apply.py",
         "reshape.py"
       ],
       "actual_file": "pivot.py"
@@ -3323,14 +3289,14 @@
       "detected_files": [
         "base.py",
         "period.py",
-        "stata.py",
-        "plotting.py",
+        "period.py",
         "offsets.py",
-        "indexing.py",
-        "attrs_caching.py",
-        "categoricals.py",
-        "frame_methods.py",
-        "base.py"
+        "accessors.py",
+        "period.py",
+        "plotting.py",
+        "series_methods.py",
+        "period.py",
+        "offsets.py"
       ],
       "actual_file": "period.py"
     },
@@ -3340,13 +3306,13 @@
       "detected_files": [
         "core.py",
         "core.py",
-        "frame_methods.py",
+        "_core.py",
         "core.py",
         "core.py",
+        "style.py",
+        "_core.py",
         "core.py",
         "core.py",
-        "core.py",
-        "plotting.py",
         "core.py"
       ],
       "actual_file": "core.py"
@@ -3356,15 +3322,15 @@
       "bug_id": "60",
       "detected_files": [
         "groupby.py",
-        "series.py",
-        "grouper.py",
-        "frame.py",
-        "groupby.py",
-        "groupby.py",
         "rolling.py",
+        "resample.py",
+        "series.py",
+        "rolling.py",
+        "frame.py",
+        "grouper.py",
         "groupby.py",
-        "gil.py",
-        "ops.py"
+        "groupby.py",
+        "rolling.py"
       ],
       "actual_file": "rolling.py"
     },
@@ -3373,14 +3339,14 @@
       "bug_id": "150",
       "detected_files": [
         "_testing.py",
+        "_testing.py",
+        "_testing.py",
         "missing.py",
         "_testing.py",
         "_testing.py",
         "_testing.py",
         "_testing.py",
-        "array_ops.py",
         "managers.py",
-        "_testing.py",
         "_testing.py"
       ],
       "actual_file": "missing.py"
@@ -3389,16 +3355,16 @@
       "project_name": "pandas",
       "bug_id": "140",
       "detected_files": [
-        "groupby.py",
-        "offsets.py",
-        "stata.py",
         "generic.py",
-        "date_converters.py",
-        "offsets.py",
-        "common.py",
-        "index_object.py",
-        "timestamp.py",
-        "datetimes.py"
+        "datetimes.py",
+        "groupby.py",
+        "generic.py",
+        "groupby.py",
+        "groupby.py",
+        "cast.py",
+        "frame_ctor.py",
+        "groupby.py",
+        "groupby.py"
       ],
       "actual_file": "generic.py"
     },
@@ -3409,12 +3375,12 @@
         "json.py",
         "_json.py",
         "_json.py",
-        "_table_schema.py",
         "_json.py",
-        "_table_schema.py",
-        "json.py",
+        "_json.py",
+        "groupby.py",
         "conftest.py",
-        "json.py",
+        "conftest.py",
+        "_table_schema.py",
         "json.py"
       ],
       "actual_file": "_json.py"
@@ -3423,16 +3389,16 @@
       "project_name": "pandas",
       "bug_id": "128",
       "detected_files": [
-        "_json.py",
+        "pytables.py",
+        "common.py",
         "printing.py",
-        "generic.py",
-        "pickle_compat.py",
+        "sql.py",
+        "display.py",
+        "stata.py",
+        "_testing.py",
+        "pytables.py",
         "_json.py",
-        "parsers.py",
-        "html.py",
-        "json.py",
-        "conftest.py",
-        "pytables.py"
+        "strings.py"
       ],
       "actual_file": "_json.py"
     },
@@ -3441,49 +3407,32 @@
       "bug_id": "64",
       "detected_files": [
         "excel.py",
-        "_base.py",
-        "_xlsxwriter.py",
-        "_util.py",
-        "style.py",
-        "_base.py",
-        "_xlwt.py",
-        "excel.py",
         "_openpyxl.py",
-        "generic.py"
+        "_base.py",
+        "excel.py",
+        "excel.py",
+        "excel.py",
+        "_base.py",
+        "style.py",
+        "_xlsxwriter.py",
+        "_base.py"
       ],
       "actual_file": "excel.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "81",
-      "detected_files": [
-        "integer.py",
-        "boolean.py",
-        "cast.py",
-        "string_.py",
-        "timedeltas.py",
-        "datetimelike.py",
-        "multi.py",
-        "numeric.py",
-        "base.py",
-        "dtype.py"
-      ],
-      "actual_file": "integer.py"
-    },
-    {
-      "project_name": "pandas",
       "bug_id": "50",
       "detected_files": [
+        "categorical.py",
+        "generic.py",
         "base.py",
+        "category.py",
         "categorical.py",
-        "algorithms.py",
-        "stata.py",
-        "categoricals.py",
-        "multiindex_object.py",
         "_testing.py",
-        "attrs_caching.py",
         "categorical.py",
-        "strings.py"
+        "dtypes.py",
+        "dtypes.py",
+        "algorithms.py"
       ],
       "actual_file": "categorical.py"
     },
@@ -3492,15 +3441,15 @@
       "bug_id": "151",
       "detected_files": [
         "cast.py",
-        "dtype.py",
-        "datetimelike.py",
         "numpy_.py",
-        "common.py",
-        "multi.py",
-        "stata.py",
+        "integer.py",
         "cast.py",
+        "multi.py",
+        "dtypes.py",
         "common.py",
-        "categorical.py"
+        "cast.py",
+        "cast.py",
+        "range.py"
       ],
       "actual_file": "numpy_.py"
     },
@@ -3509,15 +3458,15 @@
       "bug_id": "30",
       "detected_files": [
         "_json.py",
-        "_table_schema.py",
+        "json.py",
+        "_json.py",
+        "json.py",
+        "_json.py",
         "_json.py",
         "_table_schema.py",
+        "apply.py",
         "_json.py",
-        "_doctools.py",
-        "json.py",
-        "json.py",
-        "_table_schema.py",
-        "pytables.py"
+        "_json.py"
       ],
       "actual_file": "_json.py"
     },
@@ -3525,16 +3474,16 @@
       "project_name": "pandas",
       "bug_id": "164",
       "detected_files": [
-        "timeseries.py",
-        "timeseries.py",
         "stata.py",
         "timeseries.py",
-        "timestamp.py",
-        "datetimes.py",
+        "accessors.py",
         "cast.py",
-        "indexing.py",
-        "ctors.py",
-        "cast.py"
+        "datetimes.py",
+        "timeseries.py",
+        "timeseries.py",
+        "datetimes.py",
+        "timeseries.py",
+        "eval.py"
       ],
       "actual_file": "datetimes.py"
     },
@@ -3542,32 +3491,66 @@
       "project_name": "pandas",
       "bug_id": "135",
       "detected_files": [
+        "generic.py",
         "series.py",
+        "ops.py",
         "frame.py",
-        "ops.py",
-        "ops.py",
         "generic.py",
-        "gil.py",
-        "groupby.py",
         "groupby.py",
         "generic.py",
-        "reshape.py"
+        "generic.py",
+        "groupby.py",
+        "groupby.py"
       ],
       "actual_file": "ops.py"
     },
     {
       "project_name": "pandas",
+      "bug_id": "101",
+      "detected_files": [
+        "cast.py",
+        "multi.py",
+        "datetimes.py",
+        "period.py",
+        "blocks.py",
+        "timedeltas.py",
+        "datetimelike.py",
+        "datetimelike.py",
+        "pytables.py",
+        "timedeltas.py"
+      ],
+      "actual_file": "cast.py"
+    },
+    {
+      "project_name": "pandas",
+      "bug_id": "159",
+      "detected_files": [
+        "nanops.py",
+        "generic.py",
+        "missing.py",
+        "numpy_.py",
+        "blocks.py",
+        "array.py",
+        "missing.py",
+        "frame.py",
+        "nanops.py",
+        "missing.py"
+      ],
+      "actual_file": "frame.py"
+    },
+    {
+      "project_name": "pandas",
       "bug_id": "155",
       "detected_files": [
-        "generic.py",
         "rolling.py",
         "generic.py",
+        "generic.py",
         "rolling.py",
         "rolling.py",
         "rolling.py",
-        "gil.py",
         "groupby.py",
-        "function.py",
+        "offsets.py",
+        "stata.py",
         "offsets.py"
       ],
       "actual_file": "rolling.py"
@@ -3576,16 +3559,16 @@
       "project_name": "pandas",
       "bug_id": "107",
       "detected_files": [
-        "frame.py",
+        "timestamp.py",
+        "timestamp.py",
+        "timestamp.py",
         "categoricals.py",
-        "period.py",
         "timestamp.py",
-        "series.py",
+        "concat.py",
+        "frame.py",
+        "accessors.py",
         "timestamp.py",
-        "parsers.py",
-        "tile.py",
-        "timestamp.py",
-        "datetimelike.py"
+        "parsers.py"
       ],
       "actual_file": "frame.py"
     },
@@ -3595,48 +3578,31 @@
       "detected_files": [
         "strings.py",
         "strings.py",
-        "strings.py",
-        "format.py",
-        "timedeltas.py",
-        "cast.py",
+        "pytables.py",
+        "missing.py",
         "categorical.py",
         "string_.py",
-        "frame_methods.py",
-        "reshape.py"
+        "numpy_.py",
+        "numpy_.py",
+        "timedeltas.py",
+        "numpy_.py"
       ],
       "actual_file": "strings.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "133",
-      "detected_files": [
-        "generic.py",
-        "missing.py",
-        "join_merge.py",
-        "frame.py",
-        "core.py",
-        "arithmetic.py",
-        "conftest.py",
-        "__init__.py",
-        "apply.py",
-        "__init__.py"
-      ],
-      "actual_file": "generic.py"
-    },
-    {
-      "project_name": "pandas",
       "bug_id": "58",
       "detected_files": [
-        "categorical.py",
-        "dtypes.py",
-        "category.py",
         "category.py",
         "categorical.py",
-        "multiindex_object.py",
+        "categorical.py",
         "categoricals.py",
-        "base.py",
+        "dtypes.py",
         "categorical.py",
-        "categoricals.py"
+        "categorical.py",
+        "categoricals.py",
+        "categorical.py",
+        "multiindex_object.py"
       ],
       "actual_file": "categorical.py"
     },
@@ -3644,50 +3610,50 @@
       "project_name": "pandas",
       "bug_id": "71",
       "detected_files": [
-        "tile.py",
-        "tile.py",
-        "__init__.py",
-        "conftest.py",
         "reshape.py",
         "tile.py",
+        "tile.py",
+        "reshape.py",
+        "blocks.py",
+        "multi.py",
+        "pytables.py",
         "resample.py",
-        "indexing.py",
-        "conftest.py",
-        "base.py"
+        "reshape.py",
+        "reshape.py"
       ],
       "actual_file": "tile.py"
     },
     {
       "project_name": "pandas",
-      "bug_id": "38",
+      "bug_id": "43",
       "detected_files": [
-        "sql.py",
-        "multi.py",
-        "reshape.py",
-        "reshape.py",
-        "pytables.py",
-        "base.py",
-        "multi.py",
-        "multi.py",
-        "reindex.py",
-        "pytables.py"
+        "__init__.py",
+        "missing.py",
+        "_testing.py",
+        "_testing.py",
+        "frame_methods.py",
+        "array_ops.py",
+        "categoricals.py",
+        "mask_ops.py",
+        "stata.py",
+        "__init__.py"
       ],
-      "actual_file": "reshape.py"
+      "actual_file": "__init__.py"
     },
     {
       "project_name": "thefuck",
       "bug_id": "29",
       "detected_files": [
         "conf.py",
+        "types.py",
+        "test.py.py",
+        "conf.py",
+        "conf.py",
+        "fix_command.py",
+        "utils.py",
         "conf.py",
         "utils.py",
-        "utils.py",
-        "logs.py",
-        "conf.py",
-        "conf.py",
-        "conf.py",
-        "conf.py",
-        "types.py"
+        "conf.py"
       ],
       "actual_file": "types.py"
     },
@@ -3698,13 +3664,13 @@
         "fish.py",
         "fish.py",
         "fish.py",
-        "bash.py",
-        "zsh.py",
         "fish.py",
-        "fish.py",
-        "zsh.py",
+        "generic.py",
+        "logs.py",
+        "tcsh.py",
+        "generic.py",
         "bash.py",
-        "generic.py"
+        "zsh.py"
       ],
       "actual_file": "fish.py"
     },
@@ -3712,35 +3678,18 @@
       "project_name": "thefuck",
       "bug_id": "27",
       "detected_files": [
-        "test.py.py",
+        "unix.py",
         "open.py",
         "pyenv_no_such_command.py",
+        "win32.py",
         "git_two_dashes.py",
-        "python_execute.py",
-        "systemctl.py",
-        "python_command.py",
         "git_remote_seturl_add.py",
-        "brew_link.py",
-        "unix.py"
+        "python_execute.py",
+        "quotation_marks.py",
+        "git_branch_delete_checked_out.py",
+        "systemctl.py"
       ],
       "actual_file": "open.py"
-    },
-    {
-      "project_name": "thefuck",
-      "bug_id": "28",
-      "detected_files": [
-        "test.py.py",
-        "utils.py",
-        "fix_command.py",
-        "fix_file.py",
-        "utils.py",
-        "aws_cli.py",
-        "az_cli.py",
-        "git_push.py",
-        "git_remote_seturl_add.py",
-        "git_pull_clone.py"
-      ],
-      "actual_file": "fix_file.py"
     },
     {
       "project_name": "thefuck",
@@ -3754,8 +3703,8 @@
         "git_pull_uncommitted_changes.py",
         "git_merge.py",
         "git_checkout.py",
-        "git_not_command.py",
-        "git_commit_amend.py"
+        "git_push.py",
+        "git_not_command.py"
       ],
       "actual_file": "git_branch_exists.py"
     },
@@ -3764,49 +3713,49 @@
       "bug_id": "26",
       "detected_files": [
         "vagrant_up.py",
-        "test.py.py",
         "vagrant_up.py",
-        "git_pull.py",
-        "python_command.py",
-        "remove_trailing_cedilla.py",
-        "python_execute.py",
-        "tsuru_login.py",
         "git_branch_delete_checked_out.py",
-        "workon_doesnt_exists.py"
+        "tsuru_login.py",
+        "django_south_ghost.py",
+        "docker_login.py",
+        "git_pull.py",
+        "pyenv_no_such_command.py",
+        "terraform_init.py",
+        "django_south_merge.py"
       ],
       "actual_file": "vagrant_up.py"
     },
     {
       "project_name": "thefuck",
-      "bug_id": "22",
+      "bug_id": "9",
       "detected_files": [
-        "test.py.py",
-        "powershell.py",
-        "fix_command.py",
-        "corrector.py",
-        "generic.py",
-        "fish.py",
-        "types.py",
-        "types.py",
-        "ui.py",
-        "ui.py"
+        "git_push.py",
+        "git_branch_exists.py",
+        "git_checkout.py",
+        "git_push_different_branch_names.py",
+        "git_push_different_branch_names.py",
+        "git_push.py",
+        "git_commit_reset.py",
+        "git_checkout.py",
+        "git_rebase_no_changes.py",
+        "git_commit_amend.py"
       ],
-      "actual_file": "types.py"
+      "actual_file": "git_push.py"
     },
     {
       "project_name": "thefuck",
       "bug_id": "3",
       "detected_files": [
         "fish.py",
-        "logs.py",
         "fish.py",
-        "fish.py",
-        "fish.py",
-        "fish.py",
-        "types.py",
-        "logs.py",
         "generic.py",
-        "logs.py"
+        "logs.py",
+        "fish.py",
+        "tcsh.py",
+        "types.py",
+        "ui.py",
+        "generic.py",
+        "bash.py"
       ],
       "actual_file": "fish.py"
     },
@@ -3815,15 +3764,15 @@
       "bug_id": "31",
       "detected_files": [
         "git_diff_staged.py",
-        "git_branch_delete_checked_out.py",
         "test.py.py",
-        "pyenv_no_such_command.py",
         "git_stash.py",
         "git_diff_no_index.py",
-        "git_add.py",
-        "git_bisect_usage.py",
+        "git_branch_delete_checked_out.py",
+        "python_command.py",
+        "python_execute.py",
         "git_stash_pop.py",
-        "git_not_command.py"
+        "systemctl.py",
+        "pyenv_no_such_command.py"
       ],
       "actual_file": "git_diff_staged.py"
     },
@@ -3833,14 +3782,14 @@
       "detected_files": [
         "test.py.py",
         "ls_lah.py",
-        "git_rm_local_modifications.py",
-        "git_stash_pop.py",
-        "git_rm_staged.py",
         "ln_s_order.py",
         "man.py",
-        "whois.py",
+        "dirty_untar.py",
         "grep_arguments_order.py",
-        "sl_ls.py"
+        "dirty_unzip.py",
+        "cargo.py",
+        "git_rm_local_modifications.py",
+        "chmod_x.py"
       ],
       "actual_file": "ls_lah.py"
     },
@@ -3848,16 +3797,16 @@
       "project_name": "thefuck",
       "bug_id": "10",
       "detected_files": [
-        "test.py.py",
         "man_no_space.py",
-        "man.py",
-        "systemctl.py",
-        "npm_wrong_command.py",
         "pyenv_no_such_command.py",
-        "git_two_dashes.py",
+        "man.py",
+        "npm_missing_script.py",
+        "npm_wrong_command.py",
+        "systemctl.py",
+        "react_native_command_unrecognized.py",
         "python_execute.py",
-        "python_command.py",
-        "remove_trailing_cedilla.py"
+        "prove_recursively.py",
+        "git_two_dashes.py"
       ],
       "actual_file": "man.py"
     },
@@ -3870,11 +3819,11 @@
         "bash.py",
         "zsh.py",
         "generic.py",
-        "zsh.py",
         "fish.py",
-        "bash.py",
         "tcsh.py",
-        "powershell.py"
+        "generic.py",
+        "alias.py",
+        "fish.py"
       ],
       "actual_file": "fish.py"
     },
@@ -3885,13 +3834,13 @@
         "dirty_unzip.py",
         "dirty_unzip.py",
         "dirty_unzip.py",
-        "yarn_alias.py",
         "dirty_unzip.py",
+        "yarn_alias.py",
         "pyenv_no_such_command.py",
         "git_branch_delete.py",
         "git_push_without_commits.py",
-        "cargo_no_command.py",
-        "php_s.py"
+        "php_s.py",
+        "python_execute.py"
       ],
       "actual_file": "dirty_unzip.py"
     },
@@ -3900,15 +3849,15 @@
       "bug_id": "21",
       "detected_files": [
         "git_pull_clone.py",
-        "git_add.py",
         "git_checkout.py",
-        "git_stash.py",
-        "git_stash_pop.py",
-        "git_fix_stash.py",
+        "git_add.py",
         "git_not_command.py",
-        "git_rm_local_modifications.py",
-        "git_rm_staged.py",
-        "git_two_dashes.py"
+        "git_stash.py",
+        "git_fix_stash.py",
+        "git_bisect_usage.py",
+        "git_stash_pop.py",
+        "git_push_force.py",
+        "git_push.py"
       ],
       "actual_file": "git_fix_stash.py"
     },
@@ -3916,16 +3865,16 @@
       "project_name": "thefuck",
       "bug_id": "13",
       "detected_files": [
+        "git_branch_list.py",
         "git_branch_delete_checked_out.py",
         "git_branch_exists.py",
-        "git_branch_list.py",
-        "git_pull_clone.py",
         "git_push_different_branch_names.py",
-        "git_bisect_usage.py",
+        "git_push_force.py",
         "git_branch_delete.py",
-        "git_commit_amend.py",
-        "git_commit_reset.py",
-        "git_push.py"
+        "git_stash.py",
+        "git_pull_clone.py",
+        "git_push_pull.py",
+        "git_commit_amend.py"
       ],
       "actual_file": "git_branch_exists.py"
     },
@@ -3937,12 +3886,12 @@
         "no_command.py",
         "utils.py",
         "utils.py",
+        "corrector.py",
+        "corrector.py",
         "fix_command.py",
-        "types.py",
         "path_from_history.py",
-        "fastentrypoints.py",
-        "test.py.py",
-        "missing_space_before_subcommand.py"
+        "types.py",
+        "corrector.py"
       ],
       "actual_file": "utils.py"
     },
@@ -3950,16 +3899,16 @@
       "project_name": "thefuck",
       "bug_id": "18",
       "detected_files": [
-        "chmod_x.py",
-        "unsudo.py",
         "sudo.py",
-        "pip_install.py",
-        "docker_login.py",
+        "unsudo.py",
+        "chmod_x.py",
         "python_command.py",
-        "man.py",
-        "whois.py",
-        "apt_invalid_operation.py",
-        "rm_root.py"
+        "docker_login.py",
+        "rm_root.py",
+        "pip_install.py",
+        "no_command.py",
+        "git_push_without_commits.py",
+        "man.py"
       ],
       "actual_file": "sudo.py"
     },
@@ -3967,16 +3916,16 @@
       "project_name": "thefuck",
       "bug_id": "19",
       "detected_files": [
-        "git_push_force.py",
-        "git_push_different_branch_names.py",
-        "git_rebase_no_changes.py",
-        "git_checkout.py",
-        "git_commit_reset.py",
-        "git_stash_pop.py",
         "git_push.py",
+        "git_push.py",
+        "git_push_different_branch_names.py",
+        "git_push_force.py",
+        "git_checkout.py",
+        "git_push_different_branch_names.py",
         "git_branch_delete_checked_out.py",
         "git_commit_amend.py",
-        "git_pull_uncommitted_changes.py"
+        "git_rebase_no_changes.py",
+        "git_stash.py"
       ],
       "actual_file": "git_push_force.py"
     },
@@ -3986,13 +3935,13 @@
       "detected_files": [
         "utils.py",
         "utils.py",
+        "ui.py",
+        "conf.py",
+        "utils.py",
         "utils.py",
         "types.py",
+        "unix.py",
         "utils.py",
-        "zsh.py",
-        "types.py",
-        "bash.py",
-        "types.py",
         "utils.py"
       ],
       "actual_file": "utils.py"
@@ -4002,15 +3951,15 @@
       "bug_id": "25",
       "detected_files": [
         "rm_dir.py",
-        "no_such_file.py",
         "mkdir_p.py",
-        "test.py.py",
-        "dirty_untar.py",
+        "no_such_file.py",
         "cd_correction.py",
-        "git_branch_delete.py",
         "touch.py",
+        "dirty_untar.py",
+        "cd_mkdir.py",
         "open.py",
-        "python_command.py"
+        "git_two_dashes.py",
+        "git_branch_delete.py"
       ],
       "actual_file": "mkdir_p.py"
     },
@@ -4020,14 +3969,14 @@
       "detected_files": [
         "types.py",
         "types.py",
-        "types.py",
-        "man.py",
-        "whois.py",
+        "git_diff_staged.py",
         "corrector.py",
         "types.py",
         "types.py",
-        "types.py",
-        "tmux.py"
+        "ui.py",
+        "git_diff_no_index.py",
+        "man.py",
+        "prove_recursively.py"
       ],
       "actual_file": "types.py"
     },
@@ -4035,16 +3984,16 @@
       "project_name": "thefuck",
       "bug_id": "15",
       "detected_files": [
+        "git_add.py",
         "git_pull_clone.py",
-        "git_add.py",
-        "git_checkout.py",
         "test.py.py",
+        "git_checkout.py",
+        "git_commit_amend.py",
+        "git_commit_reset.py",
         "git_push.py",
-        "git_not_command.py",
-        "git_rebase_no_changes.py",
-        "git_add.py",
         "npm_missing_script.py",
-        "git_commit_amend.py"
+        "grep_arguments_order.py",
+        "git_not_command.py"
       ],
       "actual_file": "git_add.py"
     },
@@ -4053,15 +4002,32 @@
       "bug_id": "5",
       "detected_files": [
         "git_push.py",
+        "git_push_different_branch_names.py",
+        "git_pull_clone.py",
         "git_rebase_no_changes.py",
+        "git_checkout.py",
         "git_pull.py",
-        "git_push_different_branch_names.py",
-        "types.py",
-        "git_push_different_branch_names.py",
+        "git_push_force.py",
+        "git_add.py",
         "git_push_pull.py",
-        "git.py",
-        "git_pull_uncommitted_changes.py",
-        "logs.py"
+        "git_not_command.py"
+      ],
+      "actual_file": "git_push.py"
+    },
+    {
+      "project_name": "thefuck",
+      "bug_id": "11",
+      "detected_files": [
+        "git_push.py",
+        "git_checkout.py",
+        "git_branch_exists.py",
+        "git_push_different_branch_names.py",
+        "git_push_different_branch_names.py",
+        "git_push.py",
+        "git_commit_reset.py",
+        "git_checkout.py",
+        "git_rebase_no_changes.py",
+        "git_commit_amend.py"
       ],
       "actual_file": "git_push.py"
     },
@@ -4070,17 +4036,34 @@
       "bug_id": "29",
       "detected_files": [
         "__init__.py",
+        "utils.py",
+        "utils.py",
+        "make_issue_template.py",
+        "utils.py",
+        "youtube.py",
         "YoutubeDL.py",
         "utils.py",
-        "buildserver.py",
-        "ffmpeg.py",
-        "buildserver.py",
-        "cnn.py",
-        "update-sites.py",
-        "utils.py",
-        "update.py"
+        "commonmistakes.py",
+        "buildserver.py"
       ],
       "actual_file": "utils.py"
+    },
+    {
+      "project_name": "youtube-dl",
+      "bug_id": "14",
+      "detected_files": [
+        "utils.py",
+        "utils.py",
+        "utils.py",
+        "__init__.py",
+        "buildserver.py",
+        "youtube.py",
+        "youtube.py",
+        "buildserver.py",
+        "youtube.py",
+        "youtube.py"
+      ],
+      "actual_file": "youtube.py"
     },
     {
       "project_name": "youtube-dl",
@@ -4088,48 +4071,31 @@
       "detected_files": [
         "utils.py",
         "utils.py",
-        "cnn.py",
-        "__init__.py",
-        "ffmpeg.py",
-        "common.py",
-        "YoutubeDL.py",
         "utils.py",
-        "turner.py",
-        "YoutubeDL.py"
+        "make_issue_template.py",
+        "__init__.py",
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "veehd.py",
+        "utils.py"
       ],
       "actual_file": "utils.py"
     },
     {
       "project_name": "youtube-dl",
-      "bug_id": "12",
-      "detected_files": [
-        "__init__.py",
-        "YoutubeDL.py",
-        "utils.py",
-        "buildserver.py",
-        "mtv.py",
-        "ard.py",
-        "livestream.py",
-        "update-sites.py",
-        "commonmistakes.py",
-        "zdf.py"
-      ],
-      "actual_file": "YoutubeDL.py"
-    },
-    {
-      "project_name": "youtube-dl",
       "bug_id": "28",
       "detected_files": [
+        "utils.py",
+        "__init__.py",
+        "utils.py",
+        "utils.py",
         "update-sites.py",
         "YoutubeDL.py",
-        "__init__.py",
-        "tnaflix.py",
         "commonmistakes.py",
+        "youtube.py",
         "utils.py",
-        "buildserver.py",
-        "addanime.py",
-        "tvp.py",
-        "generic.py"
+        "make_issue_template.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4137,16 +4103,16 @@
       "project_name": "youtube-dl",
       "bug_id": "34",
       "detected_files": [
-        "YoutubeDL.py",
-        "common.py",
-        "arte.py",
         "utils.py",
-        "common.py",
-        "update.py",
-        "viki.py",
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
         "__init__.py",
-        "vlive.py",
-        "dramafever.py"
+        "utils.py",
+        "youtube.py",
+        "YoutubeDL.py",
+        "youtube.py",
+        "veehd.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4156,14 +4122,14 @@
       "detected_files": [
         "utils.py",
         "utils.py",
-        "cnn.py",
-        "__init__.py",
-        "ffmpeg.py",
-        "common.py",
-        "YoutubeDL.py",
         "utils.py",
-        "turner.py",
-        "YoutubeDL.py"
+        "make_issue_template.py",
+        "__init__.py",
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "veehd.py",
+        "utils.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4172,15 +4138,15 @@
       "bug_id": "26",
       "detected_files": [
         "__init__.py",
-        "YoutubeDL.py",
-        "common.py",
-        "arte.py",
-        "common.py",
         "utils.py",
-        "update.py",
-        "buildserver.py",
-        "vlive.py",
-        "dramafever.py"
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "YoutubeDL.py",
+        "utils.py",
+        "buildserver.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4188,16 +4154,16 @@
       "project_name": "youtube-dl",
       "bug_id": "9",
       "detected_files": [
-        "__init__.py",
-        "YoutubeDL.py",
         "utils.py",
+        "__init__.py",
+        "utils.py",
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "make_issue_template.py",
+        "youtube.py",
         "buildserver.py",
-        "commonmistakes.py",
-        "update-sites.py",
-        "mtv.py",
-        "livestream.py",
-        "ard.py",
-        "update.py"
+        "YoutubeDL.py"
       ],
       "actual_file": "YoutubeDL.py"
     },
@@ -4205,16 +4171,16 @@
       "project_name": "youtube-dl",
       "bug_id": "22",
       "detected_files": [
-        "generic.py",
-        "YoutubeDL.py",
-        "generic.py",
-        "__init__.py",
-        "update-sites.py",
         "utils.py",
-        "metacafe.py",
-        "wimp.py",
+        "__init__.py",
         "youtube.py",
-        "utils.py"
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "extremetube.py",
+        "youtube.py",
+        "youtube.py",
+        "youtube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4222,16 +4188,16 @@
       "project_name": "youtube-dl",
       "bug_id": "3",
       "detected_files": [
-        "YoutubeDL.py",
-        "update-sites.py",
+        "utils.py",
+        "utils.py",
         "__init__.py",
+        "utils.py",
+        "YoutubeDL.py",
+        "commonmistakes.py",
         "tnaflix.py",
         "utils.py",
-        "buildserver.py",
-        "commonmistakes.py",
-        "raywenderlich.py",
-        "bokecc.py",
-        "addanime.py"
+        "update-sites.py",
+        "extremetube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4240,15 +4206,15 @@
       "bug_id": "10",
       "detected_files": [
         "__init__.py",
-        "YoutubeDL.py",
-        "common.py",
+        "youtube.py",
         "utils.py",
-        "arte.py",
-        "update.py",
-        "common.py",
-        "buildserver.py",
-        "ustudio.py",
-        "lynda.py"
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "utils.py",
+        "utils.py",
+        "YoutubeDL.py",
+        "buildserver.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4257,15 +4223,15 @@
       "bug_id": "20",
       "detected_files": [
         "utils.py",
-        "YoutubeDL.py",
-        "update-sites.py",
-        "common.py",
-        "cbs.py",
-        "hbo.py",
-        "__init__.py",
-        "medialaan.py",
-        "tva.py",
-        "youtube.py"
+        "youtube.py",
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "commonmistakes.py",
+        "make_issue_template.py",
+        "__init__.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4273,16 +4239,16 @@
       "project_name": "youtube-dl",
       "bug_id": "37",
       "detected_files": [
-        "__init__.py",
-        "YoutubeDL.py",
         "utils.py",
-        "buildserver.py",
-        "buildserver.py",
-        "update-sites.py",
-        "ffmpeg.py",
-        "update.py",
-        "ffmpeg.py",
-        "commonmistakes.py"
+        "__init__.py",
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "make_issue_template.py",
+        "youtube.py",
+        "YoutubeDL.py",
+        "youtube.py",
+        "youtube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4291,15 +4257,15 @@
       "bug_id": "7",
       "detected_files": [
         "__init__.py",
-        "YoutubeDL.py",
-        "common.py",
-        "arte.py",
-        "common.py",
         "utils.py",
-        "update.py",
-        "buildserver.py",
-        "vlive.py",
-        "dramafever.py"
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "YoutubeDL.py",
+        "utils.py",
+        "buildserver.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4307,16 +4273,16 @@
       "project_name": "youtube-dl",
       "bug_id": "21",
       "detected_files": [
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "youtube.py",
         "YoutubeDL.py",
-        "buildserver.py",
-        "commonmistakes.py",
         "__init__.py",
-        "buildserver.py",
-        "noco.py",
         "utils.py",
-        "utils.py",
-        "videopress.py",
-        "lifenews.py"
+        "youtube.py",
+        "discovery.py",
+        "youtube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4324,16 +4290,16 @@
       "project_name": "youtube-dl",
       "bug_id": "1",
       "detected_files": [
+        "utils.py",
         "__init__.py",
+        "utils.py",
+        "make_issue_template.py",
+        "youtube.py",
+        "commonmistakes.py",
         "YoutubeDL.py",
         "utils.py",
-        "utils.py",
-        "update-sites.py",
-        "generic.py",
-        "common.py",
-        "buildserver.py",
-        "commonmistakes.py",
-        "buildserver.py"
+        "youtube.py",
+        "youtube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4341,16 +4307,16 @@
       "project_name": "youtube-dl",
       "bug_id": "13",
       "detected_files": [
+        "utils.py",
+        "utils.py",
+        "youtube.py",
+        "youtube.py",
         "YoutubeDL.py",
-        "buildserver.py",
-        "commonmistakes.py",
         "__init__.py",
-        "buildserver.py",
-        "noco.py",
         "utils.py",
-        "utils.py",
-        "videopress.py",
-        "lifenews.py"
+        "youtube.py",
+        "discovery.py",
+        "youtube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4358,16 +4324,16 @@
       "project_name": "youtube-dl",
       "bug_id": "2",
       "detected_files": [
-        "common.py",
+        "utils.py",
         "__init__.py",
-        "livestream.py",
-        "ard.py",
+        "make_issue_template.py",
+        "utils.py",
         "common.py",
-        "twitter.py",
-        "laola1tv.py",
-        "threeqsdn.py",
-        "udemy.py",
-        "tvnow.py"
+        "videomega.py",
+        "rtbf.py",
+        "utils.py",
+        "plays.py",
+        "common.py"
       ],
       "actual_file": "common.py"
     },
@@ -4375,33 +4341,16 @@
       "project_name": "youtube-dl",
       "bug_id": "8",
       "detected_files": [
-        "__init__.py",
-        "YoutubeDL.py",
         "utils.py",
-        "buildserver.py",
-        "commonmistakes.py",
-        "update-sites.py",
-        "mtv.py",
-        "livestream.py",
-        "ard.py",
-        "update.py"
-      ],
-      "actual_file": "YoutubeDL.py"
-    },
-    {
-      "project_name": "youtube-dl",
-      "bug_id": "18",
-      "detected_files": [
-        "vice.py",
-        "YoutubeDL.py",
-        "YoutubeDL.py",
-        "twitch.py",
-        "ctvnews.py",
+        "__init__.py",
+        "utils.py",
+        "utils.py",
+        "utils.py",
         "youtube.py",
-        "funk.py",
-        "update-sites.py",
-        "YoutubeDL.py",
-        "rai.py"
+        "make_issue_template.py",
+        "youtube.py",
+        "buildserver.py",
+        "YoutubeDL.py"
       ],
       "actual_file": "YoutubeDL.py"
     },
@@ -4409,16 +4358,16 @@
       "project_name": "youtube-dl",
       "bug_id": "19",
       "detected_files": [
-        "YoutubeDL.py",
-        "buildserver.py",
-        "buildserver.py",
+        "utils.py",
+        "utils.py",
         "__init__.py",
+        "YoutubeDL.py",
         "utils.py",
-        "ffmpeg.py",
-        "utils.py",
-        "update.py",
-        "ffmpeg.py",
-        "commonmistakes.py"
+        "make_issue_template.py",
+        "buildserver.py",
+        "youtube.py",
+        "buildserver.py",
+        "youtube.py"
       ],
       "actual_file": "YoutubeDL.py"
     },
@@ -4426,16 +4375,16 @@
       "project_name": "youtube-dl",
       "bug_id": "23",
       "detected_files": [
-        "YoutubeDL.py",
-        "__init__.py",
-        "common.py",
-        "update.py",
-        "arte.py",
-        "go.py",
-        "common.py",
+        "youtube.py",
+        "youtube.py",
         "utils.py",
-        "viki.py",
-        "noco.py"
+        "utils.py",
+        "youtube.py",
+        "__init__.py",
+        "ndr.py",
+        "utils.py",
+        "utils.py",
+        "extremetube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4444,15 +4393,15 @@
       "bug_id": "25",
       "detected_files": [
         "__init__.py",
-        "YoutubeDL.py",
-        "common.py",
-        "arte.py",
-        "common.py",
         "utils.py",
-        "update.py",
-        "buildserver.py",
-        "vlive.py",
-        "dramafever.py"
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "utils.py",
+        "youtube.py",
+        "YoutubeDL.py",
+        "utils.py",
+        "buildserver.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4460,16 +4409,16 @@
       "project_name": "youtube-dl",
       "bug_id": "24",
       "detected_files": [
-        "generic.py",
-        "generic.py",
-        "YoutubeDL.py",
+        "utils.py",
         "__init__.py",
         "utils.py",
-        "utils.py",
-        "metacafe.py",
-        "wimp.py",
-        "update-sites.py",
-        "cracked.py"
+        "youtube.py",
+        "youtube.py",
+        "extremetube.py",
+        "youtube.py",
+        "youtube.py",
+        "youtube.py",
+        "youtube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4477,16 +4426,16 @@
       "project_name": "youtube-dl",
       "bug_id": "15",
       "detected_files": [
-        "YoutubeDL.py",
-        "__init__.py",
-        "common.py",
-        "update.py",
-        "arte.py",
-        "go.py",
-        "common.py",
+        "youtube.py",
+        "youtube.py",
         "utils.py",
-        "viki.py",
-        "noco.py"
+        "utils.py",
+        "youtube.py",
+        "__init__.py",
+        "ndr.py",
+        "utils.py",
+        "utils.py",
+        "extremetube.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4494,16 +4443,16 @@
       "project_name": "youtube-dl",
       "bug_id": "36",
       "detected_files": [
-        "YoutubeDL.py",
         "facebook.py",
+        "facebook.py",
+        "adultswim.py",
+        "cartoonnetwork.py",
         "utils.py",
-        "youtube.py",
-        "abcnews.py",
-        "breakcom.py",
+        "crunchyroll.py",
         "fox.py",
-        "xtube.py",
-        "vimeo.py",
-        "twitch.py"
+        "bravotv.py",
+        "youtube.py",
+        "fourtube.py"
       ],
       "actual_file": "facebook.py"
     },
@@ -4512,15 +4461,15 @@
       "bug_id": "41",
       "detected_files": [
         "__init__.py",
+        "utils.py",
+        "utils.py",
+        "make_issue_template.py",
+        "utils.py",
+        "youtube.py",
         "YoutubeDL.py",
         "utils.py",
-        "buildserver.py",
-        "ffmpeg.py",
-        "buildserver.py",
-        "cnn.py",
-        "update-sites.py",
-        "utils.py",
-        "update.py"
+        "commonmistakes.py",
+        "buildserver.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4529,49 +4478,32 @@
       "bug_id": "17",
       "detected_files": [
         "utils.py",
-        "__init__.py",
-        "YoutubeDL.py",
         "utils.py",
-        "buildserver.py",
-        "buildserver.py",
-        "commonmistakes.py",
-        "ffmpeg.py",
-        "generic.py",
-        "ffmpeg.py"
+        "__init__.py",
+        "utils.py",
+        "make_issue_template.py",
+        "utils.py",
+        "YoutubeDL.py",
+        "options.py",
+        "options.py",
+        "youtube.py"
       ],
       "actual_file": "utils.py"
     },
     {
       "project_name": "youtube-dl",
-      "bug_id": "30",
-      "detected_files": [
-        "__init__.py",
-        "YoutubeDL.py",
-        "mtv.py",
-        "utils.py",
-        "utils.py",
-        "livestream.py",
-        "ard.py",
-        "update-sites.py",
-        "common.py",
-        "generic.py"
-      ],
-      "actual_file": "YoutubeDL.py"
-    },
-    {
-      "project_name": "youtube-dl",
       "bug_id": "5",
       "detected_files": [
-        "cnn.py",
-        "__init__.py",
         "utils.py",
-        "YoutubeDL.py",
-        "ffmpeg.py",
-        "turner.py",
-        "buildserver.py",
+        "__init__.py",
+        "cnn.py",
+        "utils.py",
+        "make_issue_template.py",
+        "utils.py",
         "youtube.py",
-        "buildserver.py",
-        "update-sites.py"
+        "utils.py",
+        "crunchyroll.py",
+        "YoutubeDL.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4579,16 +4511,16 @@
       "project_name": "youtube-dl",
       "bug_id": "11",
       "detected_files": [
+        "utils.py",
         "__init__.py",
+        "utils.py",
+        "make_issue_template.py",
+        "utils.py",
+        "youtube.py",
         "YoutubeDL.py",
-        "utils.py",
         "buildserver.py",
-        "buildserver.py",
-        "utils.py",
-        "update-sites.py",
-        "update.py",
-        "commonmistakes.py",
-        "utils.py"
+        "youtube.py",
+        "commonmistakes.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4596,16 +4528,16 @@
       "project_name": "youtube-dl",
       "bug_id": "43",
       "detected_files": [
-        "YoutubeDL.py",
-        "videopress.py",
-        "commonmistakes.py",
-        "buildserver.py",
-        "__init__.py",
-        "noco.py",
         "utils.py",
-        "voxmedia.py",
-        "limelight.py",
-        "utils.py"
+        "utils.py",
+        "YoutubeDL.py",
+        "utils.py",
+        "youtube.py",
+        "__init__.py",
+        "youtube.py",
+        "crunchyroll.py",
+        "discovery.py",
+        "commonmistakes.py"
       ],
       "actual_file": "utils.py"
     },
@@ -4614,15 +4546,15 @@
       "bug_id": "29",
       "detected_files": [
         "callbacks.py",
-        "training_arrays.py",
         "training.py",
-        "training_utils.py",
-        "generic_utils.py",
+        "metrics.py",
+        "callbacks.py",
+        "metrics.py",
         "layers.py",
-        "generic_utils.py",
+        "training_utils.py",
         "cudnn_recurrent.py",
-        "mnist_tfrecord.py",
-        "metrics.py"
+        "generic_utils.py",
+        "convolutional.py"
       ],
       "actual_file": "training.py"
     },
@@ -4630,33 +4562,50 @@
       "project_name": "keras",
       "bug_id": "27",
       "detected_files": [
+        "wrappers.py",
+        "wrappers.py",
+        "optimizers.py",
+        "optimizers.py",
+        "base_layer.py",
         "optimizers.py",
         "network.py",
-        "optimizers.py",
-        "optimizers.py",
-        "theano_backend.py",
-        "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "wrappers.py"
+        "wrappers.py",
+        "wrappers.py",
+        "optimizers.py"
       ],
       "actual_file": "wrappers.py"
     },
     {
       "project_name": "keras",
+      "bug_id": "28",
+      "detected_files": [
+        "sequence.py",
+        "training.py",
+        "training.py",
+        "training_utils.py",
+        "interfaces.py",
+        "training_generator.py",
+        "tensorboard_v1.py",
+        "lstm_text_generation.py",
+        "training_generator.py",
+        "data_utils.py"
+      ],
+      "actual_file": "sequence.py"
+    },
+    {
+      "project_name": "keras",
       "bug_id": "26",
       "detected_files": [
-        "cudnn_recurrent.py",
-        "cntk_backend.py",
-        "tensorflow_backend.py",
-        "layers.py",
-        "recurrent.py",
-        "numpy_backend.py",
         "network.py",
+        "network.py",
+        "tensorflow_backend.py",
+        "network.py",
+        "base_layer.py",
         "theano_backend.py",
-        "mnist_net2net.py",
-        "reuters_mlp_relu_vs_selu.py"
+        "base_layer.py",
+        "tensorflow_backend.py",
+        "tensorflow_backend.py",
+        "tensorflow_backend.py"
       ],
       "actual_file": "tensorflow_backend.py"
     },
@@ -4664,16 +4613,16 @@
       "project_name": "keras",
       "bug_id": "40",
       "detected_files": [
-        "convolutional_recurrent.py",
-        "pooling.py",
-        "layers.py",
         "recurrent.py",
-        "local.py",
-        "convolutional.py",
-        "convolutional.py",
-        "convolutional.py",
-        "convolutional.py",
-        "convolutional.py"
+        "convolutional_recurrent.py",
+        "tensorflow_backend.py",
+        "theano_backend.py",
+        "convolutional_recurrent.py",
+        "numpy_backend.py",
+        "wrappers.py",
+        "cntk_backend.py",
+        "pooling.py",
+        "layers.py"
       ],
       "actual_file": "recurrent.py"
     },
@@ -4683,13 +4632,13 @@
       "detected_files": [
         "models.py",
         "models.py",
+        "models.py",
         "wrappers.py",
         "models.py",
-        "convolutional.py",
-        "merge.py",
+        "core.py",
         "network.py",
-        "layers.py",
-        "local.py",
+        "merge.py",
+        "cifar10_cnn_capsule.py",
         "convolutional.py"
       ],
       "actual_file": "models.py"
@@ -4699,15 +4648,15 @@
       "bug_id": "32",
       "detected_files": [
         "callbacks.py",
-        "optimizers.py",
-        "layers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
-        "optimizers.py",
         "callbacks.py",
-        "theano_backend.py"
+        "optimizers.py",
+        "optimizers.py",
+        "optimizers.py",
+        "theano_backend.py",
+        "optimizers.py",
+        "saving.py",
+        "layers.py",
+        "optimizers.py"
       ],
       "actual_file": "callbacks.py"
     },
@@ -4715,15 +4664,15 @@
       "project_name": "keras",
       "bug_id": "10",
       "detected_files": [
-        "training_utils.py",
         "optimizers.py",
-        "scikit_learn.py",
         "training_utils.py",
-        "training.py",
-        "test_utils.py",
         "training_utils.py",
-        "lstm_text_generation.py",
+        "training_utils.py",
+        "base_layer.py",
+        "base_layer.py",
+        "recurrent.py",
         "optimizers.py",
+        "network.py",
         "training_utils.py"
       ],
       "actual_file": "training_utils.py"
@@ -4733,17 +4682,34 @@
       "bug_id": "4",
       "detected_files": [
         "optimizers.py",
+        "optimizers.py",
         "training.py",
         "optimizers.py",
+        "tensorflow_backend.py",
         "cudnn_recurrent.py",
+        "mnist_tfrecord.py",
         "convolutional.py",
-        "cntk_backend.py",
-        "optimizers.py",
-        "convolutional.py",
-        "multi_gpu_utils.py",
-        "convolutional.py"
+        "training.py",
+        "optimizers.py"
       ],
       "actual_file": "optimizers.py"
+    },
+    {
+      "project_name": "keras",
+      "bug_id": "7",
+      "detected_files": [
+        "scikit_learn.py",
+        "scikit_learn.py",
+        "scikit_learn.py",
+        "scikit_learn.py",
+        "mnist_transfer_cnn.py",
+        "test_utils.py",
+        "scikit_learn.py",
+        "layers.py",
+        "core.py",
+        "test_utils.py"
+      ],
+      "actual_file": "scikit_learn.py"
     },
     {
       "project_name": "keras",
@@ -4752,13 +4718,13 @@
         "image_ocr.py",
         "image.py",
         "image.py",
+        "image.py",
+        "image.py",
+        "image.py",
         "image_ocr.py",
-        "neural_style_transfer.py",
-        "neural_doodle.py",
         "io_utils.py",
-        "data_utils.py",
-        "theano_backend.py",
-        "deep_dream.py"
+        "image.py",
+        "test_utils.py"
       ],
       "actual_file": "image.py"
     },
@@ -4767,49 +4733,100 @@
       "bug_id": "45",
       "detected_files": [
         "test_utils.py",
+        "cudnn_recurrent.py",
+        "recurrent.py",
+        "layers.py",
         "convolutional_recurrent.py",
         "recurrent.py",
         "recurrent.py",
-        "recurrent.py",
-        "layers.py",
-        "layers.py",
-        "lstm_stateful.py",
-        "image_ocr.py",
-        "tensorflow_backend.py"
+        "training_arrays.py",
+        "convolutional_recurrent.py",
+        "convolutional_recurrent.py"
       ],
       "actual_file": "recurrent.py"
     },
     {
       "project_name": "keras",
+      "bug_id": "18",
+      "detected_files": [
+        "optimizers.py",
+        "tensorflow_backend.py",
+        "tensorboard_v1.py",
+        "cntk_backend.py",
+        "cudnn_recurrent.py",
+        "tensorflow_backend.py",
+        "test_utils.py",
+        "tensorboard_v1.py",
+        "tensorboard_v2.py",
+        "tensorflow_backend.py"
+      ],
+      "actual_file": "tensorflow_backend.py"
+    },
+    {
+      "project_name": "keras",
       "bug_id": "23",
       "detected_files": [
-        "models.py",
+        "__init__.py",
+        "__init__.py",
+        "tensorboard_v2.py",
         "sequential.py",
-        "mnist_net2net.py",
-        "__init__.py",
+        "sequential.py",
+        "network.py",
+        "layers.py",
+        "cntk_backend.py",
         "training_arrays.py",
-        "__init__.py",
-        "saving.py",
-        "test_utils.py",
-        "mnist_net2net.py",
-        "sequential.py"
+        "merge.py"
       ],
       "actual_file": "sequential.py"
     },
     {
       "project_name": "keras",
+      "bug_id": "39",
+      "detected_files": [
+        "scikit_learn.py",
+        "sequential.py",
+        "generic_utils.py",
+        "callbacks.py",
+        "scikit_learn.py",
+        "callbacks.py",
+        "interfaces.py",
+        "convolutional.py",
+        "resnet50.py",
+        "callbacks.py"
+      ],
+      "actual_file": "generic_utils.py"
+    },
+    {
+      "project_name": "keras",
+      "bug_id": "25",
+      "detected_files": [
+        "mnist_net2net.py",
+        "imagenet_utils.py",
+        "neural_style_transfer.py",
+        "neural_doodle.py",
+        "deep_dream.py",
+        "theano_backend.py",
+        "resnet50.py",
+        "conv_filter_visualization.py",
+        "image.py",
+        "deep_dream.py"
+      ],
+      "actual_file": "imagenet_utils.py"
+    },
+    {
+      "project_name": "keras",
       "bug_id": "44",
       "detected_files": [
+        "cudnn_recurrent.py",
         "image_ocr.py",
-        "cifar10_resnet.py",
-        "mnist_tfrecord.py",
+        "recurrent.py",
+        "wrappers.py",
+        "wrappers.py",
+        "wrappers.py",
+        "wrappers.py",
+        "recurrent.py",
         "test_utils.py",
-        "wrappers.py",
-        "mnist_dataset_api.py",
-        "mnist_net2net.py",
-        "wrappers.py",
-        "mnist_net2net.py",
-        "recurrent.py"
+        "network.py"
       ],
       "actual_file": "recurrent.py"
     },
@@ -4818,15 +4835,15 @@
       "bug_id": "36",
       "detected_files": [
         "tensorflow_backend.py",
-        "theano_backend.py",
-        "cntk_backend.py",
+        "tensorboard_v1.py",
         "tensorflow_backend.py",
-        "cntk_backend.py",
-        "theano_backend.py",
-        "tensorflow_backend.py",
-        "tensorflow_backend.py",
-        "numpy_backend.py",
-        "cntk_backend.py"
+        "cudnn_recurrent.py",
+        "optimizers.py",
+        "tensorboard_v1.py",
+        "cudnn_recurrent.py",
+        "tensorboard_v2.py",
+        "tensorboard_v1.py",
+        "tensorflow_backend.py"
       ],
       "actual_file": "tensorflow_backend.py"
     },
@@ -4836,14 +4853,14 @@
       "detected_files": [
         "metrics.py",
         "metrics.py",
-        "metrics.py",
         "losses.py",
         "metrics.py",
         "tensorflow_backend.py",
+        "metrics.py",
+        "cntk_backend.py",
+        "tensorflow_backend.py",
         "theano_backend.py",
-        "mnist_siamese.py",
-        "mnist_siamese.py",
-        "metrics.py"
+        "theano_backend.py"
       ],
       "actual_file": "metrics.py"
     },
@@ -4853,14 +4870,14 @@
       "detected_files": [
         "np_utils.py",
         "losses.py",
+        "theano_backend.py",
         "numpy_backend.py",
         "metrics.py",
-        "theano_backend.py",
-        "losses.py",
+        "tensorflow_backend.py",
         "numpy_backend.py",
         "cntk_backend.py",
-        "mnist_net2net.py",
-        "losses.py"
+        "test_utils.py",
+        "base_layer.py"
       ],
       "actual_file": "np_utils.py"
     },
@@ -4868,16 +4885,16 @@
       "project_name": "keras",
       "bug_id": "38",
       "detected_files": [
+        "recurrent.py",
         "convolutional_recurrent.py",
-        "numpy_backend.py",
-        "tensorflow_backend.py",
-        "test_utils.py",
-        "cntk_backend.py",
-        "saving.py",
         "recurrent.py",
-        "reuters_mlp_relu_vs_selu.py",
+        "convolutional_recurrent.py",
         "recurrent.py",
-        "recurrent.py"
+        "recurrent.py",
+        "cudnn_recurrent.py",
+        "merge.py",
+        "recurrent.py",
+        "advanced_activations.py"
       ],
       "actual_file": "recurrent.py"
     },
@@ -4887,14 +4904,14 @@
       "detected_files": [
         "task.py",
         "worker.py",
-        "scheduler.py",
         "worker.py",
-        "interface.py",
         "scheduler.py",
-        "worker.py",
+        "scheduler.py",
+        "task.py",
+        "scheduler.py",
         "batch_notifier.py",
-        "scheduler.py",
-        "server.py"
+        "per_task_retry_policy.py",
+        "per_task_retry_policy.py"
       ],
       "actual_file": "scheduler.py"
     },
@@ -4902,16 +4919,16 @@
       "project_name": "luigi",
       "bug_id": "27",
       "detected_files": [
-        "spark.py",
-        "conf.py",
         "parameter.py",
-        "parameter.py",
-        "core.py",
-        "cfg_parser.py",
-        "parameter.py",
-        "clients.py",
-        "spark.py",
-        "cmdline_parser.py"
+        "deps.py",
+        "dynamic_requirements.py",
+        "interface.py",
+        "execution_summary_example.py",
+        "cmdline_parser.py",
+        "interface.py",
+        "task.py",
+        "execution_summary_example.py",
+        "execution_summary_example.py"
       ],
       "actual_file": "parameter.py"
     },
@@ -4921,14 +4938,14 @@
       "detected_files": [
         "clients.py",
         "config.py",
-        "target.py",
+        "config.py",
         "webhdfs_client.py",
         "hadoopcli_clients.py",
         "target.py",
-        "webhdfs_client.py",
-        "webhdfs_client.py",
-        "webhdfs_client.py",
-        "webhdfs_client.py"
+        "hadoopcli_clients.py",
+        "hadoopcli_clients.py",
+        "snakebite_client.py",
+        "hadoopcli_clients.py"
       ],
       "actual_file": "clients.py"
     },
@@ -4953,16 +4970,16 @@
       "project_name": "luigi",
       "bug_id": "6",
       "detected_files": [
-        "six.py",
-        "range.py",
+        "parameter.py",
+        "execution_summary_example.py",
         "parameter.py",
         "parameter.py",
-        "task_history.py",
-        "six.py",
-        "task.py",
-        "ecs.py",
-        "bigquery.py",
-        "conf.py"
+        "parameter.py",
+        "conf.py",
+        "ssh_remote_execution.py",
+        "util.py",
+        "execution_summary_example.py",
+        "range.py"
       ],
       "actual_file": "parameter.py"
     },
@@ -4971,15 +4988,15 @@
       "bug_id": "26",
       "detected_files": [
         "hadoop_jar.py",
-        "terasort.py",
-        "terasort.py",
-        "scalding.py",
         "hadoop_jar.py",
-        "hadoop.py",
-        "dataproc.py",
-        "dataproc.py",
+        "hadoop_jar.py",
+        "hadoop_jar.py",
         "terasort.py",
-        "scalding.py"
+        "hadoop_jar.py",
+        "scalding.py",
+        "terasort.py",
+        "terasort.py",
+        "hadoop.py"
       ],
       "actual_file": "hadoop_jar.py"
     },
@@ -4989,14 +5006,14 @@
       "detected_files": [
         "worker.py",
         "worker.py",
+        "scheduler.py",
+        "worker.py",
         "interface.py",
-        "execution_summary.py",
-        "execution_summary.py",
         "worker.py",
+        "interface.py",
         "scheduler.py",
         "worker.py",
-        "scheduler.py",
-        "scheduler.py"
+        "execution_summary.py"
       ],
       "actual_file": "scheduler.py"
     },
@@ -5009,11 +5026,11 @@
         "parameter.py",
         "parameter.py",
         "parameter.py",
-        "six.py",
-        "six.py",
-        "six.py",
+        "conf.py",
         "execution_summary.py",
-        "parameter.py"
+        "task.py",
+        "parameter.py",
+        "task_history.py"
       ],
       "actual_file": "parameter.py"
     },
@@ -5021,16 +5038,16 @@
       "project_name": "luigi",
       "bug_id": "31",
       "detected_files": [
-        "scheduler.py",
-        "worker.py",
-        "cmdline_parser.py",
         "worker.py",
         "scheduler.py",
-        "execution_summary.py",
         "worker.py",
-        "task.py",
-        "task.py",
-        "ecs.py"
+        "ecs.py",
+        "scheduler.py",
+        "worker.py",
+        "scheduler.py",
+        "scheduler.py",
+        "scheduler.py",
+        "scheduler.py"
       ],
       "actual_file": "scheduler.py"
     },
@@ -5039,15 +5056,15 @@
       "bug_id": "32",
       "detected_files": [
         "task_register.py",
-        "task_register.py",
+        "range.py",
+        "task_history.py",
+        "execution_summary_example.py",
         "range.py",
         "cmdline_parser.py",
-        "base_parser.py",
         "task.py",
-        "util.py",
-        "cmdline_parser.py",
-        "util.py",
-        "util.py"
+        "execution_summary_example.py",
+        "parameter.py",
+        "parameter.py"
       ],
       "actual_file": "task_register.py"
     },
@@ -5055,16 +5072,16 @@
       "project_name": "luigi",
       "bug_id": "10",
       "detected_files": [
-        "scheduler.py",
-        "scheduler.py",
-        "scheduler.py",
-        "scheduler.py",
-        "execution_summary.py",
         "worker.py",
+        "per_task_retry_policy.py",
+        "scheduler.py",
+        "worker.py",
+        "scheduler.py",
+        "task_history.py",
         "execution_summary.py",
-        "scheduler.py",
-        "scheduler.py",
-        "worker.py"
+        "interface.py",
+        "hadoop.py",
+        "task.py"
       ],
       "actual_file": "scheduler.py"
     },
@@ -5077,11 +5094,11 @@
         "redshift.py",
         "redshift.py",
         "redshift.py",
-        "opener.py",
+        "rdbms.py",
+        "rdbms.py",
         "redshift.py",
-        "mock.py",
-        "bigquery.py",
-        "mysqldb.py"
+        "sqla.py",
+        "ssh_remote_execution.py"
       ],
       "actual_file": "redshift.py"
     },
@@ -5090,15 +5107,15 @@
       "bug_id": "20",
       "detected_files": [
         "range.py",
-        "parameter.py",
-        "task_history.py",
-        "util.py",
-        "db_task_history.py",
-        "ecs.py",
         "task.py",
-        "execution_summary.py",
-        "execution_summary.py",
-        "task.py"
+        "execution_summary_example.py",
+        "range.py",
+        "range.py",
+        "range.py",
+        "execution_summary_example.py",
+        "range.py",
+        "range.py",
+        "range.py"
       ],
       "actual_file": "task.py"
     },
@@ -5107,15 +5124,15 @@
       "bug_id": "7",
       "detected_files": [
         "interface.py",
-        "execution_summary.py",
         "worker.py",
-        "interface.py",
-        "interface.py",
         "worker.py",
         "worker.py",
         "worker.py",
         "scheduler.py",
-        "worker.py"
+        "worker.py",
+        "interface.py",
+        "execution_summary.py",
+        "task_history.py"
       ],
       "actual_file": "scheduler.py"
     },
@@ -5124,15 +5141,15 @@
       "bug_id": "1",
       "detected_files": [
         "server.py",
-        "scheduler.py",
-        "scheduler.py",
-        "range.py",
+        "server.py",
         "mock.py",
-        "worker.py",
-        "parameter.py",
-        "datadog_metric.py",
+        "scheduler.py",
+        "mock.py",
         "metrics.py",
-        "datadog_metric.py"
+        "datadog_metric.py",
+        "scheduler.py",
+        "mock.py",
+        "mock.py"
       ],
       "actual_file": "server.py"
     },
@@ -5140,16 +5157,16 @@
       "project_name": "luigi",
       "bug_id": "16",
       "detected_files": [
-        "scheduler.py",
-        "interface.py",
-        "scheduler.py",
-        "scheduler.py",
-        "scheduler.py",
+        "per_task_retry_policy.py",
+        "per_task_retry_policy.py",
+        "per_task_retry_policy.py",
         "execution_summary.py",
-        "per_task_retry_policy.py",
-        "per_task_retry_policy.py",
-        "per_task_retry_policy.py",
-        "worker.py"
+        "scheduler.py",
+        "metrics.py",
+        "metrics.py",
+        "ecs.py",
+        "scheduler.py",
+        "scheduler.py"
       ],
       "actual_file": "scheduler.py"
     },
@@ -5159,13 +5176,13 @@
       "detected_files": [
         "beam_dataflow.py",
         "bigquery.py",
+        "beam_dataflow.py",
+        "beam_dataflow.py",
+        "bigquery.py",
+        "bigquery.py",
+        "beam_dataflow.py",
         "bigquery.py",
         "opener.py",
-        "beam_dataflow.py",
-        "bigquery.py",
-        "bigquery.py",
-        "bigquery.py",
-        "beam_dataflow.py",
         "beam_dataflow.py"
       ],
       "actual_file": "beam_dataflow.py"
@@ -5178,12 +5195,12 @@
         "redshift.py",
         "redshift.py",
         "redshift.py",
-        "bigquery.py",
         "redshift.py",
         "redshift.py",
         "redshift.py",
-        "sqla.py",
-        "mysqldb.py"
+        "redshift.py",
+        "target.py",
+        "mock.py"
       ],
       "actual_file": "redshift.py"
     },
@@ -5194,12 +5211,12 @@
         "scheduler.py",
         "scheduler.py",
         "scheduler.py",
+        "task.py",
+        "task.py",
+        "scheduler.py",
+        "scheduler.py",
         "scheduler.py",
         "worker.py",
-        "interface.py",
-        "scheduler.py",
-        "worker.py",
-        "task_history.py",
         "task_history.py"
       ],
       "actual_file": "scheduler.py"
@@ -5209,14 +5226,14 @@
       "bug_id": "19",
       "detected_files": [
         "scheduler.py",
+        "scheduler.py",
+        "metrics.py",
+        "metrics.py",
+        "task.py",
         "per_task_retry_policy.py",
         "per_task_retry_policy.py",
         "per_task_retry_policy.py",
-        "scheduler.py",
-        "scheduler.py",
-        "batch_notifier.py",
-        "scheduler.py",
-        "scheduler.py",
+        "datadog_metric.py",
         "scheduler.py"
       ],
       "actual_file": "scheduler.py"
@@ -5229,12 +5246,12 @@
         "redshift.py",
         "redshift.py",
         "redshift.py",
-        "bigquery.py",
         "redshift.py",
         "redshift.py",
         "redshift.py",
-        "sqla.py",
-        "mysqldb.py"
+        "redshift.py",
+        "rdbms.py",
+        "redshift.py"
       ],
       "actual_file": "redshift.py"
     },
@@ -5242,16 +5259,16 @@
       "project_name": "luigi",
       "bug_id": "24",
       "detected_files": [
-        "spark.py",
-        "spark.py",
-        "spark.py",
-        "spark.py",
+        "dataproc.py",
+        "scalding.py",
+        "spark_als.py",
+        "dataproc.py",
         "dataproc.py",
         "pyspark_runner.py",
+        "hadoop.py",
+        "config.py",
         "spark.py",
-        "sparkey.py",
-        "spark.py",
-        "scalding.py"
+        "hadoop.py"
       ],
       "actual_file": "spark.py"
     },
@@ -5259,14 +5276,14 @@
       "project_name": "luigi",
       "bug_id": "15",
       "detected_files": [
-        "execution_summary.py",
-        "scheduler.py",
         "interface.py",
-        "scheduler.py",
         "execution_summary.py",
-        "worker.py",
         "scheduler.py",
         "worker.py",
+        "execution_summary.py",
+        "scheduler.py",
+        "scheduler.py",
+        "scheduler.py",
         "worker.py",
         "scheduler.py"
       ],
@@ -5274,35 +5291,18 @@
     },
     {
       "project_name": "luigi",
-      "bug_id": "33",
-      "detected_files": [
-        "task_history.py",
-        "range.py",
-        "task.py",
-        "db_task_history.py",
-        "parameter.py",
-        "range.py",
-        "bigquery.py",
-        "hadoop.py",
-        "ftp_experiment_outputs.py",
-        "ecs.py"
-      ],
-      "actual_file": "task.py"
-    },
-    {
-      "project_name": "luigi",
       "bug_id": "17",
       "detected_files": [
-        "scheduler.py",
         "interface.py",
+        "task_history.py",
+        "scheduler.py",
         "worker.py",
         "execution_summary.py",
-        "server.py",
-        "interface.py",
+        "task_history.py",
+        "execution_summary.py",
         "task_history.py",
         "task_history.py",
-        "scheduler.py",
-        "worker.py"
+        "interface.py"
       ],
       "actual_file": "interface.py"
     },
@@ -5310,16 +5310,16 @@
       "project_name": "luigi",
       "bug_id": "5",
       "detected_files": [
-        "util.py",
-        "util.py",
+        "six.py",
+        "six.py",
         "six.py",
         "util.py",
-        "task_history.py",
-        "task.py",
-        "six.py",
-        "ftp_experiment_outputs.py",
+        "conf.py",
+        "ssh.py",
+        "target.py",
+        "execution_summary_example.py",
         "util.py",
-        "util.py"
+        "pig.py"
       ],
       "actual_file": "util.py"
     },
@@ -5331,12 +5331,12 @@
         "scheduler.py",
         "scheduler.py",
         "scheduler.py",
-        "scheduler.py",
-        "interface.py",
+        "worker.py",
         "scheduler.py",
         "scheduler.py",
         "worker.py",
-        "batch_notifier.py"
+        "scheduler.py",
+        "scheduler.py"
       ],
       "actual_file": "scheduler.py"
     },
@@ -5344,16 +5344,16 @@
       "project_name": "black",
       "bug_id": "12",
       "detected_files": [
-        "black.py",
-        "black.py",
         "gallery.py",
-        "pytree.py",
-        "conv.py",
-        "pygram.py",
         "black.py",
         "black.py",
         "black.py",
-        "black.py"
+        "black.py",
+        "driver.py",
+        "gallery.py",
+        "black.py",
+        "black.py",
+        "parse.py"
       ],
       "actual_file": "black.py"
     },
@@ -5363,14 +5363,14 @@
       "detected_files": [
         "gallery.py",
         "black.py",
+        "black.py",
         "pygram.py",
+        "black.py",
         "gallery.py",
         "black.py",
-        "black.py",
-        "black.py",
-        "black.py",
-        "black.py",
-        "grammar.py"
+        "pygram.py",
+        "driver.py",
+        "black.py"
       ],
       "actual_file": "black.py"
     },
@@ -5382,8 +5382,8 @@
         "black.py",
         "gallery.py",
         "black.py",
-        "pygram.py",
         "black.py",
+        "gallery.py",
         "black.py",
         "black.py",
         "black.py",
@@ -5398,13 +5398,13 @@
         "gallery.py",
         "black.py",
         "black.py",
+        "gallery.py",
+        "black.py",
+        "parse.py",
+        "black.py",
         "black.py",
         "pygram.py",
-        "black.py",
-        "gallery.py",
-        "pgen.py",
-        "blackd.py",
-        "black.py"
+        "blackd.py"
       ],
       "actual_file": "black.py"
     },
@@ -5414,14 +5414,14 @@
       "detected_files": [
         "black.py",
         "black.py",
+        "black.py",
+        "gallery.py",
+        "black.py",
         "pygram.py",
         "gallery.py",
-        "pgen.py",
         "black.py",
         "black.py",
-        "conv.py",
-        "pytree.py",
-        "driver.py"
+        "pgen.py"
       ],
       "actual_file": "black.py"
     },
@@ -5430,14 +5430,14 @@
       "bug_id": "20",
       "detected_files": [
         "black.py",
-        "black.py",
         "gallery.py",
+        "black.py",
+        "black.py",
         "blackd.py",
         "black.py",
         "black.py",
         "black.py",
-        "black.py",
-        "black.py",
+        "pygram.py",
         "gallery.py"
       ],
       "actual_file": "black.py"
@@ -5447,15 +5447,15 @@
       "bug_id": "7",
       "detected_files": [
         "black.py",
-        "pytree.py",
+        "black.py",
+        "gallery.py",
         "black.py",
         "pygram.py",
+        "black.py",
+        "pgen.py",
+        "black.py",
         "pytree.py",
-        "pytree.py",
-        "pytree.py",
-        "parse.py",
-        "grammar.py",
-        "gallery.py"
+        "parse.py"
       ],
       "actual_file": "black.py"
     },
@@ -5465,14 +5465,14 @@
       "detected_files": [
         "gallery.py",
         "black.py",
+        "gallery.py",
         "black.py",
-        "black.py",
-        "pygram.py",
+        "parse.py",
         "blackd.py",
+        "black.py",
         "parse.py",
         "black.py",
-        "blackd.py",
-        "pytree.py"
+        "pygram.py"
       ],
       "actual_file": "black.py"
     },
@@ -5485,9 +5485,9 @@
         "black.py",
         "black.py",
         "pygram.py",
-        "black.py",
         "blackd.py",
         "black.py",
+        "gallery.py",
         "black.py",
         "black.py"
       ],
@@ -5500,13 +5500,13 @@
         "black.py",
         "gallery.py",
         "black.py",
-        "pygram.py",
-        "blackd.py",
         "black.py",
         "black.py",
-        "pgen.py",
-        "pgen.py",
-        "parse.py"
+        "gallery.py",
+        "black.py",
+        "black.py",
+        "black.py",
+        "black.py"
       ],
       "actual_file": "black.py"
     },
@@ -5517,13 +5517,13 @@
         "black.py",
         "black.py",
         "gallery.py",
+        "gallery.py",
+        "black.py",
+        "black.py",
+        "black.py",
+        "black.py",
         "pygram.py",
-        "black.py",
-        "black.py",
-        "black.py",
-        "black.py",
-        "grammar.py",
-        "pgen.py"
+        "black.py"
       ],
       "actual_file": "black.py"
     },
@@ -5535,12 +5535,12 @@
         "gallery.py",
         "black.py",
         "black.py",
-        "conv.py",
+        "black.py",
+        "black.py",
+        "black.py",
         "pgen.py",
         "black.py",
-        "black.py",
-        "black.py",
-        "black.py"
+        "gallery.py"
       ],
       "actual_file": "black.py"
     },
@@ -5552,10 +5552,10 @@
         "black.py",
         "black.py",
         "black.py",
+        "gallery.py",
+        "black.py",
         "pygram.py",
         "black.py",
-        "black.py",
-        "pytree.py",
         "black.py",
         "black.py"
       ],
@@ -5565,16 +5565,16 @@
       "project_name": "black",
       "bug_id": "15",
       "detected_files": [
+        "gallery.py",
+        "black.py",
+        "black.py",
+        "black.py",
         "black.py",
         "black.py",
         "gallery.py",
-        "blackd.py",
         "black.py",
         "black.py",
-        "pygram.py",
-        "pgen.py",
-        "parse.py",
-        "black.py"
+        "parse.py"
       ],
       "actual_file": "black.py"
     },
@@ -5582,16 +5582,16 @@
       "project_name": "black",
       "bug_id": "17",
       "detected_files": [
+        "black.py",
         "gallery.py",
+        "gallery.py",
+        "black.py",
         "black.py",
         "pygram.py",
         "black.py",
-        "pgen.py",
-        "grammar.py",
-        "grammar.py",
         "black.py",
-        "grammar.py",
-        "driver.py"
+        "black.py",
+        "pgen.py"
       ],
       "actual_file": "black.py"
     },
@@ -5599,16 +5599,16 @@
       "project_name": "black",
       "bug_id": "5",
       "detected_files": [
+        "gallery.py",
+        "black.py",
+        "black.py",
         "black.py",
         "pygram.py",
         "black.py",
-        "black.py",
+        "driver.py",
         "tokenize.py",
         "black.py",
-        "driver.py",
-        "black.py",
-        "black.py",
-        "parse.py"
+        "black.py"
       ],
       "actual_file": "black.py"
     },
@@ -5619,35 +5619,35 @@
         "black.py",
         "black.py",
         "gallery.py",
-        "pygram.py",
+        "gallery.py",
         "black.py",
         "black.py",
         "black.py",
         "black.py",
         "black.py",
-        "black.py"
+        "pygram.py"
       ],
       "actual_file": "black.py"
     }
   ],
-  "success_rate": 0.6948640483383686,
+  "success_rate": 0.7069486404833837,
   "success_projects": {
     "matplotlib": {
-      "success_rate": 0.782608695652174,
-      "failed": 5,
-      "passed": 18,
+      "success_rate": 0.7391304347826086,
+      "failed": 6,
+      "passed": 17,
       "total": 23
     },
     "scrapy": {
-      "success_rate": 0.6756756756756757,
-      "failed": 12,
-      "passed": 25,
+      "success_rate": 0.6486486486486487,
+      "failed": 13,
+      "passed": 24,
       "total": 37
     },
     "pandas": {
-      "success_rate": 0.5806451612903226,
-      "failed": 52,
-      "passed": 72,
+      "success_rate": 0.6129032258064516,
+      "failed": 48,
+      "passed": 76,
       "total": 124
     },
     "thefuck": {
@@ -5657,21 +5657,21 @@
       "total": 30
     },
     "youtube-dl": {
-      "success_rate": 0.9411764705882353,
-      "failed": 2,
-      "passed": 32,
+      "success_rate": 0.8823529411764706,
+      "failed": 4,
+      "passed": 30,
       "total": 34
     },
     "keras": {
-      "success_rate": 0.47058823529411764,
-      "failed": 18,
-      "passed": 16,
+      "success_rate": 0.6176470588235294,
+      "failed": 13,
+      "passed": 21,
       "total": 34
     },
     "luigi": {
-      "success_rate": 0.9,
-      "failed": 3,
-      "passed": 27,
+      "success_rate": 0.8666666666666667,
+      "failed": 4,
+      "passed": 26,
       "total": 30
     },
     "black": {

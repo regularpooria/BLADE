@@ -44,8 +44,11 @@ code_prompt = "Represent the code snippet to match it with a possible error trac
 # model = SentenceTransformer("flax-sentence-embeddings/st-codesearch-distilroberta-base")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = SentenceTransformer(
-    "flax-sentence-embeddings/all_datasets_v4_MiniLM-L12", device=device
+    "jinaai/jina-embeddings-v2-base-code",
+    trust_remote_code=True,
+    device=device,
 )
+# model.max_seq_length = 1024
 embeddings = embed()
 index = index_embeddings(embeddings)
 

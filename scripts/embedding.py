@@ -49,8 +49,8 @@ model = SentenceTransformer(
     device=device,
 )
 # model.max_seq_length = 1024
-embeddings = embed()
-index = index_embeddings(embeddings)
+# embeddings = embed()
+# index = index_embeddings(embeddings)
 
 
 def search_bug(bug: dict):

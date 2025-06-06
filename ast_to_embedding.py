@@ -7,9 +7,10 @@ import json
 
 files = os.listdir("tmp/ast/chunks")
 
-for file in files:
+for ast_file in files:
 
-    with open(f"tmp/ast/chunks/{file}", "w", encoding="utf-8") as f:
+    with open(f"tmp/ast/chunks/{ast_file}", "r", encoding="utf-8") as f:
+        print(f"tmp/ast/chunks/{ast_file}")
         chunks = json.loads(f.read())
 
         # Embedding each text
@@ -22,7 +23,7 @@ for file in files:
             embeddings = model.encode(texts, show_progress_bar=True)
 
         os.makedirs("tmp/ast/embeddings/", exist_ok=True)
-        project_name = file.replace("code_chunks_", "").replace(".json", "")
+        project_name = ast_file.replace("code_chunks_", "").replace(".json", "")
         numpy.save(f"tmp/ast/embeddings/embedding_{project_name}.npy", embeddings)
         index = index_embeddings(embeddings)
         faiss.write_index(index, f"tmp/ast/embeddings/index_{project_name}.faiss")

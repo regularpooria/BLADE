@@ -144,8 +144,6 @@ def extract_python_tracebacks(project, bug_id):
             text = remove_decorations(
                 "\n".join(m.group("trace").strip() for m in matches)
             )
-            if len(text) > 4096 * 3:
-                return "\n".join(re.findall(r"(?m)^E\s.*$", text))
 
             return text
 

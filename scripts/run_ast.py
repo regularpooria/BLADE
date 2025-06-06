@@ -1,4 +1,4 @@
-from scripts.embedding import model, index_embeddings, code_prompt
+from scripts.embedding import model, index_embeddings, code_prompt, BATCH_SIZE
 from scripts.bugsinpy_utils import (
     get_projects,
     clone_project,
@@ -66,15 +66,6 @@ os.makedirs("tmp/ast/chunks", exist_ok=True)
 os.makedirs("tmp/ast/embeddings", exist_ok=True)
 
 
-def batched_encode(texts, model, batch_size=8):
-    embeddings = []
-    for i in range(0, len(texts), batch_size):
-        batch = texts[i : i + batch_size]
-        batch_embeddings = model.encode(batch, show_progress_bar=True)
-        embeddings.extend(batch_embeddings)
-    return embeddings
-
-
 for directory in dirs:
     if directory == "ast":
         continue
@@ -85,7 +76,11 @@ for directory in dirs:
 
     # Embedding each text
     texts = [chunk["code"] for chunk in chunks]
-    embeddings = batched_encode(texts, model, batch_size=4)
+    if BATCH_SIZE:
+        embeddings = model.encode(texts, batch_size=BATCH_SIZE, show_progress_bar=True)
+    else:
+        embeddings = model.encode(texts, show_progress_bar=True)
+
     os.makedirs("tmp/ast/embeddings/", exist_ok=True)
     numpy.save(f"tmp/ast/embeddings/embedding_{directory}.npy", embeddings)
     index = index_embeddings(embeddings)

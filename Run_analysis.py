@@ -6,7 +6,7 @@
 # In[6]:
 
 
-from scripts.embedding import model
+from scripts.embedding import model, MODEL_NAME, BATCH_SIZE
 from scripts.bugsinpy_utils import *
 
 import faiss
@@ -50,14 +50,18 @@ for project in projects:
         if len(changed_files) > 1:
             continue
         info = get_bug_info(project, bug)
-        error = extract_python_tracebacks(project, bug)
+        # error = extract_python_tracebacks(project, bug)
+        error = get_raw_traceback(project, bug)
         if error:
             filtered_bugs.append(bug)
             error_texts.append(error)
 
     # Batch encode
     if error_texts:
-        error_embeddings = model.encode(error_texts)
+        if BATCH_SIZE:
+            error_embeddings = model.encode(error_texts, batch_size=BATCH_SIZE, show_progress_bar=True)
+        else:
+            error_embeddings = model.encode(error_texts, show_progress_bar=True)
 
         output = []
         for bug, emb in zip(filtered_bugs, error_embeddings):
@@ -83,6 +87,7 @@ results_folder = os.path.abspath("tmp/ast/results")
 results_files = os.listdir(results_folder)
 
 results = {
+    "model_name": MODEL_NAME,
     "searches_failed": [],  # [{project_name, bug_id, detected_files: list, actual_file}]
     "searches_passed": [],  # [{project_name, bug_id, detected_files: list, actual_files}]
     "success_rate": 0,  # out of 100 (including bugs skipped)

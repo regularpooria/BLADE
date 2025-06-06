@@ -26,4 +26,6 @@ if [ -z "$VIRTUAL_ENV" ]; then
   exit 1
 fi
 
-python -m scripts.run_ast
+python run_ast.py
+python ast_to_embedding.py
+python Run_analysis.py

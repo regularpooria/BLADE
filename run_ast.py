@@ -1,4 +1,3 @@
-from scripts.embedding import model, index_embeddings, code_prompt, BATCH_SIZE
 from scripts.bugsinpy_utils import (
     get_projects,
     clone_project,
@@ -10,8 +9,6 @@ import pathspec
 import os
 import json
 import pathspec
-import numpy
-import faiss
 
 
 def load_gitignore():
@@ -71,17 +68,7 @@ for directory in dirs:
         continue
 
     chunks = extract_chunks(f"tmp/{directory}")
-    with open(f"tmp/ast/chunks/code_chunks_{directory}.json", "w") as f:
+    with open(
+        f"tmp/ast/chunks/code_chunks_{directory}.json", "w", encoding="utf-8"
+    ) as f:
         json.dump(chunks, f, indent=2)
-
-    # Embedding each text
-    texts = [chunk["code"] for chunk in chunks]
-    if BATCH_SIZE:
-        embeddings = model.encode(texts, batch_size=BATCH_SIZE, show_progress_bar=True)
-    else:
-        embeddings = model.encode(texts, show_progress_bar=True)
-
-    os.makedirs("tmp/ast/embeddings/", exist_ok=True)
-    numpy.save(f"tmp/ast/embeddings/embedding_{directory}.npy", embeddings)
-    index = index_embeddings(embeddings)
-    faiss.write_index(index, f"tmp/ast/embeddings/index_{directory}.faiss")

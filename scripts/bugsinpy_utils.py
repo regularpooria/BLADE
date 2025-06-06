@@ -141,9 +141,13 @@ def extract_python_tracebacks(project, bug_id):
 
         matches = list(re.finditer(pattern_pytest, unfiltered_trace, re.DOTALL))
         if matches:
-            return remove_decorations(
+            text = remove_decorations(
                 "\n".join(m.group("trace").strip() for m in matches)
             )
+            if len(text) > 4096 * 3:
+                return "\n".join(re.findall(r"(?m)^E\s.*$", text))
+
+            return text
 
         match = re.search(pattern_unittest, unfiltered_trace, re.MULTILINE | re.DOTALL)
         if match:

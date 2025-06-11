@@ -39,12 +39,22 @@ def extract_chunks(repo_path):
                     with open(fpath, "r", encoding="utf-8") as f:
                         source = f.read()
                         tree = ast.parse(source)
+                        root_code = ""
                         for node in ast.walk(tree):
                             if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
                                 snippet = ast.get_source_segment(source, node)
                                 all_chunks.append(
                                     {"file": fpath, "name": node.name, "code": snippet}
                                 )
+                            else:
+                                snippet = ast.get_source_segment(source, node)
+                                root_code += snippet + "\n"
+
+                        if root_code != "":
+                            all_chunks.append(
+                                {"file": fpath, "name": "root", "code": root_code}
+                            )
+
                 except Exception:
                     continue
 

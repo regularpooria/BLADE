@@ -29,6 +29,7 @@ K = 20
 
 
 projects = get_projects()
+from rank_bm25 import BM25Okapi
 
 for project in projects:
     bugs = get_bugs(project)
@@ -64,13 +65,29 @@ for project in projects:
 
         output = []
         for bug, emb in zip(filtered_bugs, error_embeddings):
-            D, I = index.search(np.array([emb]).astype("float32"), k=K)
+            # Step 1: Prepare BM25 over code_chunks
+            all_code_texts = [chunk["code"] for chunk in code_chunks]
+            bm25 = BM25Okapi([text.split() for text in all_code_texts])
+
+            # Step 2: Get top BM25 matches (limit FAISS search space)
+            query_text = error_texts[filtered_bugs.index(bug)]  # Matching query string
+            bm25_scores = bm25.get_scores(query_text.split())
+            top_bm25_indices = np.argsort(bm25_scores)[-K*20:]  # e.g., top 50
+
+            # Step 3: Get embeddings and file info for top BM25 candidates
+            top_code_chunks = [code_chunks[i] for i in top_bm25_indices]
+            top_embeddings = model.encode([chunk["code"] for chunk in top_code_chunks])
+
+            # Step 4: Run FAISS on just the top BM25 candidates
+            sub_index = faiss.IndexFlatL2(top_embeddings[0].shape[0])
+            sub_index.add(np.array(top_embeddings).astype("float32"))
+            _, sub_indices = sub_index.search(np.array([emb]).astype("float32"), k=K)
+
+            # Step 5: Map back to original files
             search_results = {"index": bug, "files": []}
-            for idx in I[0]:
-                result = code_chunks[idx]
-                search_results["files"].append(
-                    {"file": result["file"], "function": result["name"]}
-                )
+            for idx in sub_indices[0]:
+                result = top_code_chunks[idx]
+                search_results["files"].append({"file": result["file"], "function": result["name"]})
             output.append(search_results)
 
         with open(bug_result_path, "w", encoding="utf-8") as f:

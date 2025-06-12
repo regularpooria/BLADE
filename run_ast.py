@@ -89,7 +89,7 @@ def process_file(fpath):
     all_chunks = []
     try:
         with open(fpath, "r", encoding="utf-8") as f:
-            source = remove_comments_and_docstrings(f.read())
+            source = f.read()
 
             # Get root-level code by removing functions and classes
             root_code = remove_functions_and_classes(source)

@@ -36,9 +36,14 @@ def parse_changed_files(project, bug_id):
 
 def get_projects():
     return [
-        x
-        for x in os.listdir(f"{FOLDER_NAME}/projects")
-        if x not in ["bugsinpy-index.csv"]
+        "matplotlib",
+        "pandas",
+        "youtube-dl",
+        "luigi",
+        "black",
+        "scrapy",
+        "thefuck",
+        "keras",
     ]
 
 
@@ -105,79 +110,48 @@ def run_test(project, bug_id):
     )
 
 
+def remove_decorations(trace):
+    return "\n".join(
+        line
+        for line in trace.splitlines()
+        if not re.fullmatch(r"[-_=~\s]{5,}", line.strip())
+        and not re.fullmatch(r"[-_=~\s]{5,}.*?[-_=~\s]{5,}", line.strip())
+    )
+
+
 def extract_python_tracebacks(project, bug_id):
     file = os.path.abspath(
         f"{FOLDER_NAME}/projects/{project}/bugs/{bug_id}/bug_buggy.txt"
     )
-    error_patterns = [
-        re.compile(r"Traceback \(most recent call last\):"),
-        re.compile(r"^E\s+[\w.]+(?:Error|Exception|Warning):"),  # pytest summary
-        re.compile(r"^[\w.]+(?:Error|Exception|Warning):.*"),  # standard one-liner
-    ]
-    pytest_arrow = re.compile(r"^\s*>")  # line where test fails (starts with >)
-    file_lineno = re.compile(r"^[^\s].+:\d+:")  # lines like file.py:123:
+
+    pattern_pytest = (
+        r"=+ (?:FAILURES|ERRORS) =+\n"
+        r"(?P<trace>.*?)"
+        r"(?=\n[-=]{10,} (Captured|warnings summary|short test summary info|ERRORS|FAILURES|slowest)[^\n]* [-=]{10,}|\Z)"
+    )
+    pattern_unittest = (
+        r"^(FAIL|ERROR): .+?\n"  # Match FAIL or ERROR line
+        r"-+\n"  # Separator line
+        r"(?:[\s\S]*?)"  # Non-greedy match for traceback
+        r"(?=^-{10,}|\Z)"  # Until next dashed line or end
+    )
 
     with open(file, "r") as bug_trace_file:
-        unfiltered_trace = bug_trace_file.readlines()
-        errors = []
-        used = set()
-        context = 2
-        idx = 0
+        unfiltered_trace = bug_trace_file.read()
 
-        while idx < len(unfiltered_trace):
-            line = unfiltered_trace[idx].strip()
+        matches = list(re.finditer(pattern_pytest, unfiltered_trace, re.DOTALL))
+        if matches:
+            text = remove_decorations(
+                "\n".join(m.group("trace").strip() for m in matches)
+            )
 
-            for pat in error_patterns:
-                if pat.match(line):
-                    if "Traceback" in line:
-                        start = max(0, idx - context)
-                        block = [unfiltered_trace[start] if start != idx else line]
-                        idx += 1
-                        while idx < len(unfiltered_trace):
-                            block.append(unfiltered_trace[idx])
-                            if any(
-                                p.match(unfiltered_trace[idx].strip())
-                                for p in error_patterns[1:]
-                            ):
-                                idx += 1
-                                break
-                            if unfiltered_trace[idx].strip() == "":
-                                idx += 1
-                                break
-                            idx += 1
-                        block_text = "".join(block).strip()
-                    else:
-                        start = max(0, idx - context)
-                        end = min(len(unfiltered_trace), idx + context + 1)
-                        block_text = "".join(unfiltered_trace[start:end]).strip()
-                        idx += 1
-                    if block_text not in used:
-                        errors.append(block_text)
-                        used.add(block_text)
-                    break
+            return text
 
-            else:
-                # NEW: support pytest-style errors starting with >
-                if pytest_arrow.match(line):
-                    start = max(0, idx - context)
-                    block = unfiltered_trace[start:idx]
-                    while idx < len(unfiltered_trace):
-                        block.append(unfiltered_trace[idx])
-                        if any(
-                            p.match(unfiltered_trace[idx].strip())
-                            for p in error_patterns[1:]
-                        ):
-                            idx += 1
-                            break
-                        idx += 1
-                    block_text = "".join(block).strip()
-                    if block_text not in used:
-                        errors.append(block_text)
-                        used.add(block_text)
-                else:
-                    idx += 1
+        match = re.search(pattern_unittest, unfiltered_trace, re.MULTILINE | re.DOTALL)
+        if match:
+            return f"FAIL: {match.group(0).strip()}"
 
-        return errors
+        return None
 
 
 def get_raw_traceback(project, bug_id):

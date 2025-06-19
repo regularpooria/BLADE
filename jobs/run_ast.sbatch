@@ -3,14 +3,16 @@
 #SBATCH --output=slurm_logs/%x_%j.out
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=00:10:00
-#SBATCH --mem-per-cpu=1G
+#SBATCH --time=02:00:00
+#SBATCH --mem=5G
+#SBATCH --gpus-per-node=1
 
 
 DATE=$(date +%Y-%m-%d)
 echo "Running tests on $DATE"
 
 # Load modules
+module load python/3.10
 module load StdEnv/2023
 module load scipy-stack/2023b
 module load cuda/12.2 
@@ -24,4 +26,6 @@ if [ -z "$VIRTUAL_ENV" ]; then
   exit 1
 fi
 
-pytest
+python run_ast.py
+python ast_to_embedding.py
+python Run_analysis.py

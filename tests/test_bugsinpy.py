@@ -54,7 +54,19 @@ def test_get_project_github():
 
 
 def test_bug_trace():
-    print(get_raw_traceback("youtube-dl", 1))
+    projects = get_projects()
+    success = True
+    for project in projects:
+        bugs = get_bugs(project)
+        for bug in bugs:
+            tracebacks = extract_python_tracebacks(project, bug)
+            if tracebacks == None:
+                success = False
+                print(
+                    f"Project: {project}, bug id: {bug} has failed to extract traceback"
+                )
+
+    assert success
 
 
 # def test_pass():

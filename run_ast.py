@@ -151,24 +151,23 @@ def extract_chunks(repo_path):
     return all_chunks
 
 
-projects = get_projects()
-for project in projects:
-    clone_project(project)
-    info = get_bug_info(project, 1)
-    checkout_to_commit(project, info["buggy_commit_id"])
+if __name__ == "__main__":
+    projects = get_projects()
+    for project in projects:
+        clone_project(project)
+        info = get_bug_info(project, 1)
+        checkout_to_commit(project, info["buggy_commit_id"])
 
+    dirs = os.listdir("tmp")
+    os.makedirs("tmp/ast/chunks", exist_ok=True)
+    os.makedirs("tmp/ast/embeddings", exist_ok=True)
 
-dirs = os.listdir("tmp")
-os.makedirs("tmp/ast/chunks", exist_ok=True)
-os.makedirs("tmp/ast/embeddings", exist_ok=True)
+    for directory in dirs:
+        if directory == "ast":
+            continue
 
-
-for directory in dirs:
-    if directory == "ast":
-        continue
-
-    chunks = extract_chunks(f"tmp/{directory}")
-    with open(
-        f"tmp/ast/chunks/code_chunks_{directory}.json", "w", encoding="utf-8"
-    ) as f:
-        json.dump(chunks, f, indent=2)
+        chunks = extract_chunks(f"tmp/{directory}")
+        with open(
+            f"tmp/ast/chunks/code_chunks_{directory}.json", "w", encoding="utf-8"
+        ) as f:
+            json.dump(chunks, f, indent=2)

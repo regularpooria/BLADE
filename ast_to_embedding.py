@@ -1,4 +1,11 @@
-from scripts.embedding import model, index_embeddings, code_prompt, BATCH_SIZE
+from scripts.embedding import (
+    model,
+    index_embeddings,
+    code_prompt,
+    BATCH_SIZE,
+    embed,
+    compute_masked_embedding,
+)
 import numpy
 import faiss
 import os
@@ -16,11 +23,9 @@ for ast_file in files:
         # Embedding each text
         texts = [chunk["code"] for chunk in chunks]
         if BATCH_SIZE:
-            embeddings = model.encode(
-                texts, batch_size=BATCH_SIZE, show_progress_bar=True
-            )
+            embeddings = embed(texts, batch_size=BATCH_SIZE, show_progress_bar=True)
         else:
-            embeddings = model.encode(texts, show_progress_bar=True)
+            embeddings = embed(texts, show_progress_bar=True)
 
         os.makedirs("tmp/ast/embeddings/", exist_ok=True)
         project_name = ast_file.replace("code_chunks_", "").replace(".json", "")

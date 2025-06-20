@@ -3,10 +3,10 @@
 
 # Importing all of the necessary modules
 
-# In[6]:
+# In[4]:
 
 
-from scripts.embedding import model, MODEL_NAME, BATCH_SIZE
+from scripts.embedding import model, MODEL_NAME, BATCH_SIZE, embed
 from scripts.bugsinpy_utils import *
 
 import faiss
@@ -16,7 +16,7 @@ import json, os
 
 # Making sure the directories exist
 
-# In[7]:
+# In[2]:
 
 
 os.makedirs(os.path.abspath(f"tmp/ast/results"), exist_ok=True)
@@ -25,11 +25,11 @@ K = 20
 
 # Running each eligible bug through the model and embedding them, after then running cosine similarity to determine which files they think it should be changed
 
-# In[8]:
+# In[5]:
 
 
 projects = get_projects()
-
+projects = ["thefuck"]
 for project in projects:
     bugs = get_bugs(project)
     code_chunks_path = f"tmp/ast/chunks/code_chunks_{project}.json"
@@ -57,10 +57,7 @@ for project in projects:
 
     # Batch encode
     if error_texts:
-        if BATCH_SIZE:
-            error_embeddings = model.encode(error_texts, batch_size=BATCH_SIZE, show_progress_bar=True)
-        else:
-            error_embeddings = model.encode(error_texts, show_progress_bar=True)
+        error_embeddings = embed(error_texts, batch_size=BATCH_SIZE, show_progress_bar=True)
 
         output = []
         for bug, emb in zip(filtered_bugs, error_embeddings):
@@ -85,7 +82,7 @@ for project in projects:
 
 
 
-# In[10]:
+# In[6]:
 
 
 results_folder = os.path.abspath("tmp/ast/results")

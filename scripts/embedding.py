@@ -45,8 +45,8 @@ code_prompt = "Represent the code snippet to match it with a possible error trac
 device = "cuda" if torch.cuda.is_available() else "cpu"
 MODEL_NAME = "codesage/codesage-small-v2"
 model = SentenceTransformer(MODEL_NAME, trust_remote_code=True, device=device)
-model.half()
-BATCH_SIZE = 128
+# model.half()
+BATCH_SIZE = 2
 # model.max_seq_length = 1024
 # embeddings = embed()
 # index = index_embeddings(embeddings)

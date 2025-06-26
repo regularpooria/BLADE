@@ -51,12 +51,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 MODEL_NAME = "blaze"
 # model = SentenceTransformer(MODEL_NAME, trust_remote_code=True, device=device)
 # model.half()
-tokenizer = AutoTokenizer.from_pretrained(
-    MODEL_NAME, trust_remote_code=True
-)
-model = AutoModel.from_pretrained(
-    MODEL_NAME, trust_remote_code=True
-)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+model = AutoModel.from_pretrained(MODEL_NAME, trust_remote_code=True)
 torch.no_grad()
 
 BATCH_SIZE = 128

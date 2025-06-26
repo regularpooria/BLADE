@@ -6,7 +6,7 @@
 # In[4]:
 
 
-from scripts.embedding import model, MODEL_NAME, BATCH_SIZE, embed
+from scripts.embedding import model, MODEL_NAME, BATCH_SIZE, embed, index_embeddings
 from scripts.bugsinpy_utils import *
 
 import faiss
@@ -25,11 +25,10 @@ K = 20
 
 # Running each eligible bug through the model and embedding them, after then running cosine similarity to determine which files they think it should be changed
 
-# In[5]:
+# In[ ]:
 
 
 projects = get_projects()
-projects = ["thefuck"]
 for project in projects:
     bugs = get_bugs(project)
     code_chunks_path = f"tmp/ast/chunks/code_chunks_{project}.json"

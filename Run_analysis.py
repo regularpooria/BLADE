@@ -31,20 +31,14 @@ K = 20
 projects = get_projects()
 for project in projects:
     bugs = get_bugs(project)
-    code_chunks_path = f"tmp/ast/chunks/code_chunks_{project}.json"
-    embedding_index_path = f"tmp/ast/embeddings/index_{project}.faiss"
+    # embedding_index_path = f"tmp/ast/embeddings/index_{project}.faiss"
     bug_result_path = os.path.abspath(f"tmp/ast/results/bug_results_{project}.json")
-
-    with open(code_chunks_path, "r") as f:
-        code_chunks = json.load(f)
-
-    index = faiss.read_index(embedding_index_path)
-
     filtered_bugs = []
     error_texts = []
 
     # First pass: filter bugs and collect error traces
     for bug in bugs:
+            
         changed_files = parse_changed_files(project, bug)
         if len(changed_files) > 1:
             continue
@@ -60,6 +54,12 @@ for project in projects:
 
         output = []
         for bug, emb in zip(filtered_bugs, error_embeddings):
+            code_chunks_path = f"dataset/{project}/{bug}/code_chunks.json"
+            with open(code_chunks_path, "r") as f:
+                code_chunks = json.loads(f.read())
+            embedding_path = f"dataset/{project}/{bug}/embedding.npy"
+            embeddings = np.load(embedding_path)
+            index = index_embeddings(embeddings)
             D, I = index.search(np.array([emb]).astype("float32"), k=K)
             search_results = {"index": bug, "files": []}
             for idx in I[0]:
@@ -157,4 +157,42 @@ analyze(5)
 analyze(10)
 analyze(15)
 analyze(20)
+
+
+# In[20]:
+
+
+import json
+
+# Load your data
+with open("results_20.json", "r") as f:
+    data = json.load(f)
+
+# Desired project order
+ordered_projects = [
+    "youtube-dl",
+    "keras",
+    "matplotlib",
+    "black",
+    "thefuck",
+    "scrapy",
+    "pandas",
+    "luigi",
+]
+
+# Print header
+print(f"{'Project':<15} {'Passed':>6} {'Failed':>6} {'Total':>6} {'Success Rate':>13}")
+print("=" * 50)
+
+# Print each project in order
+for project in ordered_projects:
+    stats = data["success_projects"][project]
+    passed = stats["passed"]
+    failed = stats["failed"]
+    total = stats["total"]
+    rate = stats["success_rate"]
+    print(rate)
+
+# Print overall success rate
+print("\nOverall Success Rate:", f"{data['success_rate'] * 100:.2f}%")
 

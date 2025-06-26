@@ -52,11 +52,12 @@ code_prompt = "Represent the code snippet to match it with a possible error trac
 
 # model = SentenceTransformer("flax-sentence-embeddings/st-codesearch-distilroberta-base")
 device = "cuda" if torch.cuda.is_available() else "cpu"
-MODEL_NAME = os.getenv("MODEL_NAME") or "blaze"
+MODEL_NAME = os.getenv("MODEL_NAME") or "regularpooria/blaze_code_embedding"
 # model = SentenceTransformer(MODEL_NAME, trust_remote_code=True, device=device)
-# model.half()
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
 model = AutoModel.from_pretrained(MODEL_NAME, trust_remote_code=True)
+model.half()
+model.eval()
 torch.no_grad()
 
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 128))
@@ -94,7 +95,6 @@ def compute_masked_embedding(
 
 
 def embed(strings, batch_size=8, show_progress_bar=True):
-    model.eval()
     embeddings = []
 
     dataloader = DataLoader(strings, batch_size=batch_size)

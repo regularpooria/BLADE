@@ -3,10 +3,10 @@
 
 # Importing all of the necessary modules
 
-# In[1]:
+# In[4]:
 
 
-from scripts.embedding import model, MODEL_NAME, BATCH_SIZE, index_embeddings
+from scripts.embedding import model, MODEL_NAME, BATCH_SIZE, embed, index_embeddings
 from scripts.bugsinpy_utils import *
 
 import faiss
@@ -25,11 +25,10 @@ K = 20
 
 # Running each eligible bug through the model and embedding them, after then running cosine similarity to determine which files they think it should be changed
 
-# In[18]:
+# In[ ]:
 
 
 projects = get_projects()
-
 for project in projects:
     bugs = get_bugs(project)
     # embedding_index_path = f"tmp/ast/embeddings/index_{project}.faiss"
@@ -51,11 +50,7 @@ for project in projects:
 
     # Batch encode
     if error_texts:
-        BATCH_SIZE=1
-        if BATCH_SIZE:
-            error_embeddings = model.encode(error_texts, batch_size=BATCH_SIZE, show_progress_bar=True)
-        else:
-            error_embeddings = model.encode(error_texts, show_progress_bar=True)
+        error_embeddings = embed(error_texts, batch_size=BATCH_SIZE, show_progress_bar=True)
 
         output = []
         for bug, emb in zip(filtered_bugs, error_embeddings):
@@ -86,7 +81,7 @@ for project in projects:
 
 
 
-# In[19]:
+# In[6]:
 
 
 results_folder = os.path.abspath("tmp/ast/results")

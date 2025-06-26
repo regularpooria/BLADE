@@ -1,6 +1,7 @@
 images
 slurm_logs
 tmp
+models
 dataset
 results*
 *.gz

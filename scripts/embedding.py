@@ -10,6 +10,11 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 
 def load_dataset(file_path):
     with open(file_path, "r") as file:
@@ -48,14 +53,14 @@ code_prompt = "Represent the code snippet to match it with a possible error trac
 
 # model = SentenceTransformer("flax-sentence-embeddings/st-codesearch-distilroberta-base")
 device = "cuda" if torch.cuda.is_available() else "cpu"
-MODEL_NAME = "blaze"
+MODEL_NAME = os.getenv("MODEL_NAME") or "blaze"
 # model = SentenceTransformer(MODEL_NAME, trust_remote_code=True, device=device)
 # model.half()
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
 model = AutoModel.from_pretrained(MODEL_NAME, trust_remote_code=True)
 torch.no_grad()
 
-BATCH_SIZE = 128
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", 128))
 # model.max_seq_length = 1024
 # embeddings = embed()
 # index = index_embeddings(embeddings)

@@ -1,7 +1,9 @@
 images
 slurm_logs
 tmp
-
+dataset
+results*
+*.gz
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

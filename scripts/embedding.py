@@ -4,6 +4,10 @@ import faiss
 import numpy as np
 import torch
 from sklearn.metrics.pairwise import cosine_similarity
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 def load_dataset(file_path):
@@ -43,10 +47,10 @@ code_prompt = "Represent the code snippet to match it with a possible error trac
 
 # model = SentenceTransformer("flax-sentence-embeddings/st-codesearch-distilroberta-base")
 device = "cuda" if torch.cuda.is_available() else "cpu"
-MODEL_NAME = "codesage/codesage-small-v2"
+MODEL_NAME = os.getenv("MODEL_NAME") or "codesage/codesage-small-v2"
 model = SentenceTransformer(MODEL_NAME, trust_remote_code=True, device=device)
 model.half()
-BATCH_SIZE = 128
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", 128))
 # model.max_seq_length = 1024
 # embeddings = embed()
 # index = index_embeddings(embeddings)

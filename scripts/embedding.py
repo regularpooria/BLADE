@@ -52,14 +52,14 @@ MODEL_NAME = "blaze"
 # model = SentenceTransformer(MODEL_NAME, trust_remote_code=True, device=device)
 # model.half()
 tokenizer = AutoTokenizer.from_pretrained(
-    "regularpooria/blaze_code_embedding", trust_remote_code=True
+    MODEL_NAME, trust_remote_code=True
 )
 model = AutoModel.from_pretrained(
-    "regularpooria/blaze_code_embedding", trust_remote_code=True
+    MODEL_NAME, trust_remote_code=True
 )
 torch.no_grad()
 
-BATCH_SIZE = 8
+BATCH_SIZE = 128
 # model.max_seq_length = 1024
 # embeddings = embed()
 # index = index_embeddings(embeddings)

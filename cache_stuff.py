@@ -13,6 +13,8 @@ for project in projects:
 
 from sentence_transformers import SentenceTransformer
 
-model = SentenceTransformer("codesage/codesage-small-v2")
+model = SentenceTransformer(
+    "regularpooria/blaze_code_embedding", trust_remote_code=True
+)
 
 model.save("codesage-small-v2-local")

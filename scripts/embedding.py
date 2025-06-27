@@ -56,7 +56,9 @@ MODEL_NAME = os.getenv("MODEL_NAME") or "regularpooria/blaze_code_embedding"
 # model = SentenceTransformer(MODEL_NAME, trust_remote_code=True, device=device)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
 model = AutoModel.from_pretrained(MODEL_NAME, trust_remote_code=True)
-model.half()
+if device != "cpu":
+    model.half().to(device)
+
 model.eval()
 torch.no_grad()
 
@@ -106,6 +108,9 @@ def embed(strings, batch_size=8, show_progress_bar=True):
         tokenized = tokenizer(
             batch, return_tensors="pt", padding=True, truncation=True, max_length=1024
         )
+        if device != "cpu":
+            # Move tensors to CUDA (or appropriate device)
+            tokenized = {k: v.to(device) for k, v in tokenized.items()}
 
         with torch.no_grad():
             output = model(**tokenized)
@@ -114,6 +119,8 @@ def embed(strings, batch_size=8, show_progress_bar=True):
         batch_embeddings = compute_masked_embedding(
             output.last_hidden_state, tokenized["attention_mask"]
         )
-        embeddings.extend(batch_embeddings)
 
-    return embeddings  # List of [hidden_dim] vectors
+        # Move embeddings to CPU and convert to NumPy if needed later
+        embeddings.extend(batch_embeddings.cpu())
+
+    return embeddings  # List of [hidden_dim] tensors

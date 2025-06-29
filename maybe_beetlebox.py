@@ -19,7 +19,7 @@ for project in projects:
         chunks = [chunk["chunk"] for chunk in chunks]
 
     embeddings = embed(chunks, BATCH_SIZE)
-    np.save(embeddings, f"beetlebox_dataset/{project}/duplicated_embeddings.npy")
+    np.save(f"beetlebox_dataset/{project}/duplicated_embeddings.npy", embeddings)
 
     for bug in bugs:
         if not os.path.isdir(f"beetlebox_dataset/{project}/{bug}"):
@@ -32,4 +32,4 @@ for project in projects:
             chunks = [chunk["chunk"] for chunk in chunks]
 
         embeddings = embed(chunks, BATCH_SIZE)
-        np.save(embeddings, f"beetlebox_dataset/{project}/{bug}/unique_embeddings.npy")
+        np.save(f"beetlebox_dataset/{project}/{bug}/unique_embeddings.npy", embeddings)

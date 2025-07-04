@@ -204,19 +204,27 @@ def update_issue_ids(data, issue_map):
     return data
 
 
-def load_project(project):
-    project_path = get_projects()[project]
+# def load_project(project):
+#     project_path = get_projects()[project]
 
-    data = load_from_disk(f"{DATASET_PATH}/BeetleBox_Test_Dataset/{project_path}")
-    with open(
-        f"{DATASET_PATH}/BeetleBox_Test_Dataset/{project_path}/version_issue_map_{project_path}.json",
-        "r",
-        encoding="utf-8",
-    ) as f:
-        issue_map = json.loads(f.read())
-    update_issue_ids(data, issue_map)
+#     data = load_from_disk(f"{DATASET_PATH}/BeetleBox_Test_Dataset/{project_path}")
+#     with open(
+#         f"{DATASET_PATH}/BeetleBox_Test_Dataset/{project_path}/version_issue_map_{project_path}.json",
+#         "r",
+#         encoding="utf-8",
+#     ) as f:
+#         issue_map = json.loads(f.read())
+#     update_issue_ids(data, issue_map)
 
-    return data
+#     return data
+
+
+def load_project(project: str):
+    if "_" in project:
+        project = project.replace("_", "/")
+    filtered_ds = ds.filter(lambda example: example["repo_name"] == project)
+
+    return filtered_ds
 
 
 if __name__ == "__main__":

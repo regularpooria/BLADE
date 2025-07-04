@@ -14,6 +14,7 @@ ordered_projects = [
     "scrapy",
     "pandas",
     "luigi",
+    "ansible",
 ]
 
 # Print header

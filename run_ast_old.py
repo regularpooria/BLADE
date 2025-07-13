@@ -1,3 +1,4 @@
+import time
 from scripts.bugsinpy_utils import (
     get_projects,
     clone_project,
@@ -8,55 +9,61 @@ import ast
 import pathspec
 import os
 import json
-import pathspec
+import token, tokenize
+from io import StringIO
 from tqdm import tqdm
 from multiprocessing import Pool
+import hashlib
+import asttokens
 
 
 def load_gitignore():
+    start_time = time.time()
     gitignore_path = os.path.abspath(".gitignore_embedding")
+    spec = None
     if os.path.exists(gitignore_path):
         with open(gitignore_path, "r") as f:
-            return pathspec.PathSpec.from_lines("gitwildmatch", f)
-    return None
+            spec = pathspec.PathSpec.from_lines("gitwildmatch", f)
+    end_time = time.time()
+    # print(f"Time taken by load_gitignore: {end_time - start_time:.4f} seconds")
+    return spec
 
 
-def remove_functions_and_classes(source):
+def remove_functions_and_classes(source, tree):
     """
     This function takes in source code, parses it with AST, and removes all
     function and class definitions, returning only the root-level code.
     """
-    tree = ast.parse(source)
+    start_time = time.time()
     lines = source.splitlines()  # Split source into lines for easier manipulation
 
     # Collect line numbers for function and class definitions
     lines_to_remove = set()
     for node in ast.walk(tree):
         if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
-            start_line = node.lineno - 1  # Convert to 0-based index
-            end_line = start_line + len(
-                node.body
-            )  # End line of the function/class body
-
-            # Mark the function or class lines for removal
+            start_line = node.lineno - 1
+            end_line = node.body[-1].lineno if node.body else start_line
+            end_line = max(end_line, start_line)
             for i in range(start_line, end_line):
                 lines_to_remove.add(i)
+            lines_to_remove.add(node.lineno - 1)
 
-    # Keep only lines that are not part of any function or class
     root_code = "\n".join(
         line for i, line in enumerate(lines) if i not in lines_to_remove
     )
+    end_time = time.time()
+    # print(
+    #     f"Time taken by remove_functions_and_classes: {end_time - start_time:.4f} seconds"
+    # )
+
     return root_code
-
-
-import token, tokenize
-from io import StringIO
 
 
 def remove_comments_and_docstrings(source: str) -> str:
     """
     Strip comments and docstrings from a given source code string.
     """
+    start_time = time.time()
     source_io = StringIO(source)
     output = []
 
@@ -82,42 +89,41 @@ def remove_comments_and_docstrings(source: str) -> str:
         last_col = ecol
         last_lineno = elineno
 
-    return "".join(output)
+    result = "".join(output)
+    end_time = time.time()
+    # print(
+    #     f"Time taken by remove_comments_and_docstrings: {end_time - start_time:.4f} seconds"
+    # )
+    return result
 
 
 def process_file(fpath):
+    start_time = time.time()
     all_chunks = []
     try:
         with open(fpath, "r", encoding="utf-8") as f:
             source = f.read()
 
-            # Get root-level code by removing functions and classes
-            root_code = remove_functions_and_classes(source)
+        atok = asttokens.ASTTokens(source, parse=True)
+        tree = atok.tree
+        root_code = remove_functions_and_classes(source, tree)
+        if root_code:
+            all_chunks.append({"file": fpath, "name": "root", "code": root_code})
 
-            # Add the root-level code to the chunks
-            if root_code:
-                all_chunks.append({"file": fpath, "name": "root", "code": root_code})
-
-            # Also add function and class code if needed (optional)
-            tree = ast.parse(source)
-            for node in ast.walk(tree):
-                if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
-                    snippet = ast.get_source_segment(source, node)
-                    all_chunks.append(
-                        {"file": fpath, "name": node.name, "code": snippet}
-                    )
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+                snippet = atok.get_text(node)
+                all_chunks.append({"file": fpath, "name": node.name, "code": snippet})
 
     except Exception as e:
-        pass  # Handle error silently and move on to the next file
+        print(f"⚠️ Error processing {fpath}: {e}")
 
+    end_time = time.time()
     return all_chunks
 
 
-def extract_chunks(repo_path):
-    all_chunks = []
+def get_python_files(repo_path):
     spec = load_gitignore()
-
-    # Gather all Python files first
     python_files = []
     for root, _, files in os.walk(repo_path):
         rel_root = os.path.relpath(root, repo_path)
@@ -132,8 +138,20 @@ def extract_chunks(repo_path):
             if fname.endswith(".py"):
                 fpath = os.path.join(root, fname)
                 python_files.append(fpath)
+    return python_files
 
-    # Use tqdm for a single progress bar over all Python files
+
+def hash_file(path):
+    try:
+        with open(path, "rb") as f:
+            return hashlib.sha256(f.read()).hexdigest()
+    except Exception:
+        return None
+
+
+def extract_chunks(python_files):
+    start_time = time.time()
+    all_chunks = []
     with Pool() as pool:
         results = list(
             tqdm(
@@ -143,31 +161,11 @@ def extract_chunks(repo_path):
                 unit="file",
             )
         )
-
-    # Combine results from all processes
     for result in results:
         all_chunks.extend(result)
 
+    end_time = time.time()
+    # print(
+    #     f"Time taken by extract_chunks for {repo_path}: {end_time - start_time:.4f} seconds"
+    # )
     return all_chunks
-
-
-if __name__ == "__main__":
-    projects = get_projects()
-    for project in projects:
-        clone_project(project)
-        info = get_bug_info(project, 1)
-        checkout_to_commit(project, info["buggy_commit_id"])
-
-    dirs = os.listdir("tmp")
-    os.makedirs("tmp/ast/chunks", exist_ok=True)
-    os.makedirs("tmp/ast/embeddings", exist_ok=True)
-
-    for directory in dirs:
-        if directory == "ast":
-            continue
-
-        chunks = extract_chunks(f"tmp/{directory}")
-        with open(
-            f"tmp/ast/chunks/code_chunks_{directory}.json", "w", encoding="utf-8"
-        ) as f:
-            json.dump(chunks, f, indent=2)

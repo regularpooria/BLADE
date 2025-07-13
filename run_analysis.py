@@ -3,7 +3,7 @@
 
 # Importing all of the necessary modules
 
-# In[4]:
+# In[2]:
 
 
 from scripts.embedding import model, MODEL_NAME, BATCH_SIZE, embed, index_embeddings
@@ -16,11 +16,11 @@ import json, os
 
 # Making sure the directories exist
 
-# In[2]:
+# In[3]:
 
 
 os.makedirs(os.path.abspath(f"tmp/ast/results"), exist_ok=True)
-K = 20
+K = 60
 
 
 # Running each eligible bug through the model and embedding them, after then running cosine similarity to determine which files they think it should be changed
@@ -28,7 +28,29 @@ K = 20
 # In[ ]:
 
 
+def compute_average_precision(y_true):
+    hits = 0
+    sum_precisions = 0.0
+    for i, rel in enumerate(y_true):
+        if rel:
+            hits += 1
+            sum_precisions += hits / (i + 1)
+    return sum_precisions / max(hits, 1)
+
+def compute_reciprocal_rank(y_true):
+    for i, rel in enumerate(y_true, start=1):  # ranks start at 1
+        if rel:
+            return 1.0 / i
+    return 0.0  # no relevant item found in top K
+
+
+# In[4]:
+
+
 projects = get_projects()
+all_ap = []
+all_rr = []
+
 for project in projects:
     bugs = get_bugs(project)
     # embedding_index_path = f"tmp/ast/embeddings/index_{project}.faiss"
@@ -53,6 +75,7 @@ for project in projects:
         error_embeddings = embed(error_texts, batch_size=BATCH_SIZE, show_progress_bar=True)
 
         output = []
+
         for bug, emb in zip(filtered_bugs, error_embeddings):
             code_chunks_path = f"dataset/{project}/{bug}/code_chunks.json"
             with open(code_chunks_path, "r") as f:
@@ -68,6 +91,14 @@ for project in projects:
                     {"file": result["file"], "function": result["name"]}
                 )
             output.append(search_results)
+            
+            changed_file = parse_changed_files(project, bug)[0].split("/")[-1]
+            y_true = [1 if code_chunks[idx]["file"] == changed_file else 0 for idx in I[0]]
+            ap = compute_average_precision(y_true)
+            rr = compute_reciprocal_rank(y_true)
+
+            all_ap.append(ap)
+            all_rr.append(rr)
 
         with open(bug_result_path, "w", encoding="utf-8") as f:
             json.dump(output, f, indent=2)
@@ -81,7 +112,7 @@ for project in projects:
 
 
 
-# In[6]:
+# In[5]:
 
 
 results_folder = os.path.abspath("tmp/ast/results")
@@ -93,6 +124,8 @@ def analyze(k):
         "searches_failed": [],  # [{project_name, bug_id, detected_files: list, actual_file}]
         "searches_passed": [],  # [{project_name, bug_id, detected_files: list, actual_files}]
         "success_rate": 0,  # out of 100 (including bugs skipped)
+        "MAP": np.mean(all_ap),
+        "MRR": np.mean(all_rr),
         "success_projects": {},  # {project_name, success_rate, success_rate_no_skip}
     }
     success_projects_tmp = {}
@@ -159,13 +192,13 @@ analyze(15)
 analyze(20)
 
 
-# In[20]:
+# In[9]:
 
 
 import json
 
 # Load your data
-with open("results_20.json", "r") as f:
+with open("results_5.json", "r") as f:
     data = json.load(f)
 
 # Desired project order

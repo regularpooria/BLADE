@@ -1,7 +1,7 @@
 import json
 
 # Load your data
-with open("results_5.json", "r") as f:
+with open("results_10.json", "r") as f:
     data = json.load(f)
 
 # Desired project order
@@ -14,6 +14,7 @@ ordered_projects = [
     "scrapy",
     "pandas",
     "luigi",
+    "ansible",
 ]
 
 # Print header

@@ -3,7 +3,7 @@ FOLDER_NAME = "BugsInPy"
 import os
 import subprocess
 from scripts.run_snippet import run_command_in_folder, run_command_in_venv, make_venv
-import re
+import re, json
 
 
 def parse_string(string: str):
@@ -22,14 +22,17 @@ def parse_changed_files(project, bug_id):
         f"{FOLDER_NAME}/projects/{project}/bugs/{bug_id}/bug_patch.txt"
     ) as diff_file:
         diff_text = diff_file.read()
-        changed_files = []
+        try:
+            changed_files = json.loads(diff_text)
+        except:
+            changed_files = []
 
-        for line in diff_text.splitlines():
-            if line.startswith("diff --git"):
-                # Extract file name from b/ path
-                match = re.match(r"diff --git a/.* b/(.*)", line)
-                if match:
-                    changed_files.append(match.group(1))
+            for line in diff_text.splitlines():
+                if line.startswith("diff --git"):
+                    # Extract file name from b/ path
+                    match = re.match(r"diff --git a/.* b/(.*)", line)
+                    if match:
+                        changed_files.append(match.group(1))
 
         return changed_files
 
@@ -44,6 +47,7 @@ def get_projects():
         "scrapy",
         "thefuck",
         "keras",
+        "ansible",
     ]
 
 
@@ -62,7 +66,7 @@ def clone_project(project):
         os.mkdir("tmp")
 
     if not os.path.isdir("tmp/" + project):
-        subprocess.run(["git", "-C", "tmp", "clone", github_url])
+        subprocess.run(["git", "-C", "tmp", "clone", "--depth=1", github_url])
 
     # make_venv(project)
 

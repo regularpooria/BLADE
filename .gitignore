@@ -2,6 +2,8 @@ images
 slurm_logs
 tmp
 models
+beetlebox_dataset
+beetlebox_dataset_mine
 dataset
 results*
 *.gz

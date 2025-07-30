@@ -1,33 +1,11 @@
-# import subprocess
-# import os
-# from scripts.bugsinpy_utils import *
-
-# projects = get_projects()
-
-# # for project in projects:
-# #     bugs = get_bugs(project)
-# #     for bug in bugs:
-# #         tracebacks = extract_python_tracebacks(project, bug)
-# #         with open("tmp.txt", "w") as file:
-# #             file.write(tracebacks)
-# #         file = os.path.abspath(
-# #             f"{FOLDER_NAME}/projects/{project}/bugs/{bug}/bug_buggy.txt"
-# #         )
-# #         subprocess.run(["code", "--reuse-window", "--diff", "tmp.txt", file])
-# #         print(project, bug)
-# #         input("Continue?")
-
-# project = "keras"
-# bug = 24
-# tracebacks = extract_python_tracebacks(project, bug)
-# with open("tmp.txt", "w") as file:
-#     file.write(tracebacks)
-# file = os.path.abspath(f"{FOLDER_NAME}/projects/{project}/bugs/{bug}/bug_buggy.txt")
-# subprocess.run(["code", "--reuse-window", "--diff", "tmp.txt", file])
-
-# # Open in current VSCode window
+from scripts.bugsinpy_utils import *
 
 
-from scripts import beetlebox_utils
-
-beetlebox_utils.prepare_dataset()
+tree, sources = test_to_source_code(
+    "youtube-dl", "test/test_utils.py", "test_js_to_json", max_depth=1
+)
+print("TREE:")
+print(tree)
+print("\nSOURCES:")
+for (file_path, func_name), src in sources.items():
+    print(f"\n--- {file_path}::{func_name} ---\n{src}")

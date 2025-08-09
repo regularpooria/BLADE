@@ -24,20 +24,24 @@ A research/engineering workspace for experimenting with bug localization on the 
 ### Local setup
 1. Clone the repository
    ```bash
-   git clone <your-fork-or-repo-url>
+   git clone https://github.com/regularpooria/bootcamp
    cd bootcamp
    ```
-2. Create and activate a virtual environment
+2. Initialize git submodules (required)
+   ```bash
+   git submodule update --init --recursive
+   ```
+3. Create and activate a virtual environment
    ```bash
    python3.9 -m venv .venv
    source .venv/bin/activate
    ```
-3. Install dependencies
+4. Install dependencies
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
-4. Optional: Configure environment variables by creating a `.env` file at the repository root:
+5. Optional: Configure environment variables by creating a `.env` file at the repository root:
    ```env
    # Hugging Face model used for embeddings (default is below)
    MODEL_NAME=regularpooria/blaze_code_embedding

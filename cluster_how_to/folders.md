@@ -1,0 +1,6 @@
+# I see 3 folders, which do I use?
+There is usually 3(+1 home) folders in each cluster.
+1. Home: This is your home directory, files such as configs and anything that is not in the folder below will be in Home, you usually have a maximum of **50GB** in this directory, so don't put your project here.
+2. Nearline: You will probably never have to use this, it's a long-term storage that is costly to read a lot of files from it at once, so it is only for when you have really large models and just want to archive them for months. There are complications on what can be saved and what not, so please refer to [the docs](https://docs.alliancecan.ca/wiki/Using_nearline_storage) if you want to use this 
+3. Scratch: This folder is temporary, it will be purged once the files are not used. So only put things that you won't mind losing, can be used in your jobs if you need to temporarily hold something until the process is finished. Could be used for large model files. 
+4. Project: This is where your project will live, it has lots of storage and is persistent.

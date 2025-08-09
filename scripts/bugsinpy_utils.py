@@ -6,6 +6,7 @@ from scripts.run_snippet import run_command_in_folder, run_command_in_venv, make
 import re, json
 import ast
 import builtins
+import tempfile
 
 builtin_names = set(dir(builtins))
 
@@ -47,9 +48,122 @@ def parse_changed_function_names(project, bug_id):
     ) as diff_file:
         diff_text = diff_file.read()
         function_names = re.findall(
-            r"^@@.*\b(?:def|class)\s+(\w+)\s*\(", diff_text, flags=re.MULTILINE
+            r"^@@.*\b(?:def)\s+(\w+)\s*\(", diff_text, flags=re.MULTILINE
         )
         return list(set(function_names))
+
+
+def parse_changed_function_names_2(project, bug_id, fixed_commit=False):
+
+    def find_enclosing_function(file_path, old_code_lines):
+        """Find the top-level (mother) function containing the old_code_lines.
+        If no function is found, return the enclosing class instead."""
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                source = f.read()
+        except FileNotFoundError:
+            return "File not found"
+
+        index = source.find(old_code_lines)
+        if index == -1:
+            return "Old code not found in file"
+
+        start_lineno = source[:index].count("\n") + 1  # AST is 1-based
+
+        try:
+            tree = ast.parse(source, filename=file_path)
+        except SyntaxError:
+            return "Syntax error in source file"
+
+        enclosing_funcs = []
+        enclosing_classes = []
+
+        class Visitor(ast.NodeVisitor):
+            def visit_FunctionDef(self, node):
+                if (
+                    hasattr(node, "end_lineno")
+                    and node.lineno <= start_lineno <= node.end_lineno
+                ):
+                    enclosing_funcs.append((node.lineno, node.name))
+                self.generic_visit(node)
+
+            def visit_AsyncFunctionDef(self, node):
+                self.visit_FunctionDef(node)
+
+            def visit_ClassDef(self, node):
+                if (
+                    hasattr(node, "end_lineno")
+                    and node.lineno <= start_lineno <= node.end_lineno
+                ):
+                    enclosing_classes.append((node.lineno, node.name))
+                self.generic_visit(node)
+
+        Visitor().visit(tree)
+
+        if enclosing_funcs:
+            # Return outermost function (smallest lineno)
+            return min(enclosing_funcs, key=lambda x: x[0])[1]
+        elif enclosing_classes:
+            return min(enclosing_classes, key=lambda x: x[0])[1]
+        else:
+            return None
+
+    def extract_old_code_blocks(diff_text):
+        """Parse diff and return list of (file_path, old_code_block) pairs"""
+        blocks = []
+        current_file = None
+        current_block = []
+        in_hunk = False
+
+        for line in diff_text.splitlines():
+            if line.startswith("diff --git"):
+                if current_block and current_file:
+                    blocks.append((current_file, current_block))
+                    current_block = []
+                current_file = None
+                in_hunk = False
+
+            elif line.startswith("--- a/"):
+                current_file = line[6:].strip()
+
+            elif line.startswith("@@"):
+                if current_block:
+                    blocks.append((current_file, current_block))
+                    current_block = []
+                in_hunk = True
+
+            elif in_hunk:
+                if fixed_commit:
+                    if line.startswith("+"):
+                        current_block.append(line[1:])  # Remove leading '+'
+                else:
+                    if line.startswith("-") and not line.startswith("---"):
+                        current_block.append(line[1:])  # Remove leading '-'
+
+        if current_block and current_file:
+            blocks.append((current_file, current_block))
+
+        return blocks
+
+    with open(
+        f"{FOLDER_NAME}/projects/{project}/bugs/{bug_id}/bug_patch.txt"
+    ) as diff_file:
+        diff_text = diff_file.read()
+        blocks = extract_old_code_blocks(diff_text)
+        funcs = {}
+        for file_path, old_code in blocks:
+            path = f"tmp/{project}/{file_path}"
+            for code in old_code:
+                func = find_enclosing_function(path, code)
+                if func is not None:
+                    funcs[func] = file_path
+
+    if len(funcs) == 0 and not fixed_commit:
+        bug_info = get_bug_info(project, bug_id)
+        checkout_to_commit(project, bug_info["fixed_commit_id"], True)
+        funcs = parse_changed_function_names_2(project, bug_id, True)
+        checkout_to_commit(project, bug_info["buggy_commit_id"], True)
+    return funcs
 
 
 def parse_imports(source_code):
@@ -223,7 +337,9 @@ def extract_function_name_from_traceback(traceback: str):
     return re.findall(pattern, traceback)
 
 
-def test_to_source_code(project, file_path, function_name, seen=None, max_depth=None, _depth=0, sources=None):
+def test_to_source_code(
+    project, file_path, function_name, seen=None, max_depth=None, _depth=0, sources=None
+):
     if "tmp" not in project:
         project_root = f"tmp/{project}"
     else:
@@ -260,13 +376,113 @@ def test_to_source_code(project, file_path, function_name, seen=None, max_depth=
             module_rel_path = resolve_module_to_path(imports[func], project_root)
             if module_rel_path:
                 subtree, sources = test_to_source_code(
-                    project_root, module_rel_path, func, seen, max_depth, _depth + 1, sources
+                    project_root,
+                    module_rel_path,
+                    func,
+                    seen,
+                    max_depth,
+                    _depth + 1,
+                    sources,
                 )
                 tree[function_name][func] = subtree
             else:
                 tree[function_name][func] = "Module file not found"
         else:
             tree[function_name][func] = "External or builtin function"
+    return tree, sources
+
+
+def test_to_source_code_2(
+    project, file_path, function_name, seen=None, max_depth=None, _depth=0, sources=None
+):
+    if "tmp" not in project:
+        project_root = f"tmp/{project}"
+    else:
+        project_root = project
+
+    if seen is None:
+        seen = set()
+    if sources is None:
+        sources = {}
+
+    key = (file_path, function_name)
+    if key in seen:
+        return {}, sources
+    seen.add(key)
+
+    abs_file_path = os.path.join(project_root, file_path)
+
+    # Run pycg on the specific file
+    with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as tmp_out:
+        tmp_json_path = tmp_out.name
+    subprocess.run(
+        [
+            "python",
+            "-m",
+            "pycg",
+            abs_file_path,
+            "--package",
+            project_root.replace(os.sep, "."),
+            "-o",
+            tmp_json_path,
+        ],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+
+    # Load PyCG output
+    with open(tmp_json_path, "r", encoding="utf-8") as f:
+        call_graph = json.load(f)
+    os.remove(tmp_json_path)
+
+    # Read source code for this function
+    with open(abs_file_path, "r", encoding="utf-8") as f:
+        source_code = f.read()
+
+    defined_funcs = get_defined_functions(source_code)
+    imports = parse_imports(source_code)
+    function_src = extract_function_source(source_code, function_name)
+    if not function_src:
+        return {function_name: "Function not found"}, sources
+
+    sources[key] = function_src
+
+    called_funcs = []
+    for k, v in call_graph.items():
+        if k.endswith(f".{function_name}"):
+            called_funcs = v
+            break
+
+    tree = {function_name: {}}
+    for func in called_funcs:
+        func_short = func.split(".")[-1]
+
+        if func_short in defined_funcs:
+            subtree, sources = test_to_source_code_2(
+                project_root, file_path, func_short, seen, max_depth, _depth, sources
+            )
+            tree[function_name][func_short] = subtree
+        elif func_short in imports:
+            if max_depth is not None and _depth >= max_depth:
+                tree[function_name][func_short] = "Max depth reached"
+                continue
+            module_rel_path = resolve_module_to_path(imports[func_short], project_root)
+            if module_rel_path:
+                subtree, sources = test_to_source_code_2(
+                    project_root,
+                    module_rel_path,
+                    func_short,
+                    seen,
+                    max_depth,
+                    _depth + 1,
+                    sources,
+                )
+                tree[function_name][func_short] = subtree
+            else:
+                tree[function_name][func_short] = "Module file not found"
+        else:
+            tree[function_name][func_short] = "External or builtin function"
+
     return tree, sources
 
 

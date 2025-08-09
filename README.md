@@ -72,17 +72,6 @@ Key cluster notes:
 - Use Python virtual environments per project.
 - For containerized execution on clusters, use **Apptainer** (see the docs above).
 
-### Docker (local development)
-A minimal `Dockerfile` is provided with Python 3.9 and common build tools. Example build:
-```bash
-docker build -t bootcamp:py39 .
-```
-Note: This image is a base; most workflows are designed for local venvs or Apptainer on clusters.
-
-### Repository tips
-- Large working data lives under `tmp/` and `dataset/`. These paths are created on demand.
-- The pipeline uses Hugging Face models. Caching models locally avoids repeated downloads.
-- `scripts/run_snippet.py` contains helpers to run commands inside an Apptainer image (`images/python.sif`) when executing on clusters.
 
 ### License
 See `LICENSE`.

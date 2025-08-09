@@ -1,5 +1,5 @@
 from scripts.bugsinpy_utils import *
-from run_ast_old import load_gitignore
+from utils.run_ast_old import load_gitignore
 
 projects = get_projects()
 

@@ -78,6 +78,34 @@ This guide explains the workflow in `generate_single_llm_patches.ipynb` to produ
 - For locating the right file/path for a function, correlate function names from LLM output with `code_chunks.json` entries
 - Automate evaluation by reusing test runners in `scripts.bugsinpy_utils.py` (`run_test`, `checkout_to_commit`, etc.)
 
+### Evaluate LLM patches with BugsInPy Docker
+Follow these steps to run the BugsInPy Docker workflow against your generated LLM patches and measure success:
+
+1. Copy your generated LLM results JSON to the BugsInPy framework location:
+   ```bash
+   cp <path-to-your-llm-results>.json BugsInPy/framework/results/llm.json
+   ```
+
+2. Build the Docker images (run this AFTER copying `llm.json`):
+   ```bash
+   (cd BugsInPy && docker compose build)
+   ```
+
+3. Run a project with the LLM testing entrypoint (example: youtube-dl). You can substitute any supported project target defined in `BugsInPy/docker-compose.yml`:
+   ```bash
+   (cd BugsInPy && docker compose run youtube-dl)
+   ```
+
+4. Compute the success rate from the Docker logs or index using the provided utility:
+   ```bash
+   python utils/count_success.py
+   ```
+
+5. Make another pass on new errors only. In the notebook `generate_single_llm_patches.ipynb`, set the variable `passed_bugs` to include bug ids (as strings) that have already passed so the script skips them on subsequent runs. Example:
+   ```python
+   passed_bugs = {"1", "3", "6", "9"}
+   ```
+
 ### Security and costs
 - API usage depends on the configured provider; control temperature and tokens as needed
 - Never log secrets; use environment variables and .env

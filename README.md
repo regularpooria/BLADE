@@ -53,6 +53,7 @@ A research/engineering workspace for experimenting with bug localization on the 
    ```
 
 ### Quickstart
+- **Open in Colab**: [Run analysis quickstart notebook](https://colab.research.google.com/drive/1deoI_khicWoG-90Jn_cka9JlYjlEtnJg?usp=sharing)
 - See `RUN_ANALYSIS.md` for step‑by‑step instructions to run file‑level and function‑level analyses (via notebooks and scripts described there).
 
 - **Run tests**:

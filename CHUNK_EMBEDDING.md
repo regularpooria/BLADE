@@ -2,6 +2,8 @@
 
 This document explains exactly how `generate_dataset_from_bugsinpy.ipynb` produces code chunks and embeds them into vectors for search, using helper modules (`run_ast_old.py`, `scripts/embedding.py`, `scripts/bugsinpy_utils.py`).
 
+> Quick start: You can view and run a working version of the notebook on Colab: [Open in Colab](https://colab.research.google.com/drive/1iOB1wROdt8MDX3zkquNQUuPVGxDJtKdW#scrollTo=GIEZu6VI-CZf)
+
 ### Outputs per bug
 Artifacts are written under `dataset/{project}/{bug}/`:
 - `code_chunks.json` — extracted code snippets from the buggy commit

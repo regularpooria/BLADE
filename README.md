@@ -5,6 +5,7 @@ A research/engineering workspace for experimenting with bug localization on the 
 ### Overall Architecture
 Here are some figures that illustrate the overall architecture and different steps of the BLADE pipeline:
 
+- [Full Report (PDF)](report/pdf/BLADE_REPORT.pdf)
 - [Overall View](report/overleaf/Figures/OverallView.pdf): This figure (Figure 1 in the report) illustrates the entire Automated Program Repair (APR) pipeline, outlining its four main stages: Input, Bug Localization, Program Repair, and Comparison of Approaches.
 - [Embedding Pipeline](report/overleaf/Figures/embed_pipeline.pdf): This figure details the process of converting code and bug reports into numerical representations (embeddings) for similarity-based retrieval, as discussed in the context of model selection and retrieval methods.
 - [Step 1: Input Processing](report/overleaf/Figures/Step1_input.drawio.pdf): This figure (Figure 2 in the report) describes the initial phase of input processing, which includes data preparation, code preparation (cloning, filtering, chunking), and bug preparation (traceback extraction).

@@ -1,0 +1,5 @@
+\section{Related Work}
+Recent approaches to bug localization increasingly use code embeddings to represent both source files and failure contexts, such as stack traces or bug reports in a shared semantic space for similarity-based retrieval.\\
+Early models like the DNN+IR hybrid from \citet{7961519} combined keyword-based search with a deep neural network, achieving around 85\% Top-20 accuracy. xLoc \citep{yang2024xloc} leverages a multilingual Transformer to classify buggy functions and localize errors, reaching 87.54\% Top-1 accuracy.\\
+BLAZE \citep{blaze2024} uses the CodeSage model \citet{zhang2024coderepresentationlearningscale} to embed entire codebases and bug reports. It applies dynamic chunking and combines semantic and lexical retrieval to support cross-project localization, achieving 60-70\% Top-20 accuracy.\\
+BugLLM \citep{subramanian2024bugllm} takes a zero-shot approach, generating natural language queries with an LLM and retrieving relevant code chunks via embeddings. It reports 44.7-61.1\% Top-5 accuracy, with explanation rated highly for clarity and correctness.

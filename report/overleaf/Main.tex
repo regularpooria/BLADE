@@ -1,0 +1,66 @@
+% Author Name: José Areia 
+% Author Contact: jose.apareia@gmail.com
+% Version: 1.0.3 - 18/04/2025
+% Public Repository: https://github.com/joseareia/nob-article
+
+% Packages & Document Configurations
+\documentclass[onecolumn]{NobArticle}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{etoolbox} % for \newcounter and \stepcounter
+
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\runninghead{Shortened Running Article Title}
+\footertext{\textit{Journal X} (2023) 12:684}
+
+% Title
+\title{BLADE: Bug Localization Assisted Debugging Engine}
+
+% Authors
+\author{
+    Pooria Roy\textsuperscript{1,3}, 
+    Mariam El Mezouar\textsuperscript{2,3}
+}
+
+% Affiliations
+\date{
+    \textsuperscript{\textbf{1}}School of Computing, Queen's University, Kingston, Canada \\
+    \textsuperscript{\textbf{2}}Faculty of Arts and Science, Queen's University, Kingston, Canada \\
+    \textsuperscript{\textbf{2}}Department of Computer Science, Royal Military College of Canada, Kingston, Canada
+}
+
+% % Abstract
+% \renewcommand{\maketitlehookd}{%
+% \begin{abstract}
+%     \noindent Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit. Aliquam arcu turpis, ultrices sed luctus ac, vehicula id metus. Morbi eu feugiat velit, et tempus augue. Proin ac mattis tortor. Donec tincidunt, ante rhoncus luctus semper, arcu lorem lobortis justo, nec convallis ante quam quis lectus. Aenean tincidunt sodales massa, et hendrerit tellus mattis ac. Sed non pretium nibh. Donec cursus maximus luctus. Vivamus lobortis eros et massa porta porttitor.
+% \end{abstract}
+% }
+
+\begin{document}
+
+\small
+\maketitle
+
+\input{Sections/01-Introduction}
+\input{Sections/02-Background}
+\input{Sections/03-Inputs}
+\input{Sections/04-Bug_localization}
+\input{Sections/05-APR}
+% \input{Sections/05-Discussion}
+% \input{Sections/06-Conclusion}
+
+\section{Reproducibility}
+All code, scripts, and instructions required to reproduce our experiments are available in the BLADE repository\footnote{\url{https://github.com/regularpooria/BLADE}}. 
+Data preparation and analysis scripts are included, along with detailed usage examples and Colab notebooks. 
+
+\section*{Acknowledgments}
+This research was conducted at the Royal Military College of Canada (RMC), Kingston, under the supervision of Professor Dr. El Mezouar. It was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC).
+
+
+
+\printbibliography
+
+\end{document}

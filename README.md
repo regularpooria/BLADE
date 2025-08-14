@@ -2,6 +2,15 @@
 
 A research/engineering workspace for experimenting with bug localization on the BugsInPy benchmark using embedding models. It includes utilities to clone/prepare buggy projects, extract error tracebacks, embed text/code with a Hugging Face model, search for likely buggy code chunks, and compute metrics (MAP/MRR, success rates).
 
+### Overall Architecture
+Here are some figures that illustrate the overall architecture and different steps of the BLADE pipeline:
+
+- [Overall View](report/overleaf/Figures/OverallView.pdf): This figure (Figure 1 in the report) illustrates the entire Automated Program Repair (APR) pipeline, outlining its four main stages: Input, Bug Localization, Program Repair, and Comparison of Approaches.
+- [Embedding Pipeline](report/overleaf/Figures/embed_pipeline.pdf): This figure details the process of converting code and bug reports into numerical representations (embeddings) for similarity-based retrieval, as discussed in the context of model selection and retrieval methods.
+- [Step 1: Input Processing](report/overleaf/Figures/Step1_input.drawio.pdf): This figure (Figure 2 in the report) describes the initial phase of input processing, which includes data preparation, code preparation (cloning, filtering, chunking), and bug preparation (traceback extraction).
+- [Step 2: Bug Localization](report/overleaf/Figures/Step2_bug_localization.drawio.pdf): This figure (Figure 3 in the report) outlines the bug localization pipeline, showcasing how embedded bug traces are matched against code chunks to identify potential bug locations.
+- [Step 3: Automated Program Repair (APR)](report/overleaf/Figures/Step3_APR.drawio.pdf): This figure represents the final stage of the pipeline, where the localized bug information is used to generate and test potential fixes, aiming to automate the program repair process.
+
 ### Contents
 - **Core code**:
   - `scripts/embedding.py`: Embedding utilities powered by `transformers`/`torch` and FAISS.
@@ -61,6 +70,7 @@ A research/engineering workspace for experimenting with bug localization on the 
   ```bash
   pytest
   ```
+
 
 ### Running on the research clusters
 Start here:

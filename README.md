@@ -1,4 +1,4 @@
-## Bootcamp Project
+## BLADE - Bug Localization Assisted Debugging Engine
 
 A research/engineering workspace for experimenting with bug localization on the BugsInPy benchmark using embedding models. It includes utilities to clone/prepare buggy projects, extract error tracebacks, embed text/code with a Hugging Face model, search for likely buggy code chunks, and compute metrics (MAP/MRR, success rates).
 

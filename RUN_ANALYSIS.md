@@ -6,6 +6,8 @@ This guide explains how to run the analysis in two modes:
 
 It also describes inputs/outputs, metrics, and tips for running locally or on clusters.
 
+> Quick start: Run the analysis notebook on Colab: [Open in Colab](https://colab.research.google.com/drive/1deoI_khicWoG-90Jn_cka9JlYjlEtnJg?usp=sharing)
+
 ### Prerequisites
 - Chunks and embeddings generated for all projects/bugs:
   - `dataset/{project}/{bug}/code_chunks.json`
@@ -25,19 +27,13 @@ It also describes inputs/outputs, metrics, and tips for running locally or on cl
 ### Option A — File-level analysis
 You can run this via the script or the notebook.
 
-- Using the script (recommended):
-  ```bash
-  python run_analysis.py
-  ```
-  What it does:
+- Using the notebook: `run_analysis_file.ipynb`
+-   What it does:
   - For each project/bug, loads `code_chunks.json` and `embedding.npy`
   - Embeds extracted error tracebacks in batch
   - Builds a FAISS index per bug and retrieves top-K code chunks
   - Writes per-project results to `tmp/ast/results/bug_results_{project}.json`
   - Aggregates metrics and writes `results_{K}.json` (for K in {5,10,15,20})
-
-- Using the notebook: `run_analysis_file.ipynb`
-  - Equivalent to the script, but interactive
   - Sections:
     - Setup: imports, `K` definition, folder creation
     - Inference: batch-embeds errors, retrieves top-K per bug, writes `bug_results_{project}.json`
